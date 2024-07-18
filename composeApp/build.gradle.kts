@@ -51,6 +51,10 @@ kotlin {
     
     sourceSets {
         val desktopMain by getting
+
+        all {
+            languageSettings.optIn("kotlinx.cinterop.ExperimentalForeignApi")
+        }
         
         androidMain.dependencies {
             implementation(compose.preview)
@@ -63,6 +67,7 @@ kotlin {
             implementation(compose.ui)
             implementation(compose.components.resources)
             implementation(compose.components.uiToolingPreview)
+            api("com.rickclephas.kmp:kmp-observableviewmodel-core:1.0.0-BETA-3")
         }
         desktopMain.dependencies {
             implementation(compose.desktop.currentOs)

@@ -1,10 +1,10 @@
-package com.mantum.demo.ViewModel
+package demo.ViewModel
 
-import androidx.lifecycle.ViewModel
+import com.rickclephas.kmp.observableviewmodel.ViewModel
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.setValue
-import com.mantum.demo.Entity.Equipo
+import demo.Entity.Equipo
 
 class EquipoViewModel : ViewModel() {
     var showForm by mutableStateOf(false)

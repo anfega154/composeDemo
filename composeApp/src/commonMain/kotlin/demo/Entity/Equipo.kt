@@ -1,4 +1,4 @@
-package com.mantum.demo.Entity
+package demo.Entity
 
 data class Equipo(
     val codigo: String,
