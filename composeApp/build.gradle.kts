@@ -1,43 +1,47 @@
-import org.jetbrains.compose.desktop.application.dsl.TargetFormat
 import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
-import org.jetbrains.kotlin.gradle.targets.js.dsl.ExperimentalWasmDsl
-import org.jetbrains.kotlin.gradle.targets.js.webpack.KotlinWebpackConfig
+import org.jetbrains.kotlin.gradle.plugin.KotlinSourceSetTree
 
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsCompose)
     alias(libs.plugins.compose.compiler)
+    id("app.cash.sqldelight") version "2.0.2"
+}
+
+repositories {
+    google()
+    mavenCentral()
+}
+
+sqldelight {
+    databases {
+        create("Database") {
+            packageName.set("com.demo.db")
+        }
+    }
 }
 
 kotlin {
-    @OptIn(ExperimentalWasmDsl::class)
-    wasmJs {
-        moduleName = "composeApp"
-        browser {
-            commonWebpackConfig {
-                outputFileName = "composeApp.js"
-                devServer = (devServer ?: KotlinWebpackConfig.DevServer()).apply {
-                    static = (static ?: mutableListOf()).apply {
-                        // Serve sources to debug inside browser
-                        add(project.projectDir.path)
-                    }
-                }
+
+    androidTarget {
+        compilations.all {
+            kotlinOptions {
+                jvmTarget = "17"
             }
         }
-        binaries.executable()
-    }
-    
-    androidTarget {
         @OptIn(ExperimentalKotlinGradlePluginApi::class)
-        compilerOptions {
-            jvmTarget.set(JvmTarget.JVM_11)
+        instrumentedTestVariant {
+            sourceSetTree.set(KotlinSourceSetTree.test)
+
+            dependencies {
+                implementation("androidx.compose.ui:ui-test-junit4-android:1.5.4")
+                debugImplementation("androidx.compose.ui:ui-test-manifest:1.5.4")
+            }
         }
     }
-    
-    jvm("desktop")
-    
+
     listOf(
         iosX64(),
         iosArm64(),
@@ -48,17 +52,25 @@ kotlin {
             isStatic = true
         }
     }
-    
+
+    sourceSets.nativeMain.dependencies {
+        implementation("app.cash.sqldelight:native-driver:2.0.2")
+    }
+
+    sourceSets.jvmMain.dependencies {
+        implementation("app.cash.sqldelight:sqlite-driver:2.0.2")
+    }
+
     sourceSets {
-        val desktopMain by getting
 
         all {
             languageSettings.optIn("kotlinx.cinterop.ExperimentalForeignApi")
         }
-        
+
         androidMain.dependencies {
             implementation(compose.preview)
             implementation(libs.androidx.activity.compose)
+            implementation("app.cash.sqldelight:native-driver:2.0.2")
         }
         commonMain.dependencies {
             implementation(compose.runtime)
@@ -68,9 +80,14 @@ kotlin {
             implementation(compose.components.resources)
             implementation(compose.components.uiToolingPreview)
             api("com.rickclephas.kmp:kmp-observableviewmodel-core:1.0.0-BETA-3")
+            implementation("app.cash.sqldelight:native-driver:2.0.2")
+
         }
-        desktopMain.dependencies {
-            implementation(compose.desktop.currentOs)
+        iosMain.dependencies {
+            //iOS dependencies
+            implementation("app.cash.sqldelight:native-driver:2.0.2")
+            implementation("co.touchlab:stately-common:2.0.5")
+
         }
     }
 }
@@ -112,14 +129,3 @@ android {
     }
 }
 
-compose.desktop {
-    application {
-        mainClass = "MainKt"
-
-        nativeDistributions {
-            targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
-            packageName = "com.mantum.demo"
-            packageVersion = "1.0.0"
-        }
-    }
-}

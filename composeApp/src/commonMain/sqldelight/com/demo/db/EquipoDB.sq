@@ -1,0 +1,15 @@
+CREATE TABLE Equipo (
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+codigo TEXT NOT NULL,
+nombre TEXT NOT NULL,
+instalacionDeProceso TEXT NOT NULL,
+tamano TEXT NOT NULL,
+estado INTEGER NOT NULL,
+observaciones TEXT NOT NULL
+);
+
+insertEquipo:
+INSERT INTO Equipo(codigo, nombre, instalacionDeProceso, tamano, estado, observaciones) VALUES (?, ?, ?, ?, ?, ?);
+
+selectAllEquipos:
+SELECT * FROM Equipo;

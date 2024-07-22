@@ -1,4 +1,4 @@
-package demo.Entity
+package Model
 
 data class Equipo(
     val codigo: String,

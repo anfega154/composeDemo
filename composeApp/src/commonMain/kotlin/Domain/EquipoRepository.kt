@@ -1,0 +1,4 @@
+package Domain
+
+class EquipoRepository {
+}
