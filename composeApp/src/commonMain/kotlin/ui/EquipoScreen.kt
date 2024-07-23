@@ -8,29 +8,34 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.Card
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Text
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.Button
+import androidx.compose.material.ButtonDefaults
+import androidx.compose.material.Card
+import androidx.compose.material.MaterialTheme
+import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import getColorTheme
 import ui.Field.BasicTextField.CustomTextField
 import ui.Field.TextAreaField.LabeledTextField
-import ui.Select.BasicSelect.DropdownSelector
+import ui.BasicSelect.DropdownSelector
 
 @Composable
 fun EquipoScreen(viewModel: EquipoViewModel) {
+    val color = getColorTheme()
     Column(modifier = Modifier.padding(16.dp)) {
         Button(
             onClick = { viewModel.toggleShowForm() },
-            shape = MaterialTheme.shapes.extraSmall,
+            shape = RoundedCornerShape(4.dp),
+            colors = ButtonDefaults.buttonColors(backgroundColor = color.mantum)
         ) {
             Text(text = if (viewModel.showForm) "Ver Equipos" else "Crear Equipo")
         }
@@ -58,8 +63,12 @@ fun EquipoForm(onSave: (Equipo) -> Unit) {
     var expanded by remember { mutableStateOf(false) }
     val estadoOptions = listOf("Activo", "Inactivo")
     var observaciones by remember { mutableStateOf("") }
+    val color = getColorTheme()
 
-    Column(modifier = Modifier.fillMaxWidth()) {
+    Column(modifier = Modifier
+        .fillMaxWidth()
+        .shadow(elevation = 1.dp, shape = RoundedCornerShape(4.dp))
+        .padding( 8.dp)){
         CustomTextField(
             value = codigo,
             onValueChange = { codigo = it },
@@ -89,7 +98,8 @@ fun EquipoForm(onSave: (Equipo) -> Unit) {
             },
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(8.dp)
+                .padding(8.dp),
+            title = "Estado"
         )
         LabeledTextField(
             value = observaciones,
@@ -109,8 +119,9 @@ fun EquipoForm(onSave: (Equipo) -> Unit) {
                         observaciones
                     )
                 )
-            }, shape = MaterialTheme.shapes.extraSmall,
-            colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.error)
+            }, shape = RoundedCornerShape(4.dp),
+            colors = ButtonDefaults.buttonColors(backgroundColor = color.mantum),
+            modifier = Modifier.fillMaxWidth()
         ) {
             Text("Crear")
         }
@@ -126,6 +137,7 @@ fun EquiposList(equipos: List<Equipo>) {
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(8.dp)
+                    .shadow(elevation = 4.dp, shape = RoundedCornerShape(4.dp))
             ) {
                 Column(modifier = Modifier.padding(16.dp)) {
                     Text(text = "Código: ${equipo.codigo}", fontSize = 18.sp)

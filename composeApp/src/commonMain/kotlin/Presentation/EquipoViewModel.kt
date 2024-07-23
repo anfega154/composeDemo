@@ -1,19 +1,35 @@
 package Presentation
 
-import com.rickclephas.kmp.observableviewmodel.ViewModel
+import Domain.EquipoRepository
+import moe.tlaster.precompose.viewmodel.ViewModel
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.setValue
 import Model.Equipo
-import com.rickclephas.kmp.observableviewmodel.launch
+import com.demo.Database
+import moe.tlaster.precompose.viewmodel.viewModelScope
+import data.DatabaseDriverFactory
+import kotlinx.coroutines.launch
 
-class EquipoViewModel : ViewModel() {
+
+class EquipoViewModel(private val equipoRepository: EquipoRepository) : ViewModel() {
     var showForm by mutableStateOf(false)
     var equipos by mutableStateOf(listOf<Equipo>())
-        private set
+
+    init {
+        viewModelScope.launch {
+            getAllEquipos()
+        }
+    }
+
+    fun getAllEquipos() {
+        equipos = equipoRepository.getAllEquipos()
+    }
 
     fun addEquipo(equipo: Equipo) {
-        equipos = equipos + equipo
+      equipoRepository.addEquipo(equipo)
+      equipos = equipoRepository.getAllEquipos()
+        //equipos += equipo
         showForm = false
     }
 

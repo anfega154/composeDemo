@@ -1,13 +1,15 @@
 import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
-import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import org.jetbrains.kotlin.gradle.plugin.KotlinSourceSetTree
+import org.jetbrains.compose.ExperimentalComposeLibrary
+
 
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsCompose)
     alias(libs.plugins.compose.compiler)
-    id("app.cash.sqldelight") version "2.0.2"
+    id("app.cash.sqldelight") version "2.0.1"
+
 }
 
 repositories {
@@ -18,7 +20,7 @@ repositories {
 sqldelight {
     databases {
         create("Database") {
-            packageName.set("com.demo.db")
+            packageName.set("com.demo")
         }
     }
 }
@@ -53,41 +55,47 @@ kotlin {
         }
     }
 
-    sourceSets.nativeMain.dependencies {
-        implementation("app.cash.sqldelight:native-driver:2.0.2")
-    }
-
-    sourceSets.jvmMain.dependencies {
-        implementation("app.cash.sqldelight:sqlite-driver:2.0.2")
-    }
-
     sourceSets {
-
-        all {
-            languageSettings.optIn("kotlinx.cinterop.ExperimentalForeignApi")
-        }
 
         androidMain.dependencies {
             implementation(compose.preview)
             implementation(libs.androidx.activity.compose)
-            implementation("app.cash.sqldelight:native-driver:2.0.2")
+            implementation ("com.google.accompanist:accompanist-systemuicontroller:0.31.3-beta")
+
+            implementation(project.dependencies.platform("io.insert-koin:koin-bom:3.5.1"))
+            implementation("io.insert-koin:koin-core")
+            implementation("io.insert-koin:koin-android")
+
+            implementation("app.cash.sqldelight:android-driver:2.0.1")
+
         }
         commonMain.dependencies {
             implementation(compose.runtime)
             implementation(compose.foundation)
-            implementation(compose.material3)
+            implementation(compose.material)
             implementation(compose.ui)
+
+            @OptIn(ExperimentalComposeLibrary::class)
             implementation(compose.components.resources)
             implementation(compose.components.uiToolingPreview)
-            api("com.rickclephas.kmp:kmp-observableviewmodel-core:1.0.0-BETA-3")
-            implementation("app.cash.sqldelight:native-driver:2.0.2")
+            implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0")
+
+
+            //Navigation PreCompose
+            api("moe.tlaster:precompose:1.5.10")
+            //Viewmodel
+            api("moe.tlaster:precompose-viewmodel:1.5.10")
+
+            //Koin
+            implementation(project.dependencies.platform("io.insert-koin:koin-bom:3.5.1"))
+            implementation("io.insert-koin:koin-core")
+            implementation("io.insert-koin:koin-compose")
+            api("moe.tlaster:precompose-koin:1.5.10")
 
         }
         iosMain.dependencies {
-            //iOS dependencies
-            implementation("app.cash.sqldelight:native-driver:2.0.2")
+            implementation("app.cash.sqldelight:native-driver:2.0.1")
             implementation("co.touchlab:stately-common:2.0.5")
-
         }
     }
 }
@@ -118,14 +126,17 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     buildFeatures {
         compose = true
     }
     dependencies {
         debugImplementation(compose.uiTooling)
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.5.10"
     }
 }
 

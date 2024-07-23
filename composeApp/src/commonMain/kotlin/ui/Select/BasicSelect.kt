@@ -1,7 +1,10 @@
-package ui.Select
+package ui
 
-import androidx.compose.foundation.layout.*
-import androidx.compose.material3.*
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.material.*
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 
@@ -12,26 +15,38 @@ object BasicSelect {
         options: List<String>,
         selectedOption: String,
         onOptionSelected: (String) -> Unit,
-        modifier: Modifier = Modifier
+        modifier: Modifier = Modifier,
+        title: String = ""
     ) {
         var expanded by remember { mutableStateOf(false) }
 
-        Box(modifier = modifier) {
-            Button(onClick = { expanded = true }, shape =  MaterialTheme.shapes.extraSmall) {
-                Text(selectedOption)
-            }
+        Box(modifier = modifier.fillMaxWidth()) {
+            OutlinedTextField(
+                value = selectedOption,
+                onValueChange = {},
+                readOnly = true,
+                label = { Text(title) },
+                trailingIcon = {
+                    IconButton(onClick = { expanded = !expanded }) {
+                        Icon(
+                            imageVector = if (expanded) Icons.Filled.ArrowDropDown else Icons.Filled.ArrowDropDown,
+                            contentDescription = null
+                        )
+                    }
+                },
+                modifier = Modifier.fillMaxWidth()
+            )
             DropdownMenu(
                 expanded = expanded,
                 onDismissRequest = { expanded = false }
             ) {
                 options.forEach { option ->
-                    DropdownMenuItem(
-                        text = { Text(option) },
-                        onClick = {
-                            onOptionSelected(option)
-                            expanded = false
-                        }
-                    )
+                    DropdownMenuItem(onClick = {
+                        onOptionSelected(option)
+                        expanded = false
+                    }) {
+                        Text(option)
+                    }
                 }
             }
         }

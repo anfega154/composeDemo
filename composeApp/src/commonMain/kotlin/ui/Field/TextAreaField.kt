@@ -2,7 +2,7 @@ package ui.Field
 
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.*
+import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.TextStyle
@@ -15,7 +15,7 @@ object TextAreaField {
         onValueChange: (String) -> Unit,
         label: String,
         modifier: Modifier = Modifier,
-        textStyle: TextStyle = TextStyle(color = MaterialTheme.colorScheme.onSurface)
+        textStyle: TextStyle = TextStyle.Default
     ) {
         OutlinedTextField(
             value = value,
