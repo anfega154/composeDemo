@@ -15,7 +15,6 @@ fun AppTheme(content: @Composable () -> Unit) {
         )
     ){
         content()
-
     }
 
 }
