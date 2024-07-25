@@ -9,6 +9,7 @@ plugins {
     alias(libs.plugins.jetbrainsCompose)
     alias(libs.plugins.compose.compiler)
     id("app.cash.sqldelight") version "2.0.1"
+    kotlin("plugin.serialization") version "1.9.22"
 
 }
 
@@ -92,6 +93,9 @@ kotlin {
             implementation("io.insert-koin:koin-compose")
             api("moe.tlaster:precompose-koin:1.5.10")
 
+            //serialization
+            implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.0") // Ensure the version matches your Kotlin version
+
         }
         iosMain.dependencies {
             implementation("app.cash.sqldelight:native-driver:2.0.1")
@@ -106,7 +110,7 @@ android {
 
     sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
     sourceSets["main"].res.srcDirs("src/androidMain/res")
-    sourceSets["main"].resources.srcDirs("src/commonMain/resources")
+    //sourceSets["main"].resources.srcDirs("src/commonMain/resources")
 
     defaultConfig {
         applicationId = "com.mantum.demo"

@@ -1,5 +1,8 @@
 package ui
 
+import Komino.JsonToKomino.BasicKomino
+import Komino.KominoForm
+import Komino.Ultils.parseJsonSchema
 import Model.Equipo
 import Presentation.EquipoViewModel
 import androidx.compose.foundation.layout.Column
@@ -64,68 +67,22 @@ fun EquipoForm(onSave: (Equipo) -> Unit) {
     val estadoOptions = listOf("Activo", "Inactivo")
     var observaciones by remember { mutableStateOf("") }
     val color = getColorTheme()
+    val jsonSchema = BasicKomino.basicKomino()
+    val formSchema = parseJsonSchema(jsonSchema)
 
-    Column(modifier = Modifier
-        .fillMaxWidth()
-        .shadow(elevation = 1.dp, shape = RoundedCornerShape(4.dp))
-        .padding( 8.dp)){
-        CustomTextField(
-            value = codigo,
-            onValueChange = { codigo = it },
-            placeholder = "Código"
+KominoForm(schema = formSchema) { formData ->
+    onSave(
+        Equipo(
+            codigo = formData["Código"] ?: "",
+            nombre = formData["Nombre"] ?: "",
+            instalacionDeProceso = formData["Instalación de Proceso"] ?: "",
+            tamano = formData["Tamaño"] ?: "",
+            estado = formData["Estado"] == "Activo",
+            observaciones = formData["Observaciones"] ?: ""
         )
-        CustomTextField(
-            value = nombre,
-            onValueChange = { nombre = it },
-            placeholder = "Nombre"
-        )
-        CustomTextField(
-            value = instalacionDeProceso,
-            onValueChange = { instalacionDeProceso = it },
-            placeholder = "Instalación de Proceso"
-        )
+    )
+}
 
-        CustomTextField(
-            value = tamano,
-            onValueChange = { tamano = it },
-            placeholder = "Tamaño"
-        )
-        DropdownSelector(
-            options = estadoOptions,
-            selectedOption = if (estado) "Activo" else "Inactivo",
-            onOptionSelected = { option ->
-                estado = option == "Activo"
-            },
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(8.dp),
-            title = "Estado"
-        )
-        LabeledTextField(
-            value = observaciones,
-            onValueChange = { observaciones = it },
-            label = "Observaciones"
-        )
-        Spacer(modifier = Modifier.height(16.dp))
-        Button(
-            onClick = {
-                onSave(
-                    Equipo(
-                        codigo,
-                        nombre,
-                        instalacionDeProceso,
-                        tamano,
-                        estado,
-                        observaciones
-                    )
-                )
-            }, shape = RoundedCornerShape(4.dp),
-            colors = ButtonDefaults.buttonColors(backgroundColor = color.mantum),
-            modifier = Modifier.fillMaxWidth()
-        ) {
-            Text("Crear")
-        }
-    }
 }
 
 @Composable
