@@ -21,7 +21,7 @@ import ui.Field.BasicTextField.CustomTextField
 import ui.Field.TextAreaField.LabeledTextField
 
 @Composable
-fun KominoForm(schema: FormSchema, onSave: (Map<String, String>) -> Unit) {
+fun KominoForm(schema: FormSchema, onFieldValuesChange: (Map<String, String>) -> Unit) {
     val fieldValues = remember { mutableStateMapOf<String, String>() }
 
     Column(modifier = Modifier.fillMaxWidth().padding(8.dp)) {
@@ -30,7 +30,10 @@ fun KominoForm(schema: FormSchema, onSave: (Map<String, String>) -> Unit) {
                 "text" -> {
                     CustomTextField(
                         value = fieldValues.getOrPut(field.label) { "" },
-                        onValueChange = { fieldValues[field.label] = it },
+                        onValueChange = {
+                            fieldValues[field.label] = it
+                            onFieldValuesChange(fieldValues)
+                        },
                         placeholder = field.placeholder ?: ""
                     )
                 }
@@ -38,14 +41,20 @@ fun KominoForm(schema: FormSchema, onSave: (Map<String, String>) -> Unit) {
                     DropdownSelector(
                         options = field.options ?: emptyList(),
                         selectedOption = fieldValues.getOrPut(field.label) { field.options?.firstOrNull() ?: "" },
-                        onOptionSelected = { fieldValues[field.label] = it },
+                        onOptionSelected = {
+                            fieldValues[field.label] = it
+                            onFieldValuesChange(fieldValues)
+                        },
                         title = field.label
                     )
                 }
                 "textarea" -> {
                     LabeledTextField(
                         value = fieldValues.getOrPut(field.label) { "" },
-                        onValueChange = { fieldValues[field.label] = it },
+                        onValueChange = {
+                            fieldValues[field.label] = it
+                            onFieldValuesChange(fieldValues)
+                        },
                         label = field.label
                     )
                 }
@@ -53,14 +62,5 @@ fun KominoForm(schema: FormSchema, onSave: (Map<String, String>) -> Unit) {
         }
 
         Spacer(modifier = Modifier.height(16.dp))
-
-        Button(
-            onClick = { onSave(fieldValues) },
-            shape = RoundedCornerShape(4.dp),
-            colors = ButtonDefaults.buttonColors(backgroundColor = getColorTheme().mantum),
-            modifier = Modifier.fillMaxWidth()
-        ) {
-            Text("Guardar")
-        }
     }
 }

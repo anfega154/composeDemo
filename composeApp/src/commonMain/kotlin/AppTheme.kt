@@ -30,6 +30,8 @@ fun getColorTheme() : DarkModeColors {
     val Success = Color(0xFF32CD32)
     val Basicbutton = Color(0xFFDCDCDC)
     val BlackDefault = Color.Black
+    val Danger = Color(0xFFB22222)
+    val Warning = Color(0xFFFFD700)
 
     return DarkModeColors(
         mantum = Mantum,
@@ -38,7 +40,9 @@ fun getColorTheme() : DarkModeColors {
         colorCards = ColorCards,
         success = Success,
         basicbutton = Basicbutton,
-        blackDefault = BlackDefault
+        blackDefault = BlackDefault,
+        danger = Danger,
+        warning = Warning
     )
 }
 
@@ -49,5 +53,7 @@ data class DarkModeColors(
     val colorCards : Color,
     val success : Color,
     val basicbutton : Color,
-    val blackDefault : Color
+    val blackDefault : Color,
+    val danger : Color,
+    val warning : Color
 )

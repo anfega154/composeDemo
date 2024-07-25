@@ -15,21 +15,14 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Button
 import androidx.compose.material.ButtonDefaults
 import androidx.compose.material.Card
-import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import getColorTheme
-import ui.Field.BasicTextField.CustomTextField
-import ui.Field.TextAreaField.LabeledTextField
-import ui.BasicSelect.DropdownSelector
+import ui.Button.BasicButton.GenericButton
 
 @Composable
 fun EquipoScreen(viewModel: EquipoViewModel) {
@@ -58,31 +51,33 @@ fun EquipoScreen(viewModel: EquipoViewModel) {
 
 @Composable
 fun EquipoForm(onSave: (Equipo) -> Unit) {
-    var codigo by remember { mutableStateOf("") }
-    var nombre by remember { mutableStateOf("") }
-    var instalacionDeProceso by remember { mutableStateOf("") }
-    var tamano by remember { mutableStateOf("") }
-    var estado by remember { mutableStateOf(false) }
-    var expanded by remember { mutableStateOf(false) }
-    val estadoOptions = listOf("Activo", "Inactivo")
-    var observaciones by remember { mutableStateOf("") }
-    val color = getColorTheme()
     val jsonSchema = BasicKomino.basicKomino()
     val formSchema = parseJsonSchema(jsonSchema)
+    var fieldValues = mapOf<String, String>()
 
-KominoForm(schema = formSchema) { formData ->
-    onSave(
-        Equipo(
-            codigo = formData["Código"] ?: "",
-            nombre = formData["Nombre"] ?: "",
-            instalacionDeProceso = formData["Instalación de Proceso"] ?: "",
-            tamano = formData["Tamaño"] ?: "",
-            estado = formData["Estado"] == "Activo",
-            observaciones = formData["Observaciones"] ?: ""
-        )
+    KominoForm(schema = formSchema, onFieldValuesChange = { values ->
+        fieldValues = values
+    })
+
+    GenericButton(
+        onClick = {
+            val equipo = mapFieldValuesToEquipo(fieldValues)
+            onSave(equipo)
+        },
+        text = "Guardar",
+        modifier = Modifier.fillMaxWidth()
     )
 }
 
+fun mapFieldValuesToEquipo(fieldValues: Map<String, String>): Equipo {
+    return Equipo(
+        codigo = fieldValues["Código"] ?: "",
+        nombre = fieldValues["Nombre"] ?: "",
+        instalacionDeProceso = fieldValues["Instalación de Proceso"] ?: "",
+        tamano = fieldValues["Tamaño"] ?: "",
+        estado = fieldValues["Estado"] == "Activo",
+        observaciones = fieldValues["Observaciones"] ?: ""
+    )
 }
 
 @Composable
