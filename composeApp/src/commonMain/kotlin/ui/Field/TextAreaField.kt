@@ -22,7 +22,7 @@ object TextAreaField {
             onValueChange = onValueChange,
             modifier = modifier
                 .fillMaxWidth()
-                .padding(8.dp),
+                .padding(4.dp),
             label = { Text(label) },
             textStyle = textStyle
         )

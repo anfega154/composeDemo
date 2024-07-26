@@ -32,6 +32,7 @@ fun getColorTheme() : DarkModeColors {
     val BlackDefault = Color.Black
     val Danger = Color(0xFFB22222)
     val Warning = Color(0xFFFFD700)
+    val Addiconcolor = Color.Black
 
     return DarkModeColors(
         mantum = Mantum,
@@ -42,7 +43,8 @@ fun getColorTheme() : DarkModeColors {
         basicbutton = Basicbutton,
         blackDefault = BlackDefault,
         danger = Danger,
-        warning = Warning
+        warning = Warning,
+        addIconColor = Addiconcolor
     )
 }
 
@@ -55,5 +57,6 @@ data class DarkModeColors(
     val basicbutton : Color,
     val blackDefault : Color,
     val danger : Color,
-    val warning : Color
+    val warning : Color,
+    val addIconColor : Color
 )

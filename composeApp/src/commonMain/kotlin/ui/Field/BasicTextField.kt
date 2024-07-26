@@ -30,7 +30,7 @@ object BasicTextField {
                 onValueChange = onValueChange,
                 modifier = modifier
                     .fillMaxWidth()
-                    .padding(8.dp)
+                    .padding(4.dp)
                     .shadow(elevation = 1.dp),
                 textStyle = textStyle,
                 decorationBox = { innerTextField ->

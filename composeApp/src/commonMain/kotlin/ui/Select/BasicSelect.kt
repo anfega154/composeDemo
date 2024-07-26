@@ -2,11 +2,13 @@ package ui
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
 
 object BasicSelect {
 
@@ -35,6 +37,7 @@ object BasicSelect {
                     }
                 },
                 modifier = Modifier.fillMaxWidth()
+                    .padding(4.dp)
             )
             DropdownMenu(
                 expanded = expanded,
