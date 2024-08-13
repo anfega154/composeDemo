@@ -69,6 +69,10 @@ kotlin {
 
             implementation("app.cash.sqldelight:android-driver:2.0.1")
 
+            //Ktor
+            implementation(libs.ktor.client.okhttp)
+            implementation(libs.kotlinx.coroutines.android)
+
         }
         commonMain.dependencies {
             implementation(compose.runtime)
@@ -93,6 +97,12 @@ kotlin {
             implementation("io.insert-koin:koin-compose")
             api("moe.tlaster:precompose-koin:1.5.10")
 
+            //ktor
+            implementation(libs.ktor.client.core)
+            implementation(libs.kotlinx.coroutines.core)
+            implementation(libs.ktor.serialization)
+            implementation(libs.ktor.content.negotiation)
+
             //serialization
             implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.0") // Ensure the version matches your Kotlin version
 
@@ -100,6 +110,9 @@ kotlin {
         iosMain.dependencies {
             implementation("app.cash.sqldelight:native-driver:2.0.1")
             implementation("co.touchlab:stately-common:2.0.5")
+
+            //Ktor
+            implementation(libs.ktor.client.darwin)
         }
     }
 }

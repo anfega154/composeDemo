@@ -13,3 +13,6 @@ INSERT INTO Equipo(codigo, nombre, instalacionDeProceso, tamano, estado, observa
 
 selectAllEquipos:
 SELECT * FROM Equipo;
+
+deleteAllEquipos:
+DELETE FROM Equipo;

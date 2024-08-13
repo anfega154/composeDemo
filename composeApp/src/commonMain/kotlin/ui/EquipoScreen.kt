@@ -11,9 +11,11 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import getColorTheme
+import kotlinx.coroutines.launch
 import moe.tlaster.precompose.navigation.Navigator
 import ui.Button.BasicButton.GenericButton
 
@@ -21,9 +23,12 @@ import ui.Button.BasicButton.GenericButton
 @Composable
 fun EquipoScreen(viewModel: EquipoViewModel, navigator: Navigator) {
     val color = getColorTheme()
+    val coroutineScope = rememberCoroutineScope()
     Column(modifier = Modifier.padding(16.dp)) {
         EquipoForm(onSave = { equipo ->
-            viewModel.addEquipo(equipo)
+            coroutineScope.launch {
+                viewModel.addEquipo(equipo)
+            }
         })
 
         Spacer(modifier = Modifier.height(16.dp))

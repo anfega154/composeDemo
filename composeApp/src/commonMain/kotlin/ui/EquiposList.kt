@@ -17,6 +17,7 @@ import androidx.compose.ui.unit.sp
 @Composable
 fun EquiposList(viewModel: EquipoViewModel) {
     val equipos = viewModel.equipos
+    //viewModel.deleteAllEquipos()
     LazyColumn {
         items(equipos.size) { index ->
             val equipo = equipos[index]
