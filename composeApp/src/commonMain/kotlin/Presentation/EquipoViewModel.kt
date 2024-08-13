@@ -30,8 +30,7 @@ class EquipoViewModel(private val equipoRepository: EquipoRepository) : ViewMode
     fun addEquipo(equipo: Equipo) {
         viewModelScope.launch {
             equipoRepository.addEquipo(equipo)
-            equipos = equipoRepository.getAllEquipos()
-            //equipos += equipo
+            getAllEquipos()
             showForm = false
         }
     }

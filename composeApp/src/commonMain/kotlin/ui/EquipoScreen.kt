@@ -22,7 +22,6 @@ import ui.Button.BasicButton.GenericButton
 
 @Composable
 fun EquipoScreen(viewModel: EquipoViewModel, navigator: Navigator) {
-    val color = getColorTheme()
     val coroutineScope = rememberCoroutineScope()
     Column(modifier = Modifier.padding(16.dp)) {
         EquipoForm(onSave = { equipo ->
