@@ -2,22 +2,22 @@ package Domain
 
 import Model.Equipo
 import Model.networkEquipo
-import Utils.Mantum
 import Utils.Request
-import com.demo.Database
-import io.ktor.client.HttpClient
 import kotlinx.serialization.builtins.ListSerializer
 
 private const val TOKEN =
     "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkdyZWciLCJpYXQiOjE1MTYyMzkwMjJ9.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
 
 class EquipoRepository(
-    private val database: Database,
-    private val mantum: Mantum,
-    private val httpClient: HttpClient
-) : EquipoInterface {
-    private val equipoQueries = database.equipoQueries
-    private val request = Request(httpClient)
+    baseRepository: BaseRepository
+) : BaseRepository(
+    baseRepository.getDatabase(),
+    baseRepository.getMantum(),
+    baseRepository.getHttpClient()
+), EquipoInterface {
+    private val equipoQueries = baseRepository.getDatabase().equipoQueries
+    private val request = Request(baseRepository.getHttpClient())
+    private val mantum = baseRepository.getMantum()
 
     override suspend fun addEquipo(equipo: Equipo) {
         try {

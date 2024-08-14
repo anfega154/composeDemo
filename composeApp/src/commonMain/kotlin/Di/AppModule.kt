@@ -1,5 +1,6 @@
 package Di
 
+import Domain.BaseRepository
 import Domain.EquipoRepository
 import Presentation.EquipoViewModel
 import Utils.Mantum
@@ -12,6 +13,8 @@ import org.koin.dsl.module
 
 fun appModule(database: Database, mantum: Mantum) = module {
     single<HttpClient> { HttpClient{install(ContentNegotiation) {json()} } }
-    single { EquipoRepository(database, mantum,get()) }
+    single { mantum }
+    single { BaseRepository(database, get(),get()) }
+    factory { EquipoRepository(get())}
     factory { EquipoViewModel(get()) }
 }
