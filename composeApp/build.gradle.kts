@@ -10,7 +10,6 @@ plugins {
     alias(libs.plugins.compose.compiler)
     id("app.cash.sqldelight") version "2.0.1"
     kotlin("plugin.serialization") version "1.9.22"
-
 }
 
 repositories {
@@ -102,9 +101,6 @@ kotlin {
             implementation(libs.kotlinx.coroutines.core)
             implementation(libs.ktor.serialization)
             implementation(libs.ktor.content.negotiation)
-
-            //serialization
-            implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.0") // Ensure the version matches your Kotlin version
 
         }
         iosMain.dependencies {

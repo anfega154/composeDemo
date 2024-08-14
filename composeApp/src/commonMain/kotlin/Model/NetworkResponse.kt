@@ -4,7 +4,8 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data class NetworkResponse<T>(
-    val success: Boolean,
-    val message: String,
+    val success: Boolean? = null,
+    val message: String? = null,
     val body: T
 )
+

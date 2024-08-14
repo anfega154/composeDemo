@@ -28,6 +28,7 @@ fun EquipoScreen(viewModel: EquipoViewModel, navigator: Navigator) {
             coroutineScope.launch {
                 viewModel.addEquipo(equipo)
             }
+            navigator.navigate("/home")
         })
 
         Spacer(modifier = Modifier.height(16.dp))

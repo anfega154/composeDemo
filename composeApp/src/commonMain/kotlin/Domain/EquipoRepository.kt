@@ -5,11 +5,7 @@ import Model.networkEquipo
 import Utils.Request
 import com.demo.Database
 import io.ktor.client.HttpClient
-import io.ktor.client.request.headers
-import io.ktor.client.request.post
-import io.ktor.client.request.setBody
-import io.ktor.http.ContentType
-import io.ktor.http.contentType
+import kotlinx.serialization.builtins.ListSerializer
 
 private const val BASE_URL = "http://10.0.2.2:8002/api"
 //private const val BASE_URL = "http://192.168.0.78/laraveldemo/public/api"
@@ -27,23 +23,19 @@ class EquipoRepository(
 
     override suspend fun addEquipo(equipo: Equipo) {
         try {
-             val response = httpClient.post("$BASE_URL/v1/equipo") {
-                headers {
-                    append("Authorization", TOKEN)
-                }
-                contentType(ContentType.Application.Json)
-                setBody(
-                    networkEquipo(
-                        codigo = equipo.codigo,
-                        nombre = equipo.nombre,
-                        instalacionDeProceso = equipo.instalacionDeProceso,
-                        tamano = equipo.tamano,
-                        estado = if (equipo.estado) "activo" else "inactivo",
-                        observaciones = equipo.observaciones
-
-                    )
-                )
-            }
+            request.post(
+                url = "/v1/equipo",
+                headers = mapOf("Authorization" to TOKEN),
+                body = networkEquipo(
+                    codigo = equipo.codigo,
+                    nombre = equipo.nombre,
+                    instalacionDeProceso = equipo.instalacionDeProceso,
+                    tamano = equipo.tamano,
+                    estado = if (equipo.estado) "activo" else "inactivo",
+                    observaciones = equipo.observaciones
+                ),
+                serializer = networkEquipo.serializer()
+            )
             equipoQueries.insertEquipo(
                 codigo = equipo.codigo,
                 nombre = equipo.nombre,
@@ -61,8 +53,12 @@ class EquipoRepository(
     override suspend fun getAllEquipos(): List<Equipo> {
         return if (equipoQueries.selectAllEquipos().executeAsList().isEmpty()) {
             try {
-                val networkResponse = request.get<List<networkEquipo>>("/v1/equipo", mapOf("Authorization" to TOKEN))
-                if (!networkResponse.success || networkResponse.body.isEmpty()) {
+                val networkResponse = request.get(
+                    url = "/v1/equipo",
+                    headers = mapOf("Authorization" to TOKEN),
+                    serializer = ListSerializer(networkEquipo.serializer())
+                )
+                if (networkResponse.success == false || networkResponse.body.isEmpty()) {
                     return emptyList()
                 }
                 val equipos = networkResponse.body.map { networkEquipo ->
