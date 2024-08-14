@@ -1,8 +1,5 @@
 package Utils
 
-class Mantum {
-
-    public fun isConnectedOrConnecting(){
-
-    }
+expect class Mantum {
+    fun isConnectedOrConnecting(): Boolean
 }

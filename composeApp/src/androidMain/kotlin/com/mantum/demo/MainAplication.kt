@@ -7,16 +7,18 @@ import data.DatabaseDriverFactory
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
+import org.koin.dsl.module
+import Utils.Mantum
 
-
-class MainAplication : Application(){
+class MainAplication : Application() {
 
     override fun onCreate() {
         super.onCreate()
-        startKoin{
+        val mantum = Mantum(this@MainAplication)
+        startKoin {
             androidContext(this@MainAplication)
             androidLogger()
-            modules(appModule(Database.invoke(DatabaseDriverFactory(this@MainAplication).createDriver())))
+            modules(appModule(Database.invoke(DatabaseDriverFactory(this@MainAplication).createDriver()),mantum))
         }
     }
 }
