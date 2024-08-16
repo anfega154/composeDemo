@@ -19,33 +19,37 @@ class EquipoRepository(
     private val request = Request(baseRepository.getHttpClient())
     private val mantum = baseRepository.getMantum()
 
-    override suspend fun addEquipo(equipo: Equipo) {
-        try {
-            request.post(
-                url = "/v1/equipo",
-                headers = mapOf("Authorization" to TOKEN),
-                body = networkEquipo(
+    override suspend fun addEquipo(equipo: Equipo): Boolean {
+        return try {
+            if (mantum.isConnectedOrConnecting()) {
+                request.post(
+                    url = "/v1/equipo",
+                    headers = mapOf("Authorization" to TOKEN),
+                    body = networkEquipo(
+                        codigo = equipo.codigo,
+                        nombre = equipo.nombre,
+                        instalacionDeProceso = equipo.instalacionDeProceso,
+                        tamano = equipo.tamano,
+                        estado = if (equipo.estado) "activo" else "inactivo",
+                        observaciones = equipo.observaciones
+                    ),
+                    serializer = networkEquipo.serializer()
+                )
+                equipoQueries.insertEquipo(
                     codigo = equipo.codigo,
                     nombre = equipo.nombre,
                     instalacionDeProceso = equipo.instalacionDeProceso,
                     tamano = equipo.tamano,
-                    estado = if (equipo.estado) "activo" else "inactivo",
+                    estado = if (equipo.estado) 1L else 0L,
                     observaciones = equipo.observaciones
-                ),
-                serializer = networkEquipo.serializer()
-            )
-            equipoQueries.insertEquipo(
-                codigo = equipo.codigo,
-                nombre = equipo.nombre,
-                instalacionDeProceso = equipo.instalacionDeProceso,
-                tamano = equipo.tamano,
-                estado = if (equipo.estado) 1L else 0L,
-                observaciones = equipo.observaciones
-            )
+                )
+                true
+            } else {
+                false
+            }
         } catch (e: Exception) {
-            println("Error fetching equipos: ${e.message}")
+            throw e
         }
-
     }
 
     override suspend fun getAllEquipos(): List<Equipo> {

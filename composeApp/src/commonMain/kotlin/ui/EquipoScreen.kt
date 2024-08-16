@@ -10,25 +10,41 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material.SnackbarHost
+import androidx.compose.material.SnackbarHostState
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import getColorTheme
 import kotlinx.coroutines.launch
 import moe.tlaster.precompose.navigation.Navigator
 import ui.Button.BasicButton.GenericButton
-
+import androidx.compose.material.Text
+import getColorTheme
 
 @Composable
 fun EquipoScreen(viewModel: EquipoViewModel, navigator: Navigator) {
     val coroutineScope = rememberCoroutineScope()
+    val snackbarHostState = remember { SnackbarHostState() }
     Column(modifier = Modifier.padding(16.dp)) {
         EquipoForm(onSave = { equipo ->
             coroutineScope.launch {
-                viewModel.addEquipo(equipo)
+                val result = viewModel.addEquipo(equipo)
+                when (result) {
+                    is EquipoViewModel.AddEquipoResult.Success -> {
+                        navigator.navigate("/home")
+                    }
+                    is EquipoViewModel.AddEquipoResult.NoConnection -> {
+                        showSnackbar(snackbarHostState, "No tienes conexión a internet")
+                    }
+                    is EquipoViewModel.AddEquipoResult.Error -> {
+                        showSnackbar(snackbarHostState, "Error al guardar el equipo: ${result.exception.message}")
+                    }
+                }
             }
-            navigator.navigate("/home")
+
         })
 
         Spacer(modifier = Modifier.height(16.dp))
@@ -40,6 +56,7 @@ fun EquipoScreen(viewModel: EquipoViewModel, navigator: Navigator) {
             color = "mantum"
         )
     }
+    SnackbarHost(hostState = snackbarHostState)
 }
 
 
@@ -47,21 +64,37 @@ fun EquipoScreen(viewModel: EquipoViewModel, navigator: Navigator) {
 fun EquipoForm(onSave: (Equipo) -> Unit) {
     val jsonSchema = BasicKomino.basicKomino()
     val formSchema = parseJsonSchema(jsonSchema)
-    var fieldValues = mapOf<String, String>()
+    val fieldValues = remember { mutableStateOf(mapOf<String, String>()) }
+    val errorMessage = remember { mutableStateOf("") }
+    val Color = getColorTheme()
+
 
     KominoForm(schema = formSchema, onFieldValuesChange = { values ->
-        fieldValues = values
+        fieldValues.value = values
     })
 
     GenericButton(
         onClick = {
-            val equipo = mapFieldValuesToEquipo(fieldValues)
-            onSave(equipo)
+            val equipo = mapFieldValuesToEquipo(fieldValues.value)
+            if (validateFields(fieldValues.value)) {
+                onSave(equipo)
+                errorMessage.value = ""
+            } else {
+                errorMessage.value = "Todos los campos deben estar diligenciados"
+            }
         },
         text = "Guardar",
         modifier = Modifier.fillMaxWidth(),
         color = "Success"
     )
+
+    if (errorMessage.value.isNotEmpty()) {
+        Text(
+            text = errorMessage.value,
+            color = Color.danger,
+            modifier = Modifier.padding(top = 8.dp)
+        )
+    }
 }
 
 fun mapFieldValuesToEquipo(fieldValues: Map<String, String>): Equipo {
@@ -73,6 +106,13 @@ fun mapFieldValuesToEquipo(fieldValues: Map<String, String>): Equipo {
         estado = fieldValues["Estado"] == "Activo",
         observaciones = fieldValues["Observaciones"] ?: ""
     )
+}
+suspend fun showSnackbar(snackbarHostState: SnackbarHostState, message: String) {
+    snackbarHostState.showSnackbar(message)
+}
+
+fun validateFields(fieldValues: Map<String, String>): Boolean {
+    return fieldValues.isNotEmpty() && fieldValues.values.all { it.isNotBlank() }
 }
 
 

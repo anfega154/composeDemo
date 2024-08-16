@@ -12,8 +12,13 @@ import kotlinx.coroutines.launch
 
 
 class EquipoViewModel(private val equipoRepository: EquipoRepository) : ViewModel() {
-    var showForm by mutableStateOf(false)
     var equipos by mutableStateOf(listOf<Equipo>())
+
+    sealed class AddEquipoResult {
+        object Success : AddEquipoResult()
+        object NoConnection : AddEquipoResult()
+        data class Error(val exception: Exception) : AddEquipoResult()
+    }
 
     init {
         viewModelScope.launch {
@@ -27,16 +32,18 @@ class EquipoViewModel(private val equipoRepository: EquipoRepository) : ViewMode
         }
     }
 
-    fun addEquipo(equipo: Equipo) {
-        viewModelScope.launch {
-            equipoRepository.addEquipo(equipo)
+    suspend fun addEquipo(equipo: Equipo): AddEquipoResult {
+        return try {
+            val add = equipoRepository.addEquipo(equipo)
             getAllEquipos()
-            showForm = false
+            if (add) {
+                AddEquipoResult.Success
+            } else {
+                AddEquipoResult.NoConnection
+            }
+        } catch (e: Exception) {
+            AddEquipoResult.Error(e)
         }
-    }
-
-    fun toggleShowForm() {
-        showForm = !showForm
     }
 
     fun deleteAllEquipos() {

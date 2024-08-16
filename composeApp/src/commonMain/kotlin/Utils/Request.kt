@@ -18,9 +18,10 @@ import kotlinx.serialization.json.Json
 import io.ktor.http.ContentType
 import io.ktor.http.contentType
 
-private const val BASE_URL = "http://10.0.2.2:8002/api"
+//private const val BASE_URL = "http://10.0.2.2:8000/api"
 //private const val BASE_URL = "http://192.168.0.78/laraveldemo/public/api"
-//private const val BASE_URL = "http://127.0.0.1:8002/api"
+private const val BASE_URL = "http://192.168.4.33/laraveldemo/public/api"
+//private const val BASE_URL = "http://127.0.0.1:8000/api"
 
 class Request (private val httpClient: HttpClient): HttpClientInterface
 {
