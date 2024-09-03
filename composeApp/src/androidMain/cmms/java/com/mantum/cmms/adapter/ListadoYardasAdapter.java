@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.adapter.handler.ListadoYardasHandler;
 import com.mantum.component.Mantum;
 import com.mantum.component.OnValueChange;

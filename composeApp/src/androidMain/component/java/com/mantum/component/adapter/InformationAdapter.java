@@ -27,7 +27,7 @@ import com.mantum.component.OnCall;
 import com.mantum.component.OnDrawable;
 import com.mantum.component.OnInvoke;
 import com.mantum.component.OnSelected;
-import com.mantum.component.R;
+import com.mantum.demo.R;
 import com.mantum.component.adapter.handler.ViewInformationAdapter;
 import com.mantum.component.adapter.handler.ViewInformationChildrenAdapter;
 

@@ -14,7 +14,7 @@ import android.widget.EditText;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.adapter.LecturaAdapter;
 import com.mantum.cmms.entity.Actividad;
 import com.mantum.cmms.entity.Busqueda;

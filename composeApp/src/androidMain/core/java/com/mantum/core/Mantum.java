@@ -25,6 +25,7 @@ import com.mantum.core.exception.ServiceException;
 import com.mantum.core.util.Assert;
 import com.mantum.core.util.Cache;
 import com.mantum.core.util.Online;
+import com.mantum.demo.R;
 
 import java.io.Serializable;
 import java.util.ArrayList;

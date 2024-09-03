@@ -18,7 +18,7 @@ import android.widget.RelativeLayout;
 
 import com.getbase.floatingactionbutton.FloatingActionButton;
 import com.google.zxing.integration.android.IntentIntegrator;
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.activity.BitacoraActivity;
 import com.mantum.cmms.activity.BusquedaActivity;
 import com.mantum.cmms.activity.CaptureActivityPortrait;

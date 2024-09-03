@@ -12,7 +12,7 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
 
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.adapter.onValueChange.CustomOnValueChange;
 import com.mantum.cmms.adapter.handler.ListadoConsumiblesHandler;
 import com.mantum.component.Mantum;

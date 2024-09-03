@@ -3,7 +3,7 @@ package com.mantum.cmms.view;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.entity.Actividad;
 import com.mantum.cmms.entity.Entidad;
 import com.mantum.component.adapter.handler.ViewInformationChildrenAdapter;

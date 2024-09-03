@@ -14,7 +14,7 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.activity.DiligenciarRutaTrabajoActivity;
 import com.mantum.cmms.activity.MovimientoAlmacenActivity;
 import com.mantum.cmms.entity.ListaChequeo;

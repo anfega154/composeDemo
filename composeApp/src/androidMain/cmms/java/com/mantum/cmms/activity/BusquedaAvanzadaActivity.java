@@ -15,7 +15,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.database.Database;
 import com.mantum.cmms.domain.BusquedaAvanzada;
 import com.mantum.cmms.domain.Response;

@@ -19,10 +19,9 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
-import com.futuremind.recyclerviewfastscroll.SectionTitleProvider;
 import com.mantum.component.Mantum;
 import com.mantum.component.OnSelected;
-import com.mantum.component.R;
+import com.mantum.demo.R;
 import com.mantum.component.adapter.handler.ViewTrasladoAdapter;
 
 import java.text.Normalizer;
@@ -30,7 +29,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-public class AlmacenAdapter<T extends ViewTrasladoAdapter<T>> extends Mantum.Adapter<T, AlmacenAdapter.ViewHolder> implements SectionTitleProvider {
+public class AlmacenAdapter<T extends ViewTrasladoAdapter<T>> extends Mantum.Adapter<T, AlmacenAdapter.ViewHolder> {
 
     @SuppressWarnings("WeakerAccess")
     protected boolean summary;
@@ -259,7 +258,6 @@ public class AlmacenAdapter<T extends ViewTrasladoAdapter<T>> extends Mantum.Ada
         return value;
     }
 
-    @Override
     public String getSectionTitle(int position) {
         T value = getItemPosition(position);
         return value != null ? value.getTitle().substring(0, 1) : null;

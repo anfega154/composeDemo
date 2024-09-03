@@ -14,7 +14,7 @@ import androidx.appcompat.widget.SwitchCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.activity.RegistrarFallaActivity;
 import com.mantum.cmms.adapter.FallaAdapter;
 import com.mantum.cmms.entity.Contenedor;

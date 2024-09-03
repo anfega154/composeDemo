@@ -1,5 +1,5 @@
 package com.mantum.cmms.adapter;
-import com.mantum.R;
+import com.mantum.demo.R;
 
 import android.view.LayoutInflater;
 import android.view.View;

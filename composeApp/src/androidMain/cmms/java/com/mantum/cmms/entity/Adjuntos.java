@@ -4,7 +4,7 @@ import android.net.Uri;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.component.adapter.handler.ViewAdapter;
 import com.mantum.component.adapter.handler.ViewGalleryAdapter;
 

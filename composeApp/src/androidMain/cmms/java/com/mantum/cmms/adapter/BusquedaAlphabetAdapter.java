@@ -19,15 +19,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
-import com.futuremind.recyclerviewfastscroll.SectionTitleProvider;
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.adapter.handler.BusquedaHandler;
 import com.mantum.component.Mantum;
 import com.mantum.component.OnSelected;
 
 import java.util.List;
 
-public class BusquedaAlphabetAdapter<T extends BusquedaHandler<T>> extends Mantum.Adapter<T, BusquedaAlphabetAdapter.ViewHolder> implements SectionTitleProvider {
+public class BusquedaAlphabetAdapter<T extends BusquedaHandler<T>> extends Mantum.Adapter<T, BusquedaAlphabetAdapter.ViewHolder>{
 
     protected OnSelected<T> onSelected;
 
@@ -136,13 +135,13 @@ public class BusquedaAlphabetAdapter<T extends BusquedaHandler<T>> extends Mantu
     }
 
     public void showMessageEmpty(@NonNull View view, @StringRes int message, @DrawableRes int icon) {
-        RelativeLayout empty = view.findViewById(com.mantum.component.R.id.empty);
+        RelativeLayout empty = view.findViewById(R.id.empty);
         if (empty != null) {
             empty.setVisibility(isEmpty() ? View.VISIBLE : View.GONE);
         }
 
         if (isEmpty()) {
-            TextView container = view.findViewById(com.mantum.component.R.id.message);
+            TextView container = view.findViewById(R.id.message);
             if (message != 0) {
                 container.setText(view.getContext().getString(message));
             }
@@ -153,7 +152,6 @@ public class BusquedaAlphabetAdapter<T extends BusquedaHandler<T>> extends Mantu
         }
     }
 
-    @Override
     public String getSectionTitle(int position) {
         T value = getItemPosition(position);
         return value != null ? value.getTitle().substring(0, 1) : null;
@@ -184,14 +182,14 @@ public class BusquedaAlphabetAdapter<T extends BusquedaHandler<T>> extends Mantu
 
         public ViewHolder(View itemView) {
             super(itemView);
-            container = itemView.findViewById(com.mantum.component.R.id.container);
-            letter = itemView.findViewById(com.mantum.component.R.id.letter);
-            favorite = itemView.findViewById(com.mantum.component.R.id.favorite);
-            title = itemView.findViewById(com.mantum.component.R.id.title);
-            subtitle = itemView.findViewById(com.mantum.component.R.id.subtitle);
-            summary = itemView.findViewById(com.mantum.component.R.id.summary);
-            separator = itemView.findViewById(com.mantum.component.R.id.separator);
-            icon = itemView.findViewById(com.mantum.component.R.id.icon);
+            container = itemView.findViewById(R.id.container);
+            letter = itemView.findViewById(R.id.letter);
+            favorite = itemView.findViewById(R.id.favorite);
+            title = itemView.findViewById(R.id.title);
+            subtitle = itemView.findViewById(R.id.subtitle);
+            summary = itemView.findViewById(R.id.summary);
+            separator = itemView.findViewById(R.id.separator);
+            icon = itemView.findViewById(R.id.icon);
         }
     }
 }

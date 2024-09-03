@@ -15,7 +15,7 @@ import android.view.ViewGroup;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.activity.BitacoraActivity;
 import com.mantum.cmms.database.Database;
 import com.mantum.cmms.entity.Cuenta;

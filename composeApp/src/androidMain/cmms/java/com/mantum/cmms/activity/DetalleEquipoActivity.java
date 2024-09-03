@@ -20,7 +20,7 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.convert.BusquedaConvert;
 import com.mantum.cmms.database.Database;
 import com.mantum.cmms.domain.Response;
@@ -350,12 +350,12 @@ public class DetalleEquipoActivity extends Mantum.NfcActivity implements OnCompl
                     return false;
                 }
 
-                View form = View.inflate(this, com.mantum.component.R.layout.write_data_nfc, null);
+                View form = View.inflate(this, com.mantum.demo.R.layout.write_data_nfc, null);
 
                 AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
                 alertDialogBuilder.setView(form);
                 alertDialogBuilder.setCancelable(false);
-                alertDialogBuilder.setPositiveButton(com.mantum.component.R.string.cancelar, (dialog, which) -> {
+                alertDialogBuilder.setPositiveButton(com.mantum.demo.R.string.cancelar, (dialog, which) -> {
                     dialog.dismiss();
                 });
                 alertDialog = alertDialogBuilder.show();

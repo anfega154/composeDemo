@@ -36,7 +36,6 @@ import com.google.firebase.messaging.FirebaseMessaging;
 import com.google.gson.Gson;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
-import com.mantum.R;
 import com.mantum.cmms.database.Database;
 import com.mantum.cmms.entity.Busqueda;
 import com.mantum.cmms.entity.Certificado;
@@ -83,6 +82,7 @@ import io.reactivex.internal.functions.Functions;
 import io.reactivex.schedulers.Schedulers;
 import io.realm.RealmResults;
 import com.mantum.cmms.activity.ValidarInventarioActivoActivity;
+import com.mantum.demo.R;
 
 import static com.mantum.cmms.entity.Transaccion.MODULO_ESTADO_USUARIO;
 import static com.mantum.cmms.service.ATNotificationService.DISPONIBLE;

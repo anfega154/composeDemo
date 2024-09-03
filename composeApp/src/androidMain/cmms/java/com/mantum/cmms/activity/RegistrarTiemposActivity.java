@@ -1,14 +1,17 @@
 package com.mantum.cmms.activity;
 
 import android.os.Bundle;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+
 import com.google.android.material.snackbar.Snackbar;
+
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.database.Database;
 import com.mantum.cmms.domain.RegistrarTiempoConsolidado;
 import com.mantum.cmms.fragment.RegistrarTiemposFragment;
@@ -116,7 +119,8 @@ public class RegistrarTiemposActivity extends TransaccionHelper.Dialog implement
     }
 
     @Override
-    public void onComplete(@NonNull String name) {}
+    public void onComplete(@NonNull String name) {
+    }
 
     private void register() {
         if (registrarTiemposFragment == null) {
@@ -159,7 +163,8 @@ public class RegistrarTiemposActivity extends TransaccionHelper.Dialog implement
 
         compositeDisposable.add(transaccionService.save(transaccion)
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(self -> { }, this::onError, this::onComplete));
+                .subscribe(self -> {
+                }, this::onError, this::onComplete));
     }
 
     private void onComplete() {

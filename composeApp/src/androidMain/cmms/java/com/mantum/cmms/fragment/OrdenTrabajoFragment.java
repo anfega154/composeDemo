@@ -25,7 +25,7 @@ import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.activity.ActualizarContactoActivity;
 import com.mantum.cmms.activity.BitacoraActivity;
 import com.mantum.cmms.activity.DescargarRutaTrabajoActivity;

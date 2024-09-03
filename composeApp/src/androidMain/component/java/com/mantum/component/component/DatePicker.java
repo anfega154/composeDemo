@@ -10,7 +10,7 @@ import androidx.annotation.Nullable;
 import android.util.Log;
 import android.widget.EditText;
 
-import com.mantum.component.R;
+import com.mantum.demo.R;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;

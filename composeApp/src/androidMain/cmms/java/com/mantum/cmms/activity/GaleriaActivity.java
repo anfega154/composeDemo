@@ -30,7 +30,7 @@ import android.widget.TextView;
 import com.getbase.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.crashlytics.FirebaseCrashlytics;
 import com.google.gson.GsonBuilder;
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.database.Database;
 import com.mantum.cmms.domain.Archivo;
 import com.mantum.cmms.domain.Coordenada;

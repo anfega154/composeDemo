@@ -26,7 +26,7 @@ import androidx.core.content.FileProvider;
 import android.util.Log;
 import android.view.View;
 
-import com.mantum.component.R;
+import com.mantum.demo.R;
 
 import java.io.File;
 import java.io.FileOutputStream;

@@ -14,7 +14,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.entity.RecursoAdicional;
 import com.mantum.component.Mantum;
 import com.mantum.component.OnCompleteListener;

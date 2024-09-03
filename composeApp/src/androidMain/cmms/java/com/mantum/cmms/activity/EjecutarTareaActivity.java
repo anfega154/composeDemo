@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.adapter.TareaAdapter;
 import com.mantum.cmms.database.Database;
 import com.mantum.cmms.entity.Cuenta;

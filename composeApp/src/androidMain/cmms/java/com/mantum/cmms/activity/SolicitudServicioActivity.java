@@ -19,7 +19,7 @@ import android.widget.TextView;
 
 import com.getbase.floatingactionbutton.FloatingActionButton;
 import com.google.gson.Gson;
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.entity.Cuenta;
 import com.mantum.cmms.entity.Transaccion;
 import com.mantum.cmms.entity.parameter.Area;

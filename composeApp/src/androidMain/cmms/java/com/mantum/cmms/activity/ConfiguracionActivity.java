@@ -7,7 +7,7 @@ import android.preference.PreferenceFragment;
 import androidx.annotation.Nullable;
 import android.view.MenuItem;
 
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.entity.parameter.UserParameter;
 import com.mantum.cmms.entity.parameter.UserPermission;
 import com.mantum.cmms.service.SocketService;

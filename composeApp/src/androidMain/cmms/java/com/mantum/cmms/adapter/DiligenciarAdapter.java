@@ -16,7 +16,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.domain.Diligenciar;
 import com.mantum.cmms.entity.Actividad;
 import com.mantum.cmms.entity.Entidad;

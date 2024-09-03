@@ -3,7 +3,7 @@ package com.mantum.cmms.entity;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.component.adapter.handler.ViewGroupAdapter;
 
 import java.util.List;

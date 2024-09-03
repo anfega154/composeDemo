@@ -14,7 +14,7 @@ import androidx.annotation.Nullable;
 
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.database.Database;
 import com.mantum.cmms.domain.Spinner;
 import com.mantum.cmms.entity.Contenedor;

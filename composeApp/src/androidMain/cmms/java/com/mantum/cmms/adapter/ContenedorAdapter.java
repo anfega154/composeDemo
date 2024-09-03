@@ -12,7 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.component.Mantum;
 import com.mantum.component.OnSelected;
 import com.mantum.component.adapter.handler.ViewAdapter;

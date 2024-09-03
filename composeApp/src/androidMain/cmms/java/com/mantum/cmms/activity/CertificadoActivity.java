@@ -20,7 +20,7 @@ import android.util.Log;
 import com.google.gson.Gson;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.domain.QR;
 import com.mantum.cmms.entity.Certificado;
 import com.mantum.cmms.net.CertificateManager;

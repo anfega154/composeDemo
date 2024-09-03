@@ -10,7 +10,7 @@ import android.util.SparseArray;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.database.Database;
 import com.mantum.cmms.domain.Comentar;
 import com.mantum.cmms.entity.Cuenta;
@@ -122,19 +122,16 @@ public class SolicitudServicioComentarActivity extends Mantum.Activity implement
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem menuItem) {
-        switch (menuItem.getItemId()) {
-            case android.R.id.home:
-                super.onBackPressed();
-                break;
-
-            case R.id.action_done:
-                register();
-                break;
-        }
-
-        return super.onOptionsItemSelected(menuItem);
+public boolean onOptionsItemSelected(MenuItem menuItem) {
+    int itemId = menuItem.getItemId();
+    if (itemId == android.R.id.home) {
+        onBackPressed();
+    } else if (itemId == R.id.action_done) {
+        register();
     }
+
+    return super.onOptionsItemSelected(menuItem);
+}
 
     @Override
     protected void onDestroy() {

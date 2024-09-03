@@ -27,7 +27,7 @@ import com.google.android.gms.location.LocationResult;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.location.LocationSettingsRequest;
 import com.google.android.gms.location.SettingsClient;
-import com.mantum.component.R;
+import com.mantum.demo.R;
 import com.mantum.component.service.handler.OnLocationListener;
 
 import static android.Manifest.permission.ACCESS_COARSE_LOCATION;

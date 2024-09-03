@@ -18,7 +18,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.database.Database;
 import com.mantum.cmms.fragment.SincronizarErrorFragment;
 import com.mantum.cmms.fragment.SincronizarExitoFragment;

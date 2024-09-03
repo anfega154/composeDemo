@@ -10,11 +10,28 @@
     <color name="green">#77cc00</color>
     <color name="yellow">#ffec1a</color>
     <color name="yellowDark">#D5C300</color>
-    <color name="blue">#3488ff</color>
     <color name="orange">#FF5600</color>
     <color name="black">#333333</color>
     <color name="black_transparent">#B2000000</color>
     <color name="colorAccentPrimary">#FFFFFF</color>
     <color name="colorAccentPrimaryDark">#B2000000</color>
     <color name="transparent">#80000000</color>
+    <color name="fasts_croll_handle">#FF5600</color>
+    <color name="fasts_croll_bubble">#e64d00</color>
+    <color name="timeline_color">#FF5600</color>
+    <color name="list_color_accent">#FF5600</color>
+    <color name="background_fullscreen_view">#000</color>
+    <color name="background_gray">#707070</color>
+    <color name="background_white">#FFF</color>
+    <color name="negative_event">#ff0040</color>
+    <color name="positive_event">#33cc00</color>
+    <color name="gray">#cecece</color>
+    <color name="gray_2">#eee</color>
+    <color name="gray_3">#fafafa</color>
+    <color name="gray_4">#d1d1d1</color>
+    <color name="blue">#0000ff</color>
+    <color name="light_blue">#1468B3</color>
+    <color name="colorPrimary_2">#65FF5600</color>
+    <color name="colorPrimary_3">#7CF38C6D</color>
+
 </resources>

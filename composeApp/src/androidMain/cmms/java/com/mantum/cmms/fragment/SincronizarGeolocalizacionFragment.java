@@ -7,7 +7,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 
-import com.mantum.R;
+import com.mantum.demo.R;
 
 public class SincronizarGeolocalizacionFragment extends SincronizarFragment {
 

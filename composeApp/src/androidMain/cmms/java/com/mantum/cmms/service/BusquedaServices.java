@@ -10,7 +10,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonObject;
 import com.google.gson.reflect.TypeToken;
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.convert.BusquedaConvert;
 import com.mantum.cmms.database.Database;
 import com.mantum.cmms.domain.BusquedaAvanzada;

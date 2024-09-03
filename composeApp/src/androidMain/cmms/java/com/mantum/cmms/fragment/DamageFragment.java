@@ -13,7 +13,7 @@ import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.activity.RegisterDamageActivity;
 import com.mantum.cmms.adapter.DamageAdapter;
 import com.mantum.cmms.entity.Contenedor;

@@ -27,7 +27,7 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.adapter.BusquedaAlphabetAdapter;
 import com.mantum.cmms.convert.BusquedaConvert;
 import com.mantum.cmms.database.Database;
@@ -548,17 +548,13 @@ public class BusquedaActivity extends Mantum.NfcActivity implements SearchView.O
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case android.R.id.home:
-                backActivity();
-                break;
-
-            case R.id.filtro:
-                Intent intent = new Intent(this, BusquedaAvanzadaActivity.class);
-                startActivity(intent);
-                break;
+        int itemId = item.getItemId();
+        if (itemId == android.R.id.home) {
+            backActivity();
+        } else if (itemId == R.id.filtro) {
+            Intent intent = new Intent(this, BusquedaAvanzadaActivity.class);
+            startActivity(intent);
         }
-
         return super.onOptionsItemSelected(item);
     }
 
@@ -622,7 +618,7 @@ public class BusquedaActivity extends Mantum.NfcActivity implements SearchView.O
             busquedaServices.cancel();
             progressBar.setVisibility(View.VISIBLE);
             String entitytypes = getCheckedsEntitytypes();
-            compositeDisposable.add(busquedaServices.buscar(id, newText,entitytypes)
+            compositeDisposable.add(busquedaServices.buscar(id, newText, entitytypes)
                     .observeOn(AndroidSchedulers.mainThread())
                     .subscribe(this::onNext, this::onError, this::onComplete));
 
@@ -1328,45 +1324,45 @@ public class BusquedaActivity extends Mantum.NfcActivity implements SearchView.O
         return "";
     }
 
-    private String getCheckedsEntitytypes(){
+    private String getCheckedsEntitytypes() {
         StringBuilder resultado = new StringBuilder();
-        if (checkBusquedaOrdenTrabajo.isChecked()){
+        if (checkBusquedaOrdenTrabajo.isChecked()) {
             resultado.append("OT,");
         }
-        if (checkBusquedaSolicitudServicio.isChecked()){
+        if (checkBusquedaSolicitudServicio.isChecked()) {
             resultado.append("SS,");
         }
-        if (checkBusquedaRutaTrabajo.isChecked()){
+        if (checkBusquedaRutaTrabajo.isChecked()) {
             resultado.append("RT,");
         }
-        if (checkBusquedaEquipo.isChecked()){
+        if (checkBusquedaEquipo.isChecked()) {
             resultado.append("Equipo,");
         }
-        if (checkBusquedaInstalacionLocativa.isChecked()){
+        if (checkBusquedaInstalacionLocativa.isChecked()) {
             resultado.append("InstalacionLocativa,");
         }
-        if (checkBusquedaInstalacionProceso.isChecked()){
+        if (checkBusquedaInstalacionProceso.isChecked()) {
             resultado.append("InstalacionProceso,");
         }
-        if (checkBusquedaGrupoVariable.isChecked()){
+        if (checkBusquedaGrupoVariable.isChecked()) {
             resultado.append("GrupoVariable,");
         }
-        if (checkBusquedaPesonal.isChecked()){
+        if (checkBusquedaPesonal.isChecked()) {
             resultado.append("Personal,");
         }
-        if (checkBusquedaPieza.isChecked()){
+        if (checkBusquedaPieza.isChecked()) {
             resultado.append("Pieza,");
         }
-        if (checkBusquedaComponente.isChecked()){
+        if (checkBusquedaComponente.isChecked()) {
             resultado.append("Componente,");
         }
-        if (checkBusquedaRecurso.isChecked()){
+        if (checkBusquedaRecurso.isChecked()) {
             resultado.append("Recurso,");
         }
-        if (checkBusquedaFamilia.isChecked()){
+        if (checkBusquedaFamilia.isChecked()) {
             resultado.append("Familia,");
         }
-        if (checkBusquedaFabricante.isChecked()){
+        if (checkBusquedaFabricante.isChecked()) {
             resultado.append("Fabricante,");
         }
         if (resultado.length() > 0) {
@@ -1374,6 +1370,6 @@ public class BusquedaActivity extends Mantum.NfcActivity implements SearchView.O
         }
         String entitytypes = resultado.toString();
 
-        return  entitytypes;
+        return entitytypes;
     }
 }

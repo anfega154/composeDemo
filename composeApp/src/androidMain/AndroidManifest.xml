@@ -1,28 +1,537 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.mantum.demo">
 
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <queries>
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE" />
+        </intent>
+    </queries>
+
+    <uses-feature
+        android:name="android.hardware.nfc"
+        android:required="false"
+        tools:ignore="WrongManifestParent" />
+
+    <uses-feature
+        android:name="android.hardware.location.gps"
+        android:required="false"
+        tools:ignore="WrongManifestParent" />
+
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false"
+        tools:ignore="WrongManifestParent" />
 
     <application
         android:name=".MainAplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:usesCleartextTraffic="true"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@android:style/Theme.Material.Light.NoActionBar">
+        android:theme="@android:style/Theme.Material.Light.NoActionBar"
+        android:usesCleartextTraffic="true">
         <activity
+            android:name="com.mantum.cmms.activity.AccesoActivity"
             android:exported="true"
-            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden|mnc|colorMode|density|fontScale|fontWeightAdjustment|keyboard|layoutDirection|locale|mcc|navigation|smallestScreenSize|touchscreen|uiMode"
-            android:name=".MainActivity">
+            android:label="@string/app_name"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+        <activity
+            android:name="com.mantum.cmms.activity.DescargarInventariosActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.mantum.cmms.activity.MostrarIngresoActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.mantum.cmms.activity.ValidarIngresoActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.mantum.cmms.activity.ListaPersonalActivity"
+            android:exported="false" />
+
+        <activity
+            android:name="com.mantum.cmms.activity.ValidarInventarioActivoActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.mantum.cmms.activity.InventarioActivosActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.mantum.cmms.activity.CambioEstadoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name="com.mantum.cmms.activity.EjecutarTareaActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name="com.mantum.cmms.activity.HistoricoParoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name="com.mantum.cmms.activity.AsignarParoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name="com.mantum.cmms.activity.DescargarRecursosActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name="com.mantum.cmms.activity.MovimientoAlmacenActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name="com.mantum.cmms.activity.FormularioEquipoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name="com.mantum.cmms.activity.BusquedaVariablesEquipoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name="com.mantum.cmms.activity.BusquedaVariablesFallaActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name="com.mantum.cmms.activity.FormularioFallaOTActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name="com.mantum.cmms.activity.FormularioFallaEquipoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name="com.mantum.cmms.activity.FormularioFallaInstalacionLocativaActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name="com.mantum.cmms.activity.EnviarImagenesCorreoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:enabled="true"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <service
+            android:name="com.mantum.cmms.service.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.mantum.cmms.service.MyFirebaseInstanceIDService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name="com.mantum.cmms.activity.CertificadoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.mantum.cmms.activity.BridgeActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.mantum.cmms.activity.CaptureActivityPortrait"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified"
+            android:stateNotNeeded="true"
+            android:theme="@style/zxing_CaptureTheme"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.mantum.cmms.activity.CaptureTabletActivityPortrait"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="landscape"
+            android:stateNotNeeded="true"
+            android:theme="@style/zxing_CaptureTheme"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+
+        <provider
+            android:name="com.mantum.cmms.provider.RecursoProvider"
+            android:authorities="${applicationId}.cmms.provider.RecursoProvider"
+            android:enabled="true"
+            android:exported="false" />
+
+        <activity
+            android:name="com.mantum.cmms.activity.RecursosActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="unspecified">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/recursos_searchable" />
+            <meta-data
+                android:name="android.app.default_searchable"
+                android:value="com.mantum.cmms.activity.RecursoActivity" />
+        </activity>
+        <activity
+            android:name="com.mantum.cmms.activity.HomeActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.mantum.cmms.activity.BusquedaActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name="com.mantum.cmms.activity.BusquedaAvanzadaActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name="com.mantum.cmms.activity.BusquedaAvanzadaResultadoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name="com.mantum.cmms.activity.LecturaActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name="com.mantum.cmms.activity.BitacoraActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.mantum.cmms.activity.SolicitudServicioActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.mantum.cmms.activity.EvaluarActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.mantum.cmms.activity.SolicitudServicioComentarActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.mantum.cmms.activity.RecibirOrdenTrabajoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.mantum.cmms.activity.FirmaActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name="com.mantum.cmms.activity.RecibirSolicitudServicioActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.mantum.cmms.activity.DiligenciarRutaTrabajoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.mantum.cmms.activity.DiligenciarListaChequeoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.mantum.cmms.activity.ConfiguracionActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name="com.mantum.cmms.activity.GaleriaActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name="com.mantum.cmms.activity.MochilaActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name="com.mantum.cmms.activity.TransferenciaActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name="com.mantum.cmms.activity.DescargarEntidadesActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name="com.mantum.cmms.activity.DescargarRutaTrabajoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name="com.mantum.cmms.activity.TerminarOrdenTrabajoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name="com.mantum.cmms.activity.AceptarTransferenciaActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name="com.mantum.cmms.activity.DetalleRutaTrabajoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.mantum.cmms.activity.DetalleListaChequeoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.mantum.cmms.activity.DetalleOrdenTrabajoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.mantum.cmms.activity.TransaccionActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.mantum.cmms.activity.DetalleSolicitudServicioActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.mantum.cmms.activity.DetallePendienteActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.mantum.cmms.activity.TransaccionDetalleActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.mantum.cmms.activity.AutorizacionAccesoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name="com.mantum.cmms.activity.DetalleAutorizacionActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name="com.mantum.cmms.activity.EstadoInicialActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name="com.mantum.cmms.activity.PendienteMantenimientoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name="com.mantum.cmms.activity.InformeTecnicoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name="com.mantum.cmms.activity.RecursosAdicionalesActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name="com.mantum.cmms.activity.RecursosAdicionalesBuscarActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified"
+            android:theme="@style/AppAccentTheme" />
+        <activity
+            android:name="com.mantum.cmms.activity.RegistrarTiemposActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name="com.mantum.cmms.activity.InspeccionElectricaActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name="com.mantum.cmms.activity.ActualizarContactoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name="com.mantum.cmms.activity.RecorridoPlantaExternaActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name="com.mantum.cmms.activity.InstalacionPlantaExternaActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name="com.mantum.cmms.activity.MiAutorizacionAccesoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.mantum.cmms.activity.ListaChequeoEntidadActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name="com.mantum.cmms.activity.DetalleActividadMantenimientoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.mantum.cmms.activity.DetalleEquipoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.mantum.cmms.activity.DetalleInstalacionLocativaActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.mantum.cmms.activity.EventoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name="com.mantum.cmms.activity.DevolucionActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name="com.mantum.cmms.activity.FirmaxEntidadActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name="com.mantum.cmms.activity.PersonalAutocompleteActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name="com.mantum.cmms.activity.EntidadesListaChequeoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name="com.mantum.cmms.activity.PersonalListaChequeoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name="com.mantum.cmms.activity.ProveedorAutocompleteActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name="com.mantum.cmms.activity.RegistrarFallaActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name="com.mantum.cmms.activity.RegisterDamageActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name="com.mantum.cmms.activity.InspeccionManagerActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name="com.mantum.cmms.activity.BusquedaInspeccionManagerActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name="com.mantum.cmms.activity.ClienteAutocompleteActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name="com.mantum.cmms.activity.AlmacenActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name="com.mantum.cmms.activity.TrasladoAlmacenActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name="com.mantum.cmms.activity.MovimientoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name="com.mantum.cmms.activity.RecorridoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.mantum.component.activity.FullScreenView"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name="com.mantum.cmms.activity.DetalleFallaActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.mantum.cmms.activity.DetalleTareaActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.mantum.cmms.activity.GestionFallaActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name="com.mantum.component.activity.DrawingView"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified" />
+        <activity
+            android:name="com.mantum.cmms.activity.InspeccionRegistroPTIActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.mantum.cmms.activity.InspeccionRegistroEIRActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="unspecified"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.1" />
+        <meta-data
+            android:name="Mantum.Authentication.Token"
+            android:value="_cmms_" />
+
+        <service android:name="com.mantum.cmms.task.TransaccionTask" />
+        <service android:name="com.mantum.cmms.task.AnsCounterTask" />
+        <service
+            android:name="com.mantum.cmms.task.GeolocalizacionTask"
+            android:foregroundServiceType="location" />
+
+        <receiver
+            android:name="com.mantum.cmms.broadcast.ActividadTecnicoBroadcast"
+            android:enabled="true"
+            android:exported="false" />
+
+
     </application>
 
 </manifest>

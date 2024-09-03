@@ -9,7 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.domain.RegistrarTiempoConsolidado;
 import com.mantum.cmms.entity.OrdenTrabajo;
 import com.mantum.component.Mantum;

@@ -29,7 +29,7 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.signature.StringSignature;
 import com.mantum.component.Mantum;
-import com.mantum.component.R;
+import com.mantum.demo.R;
 import com.mantum.component.adapter.CategoryAdapter;
 import com.mantum.component.adapter.FormatoAdapter;
 import com.mantum.component.view.TouchImageView;
@@ -95,7 +95,7 @@ public class FullScreenView extends Mantum.Activity {
             if (formatos != null && !formatos.isEmpty()) {
                 FormatoAdapter formatoDefault = new FormatoAdapter();
                 formatoDefault.setId((long) -1);
-                formatoDefault.setFormato(getString(com.mantum.component.R.string.formato_select_category));
+                formatoDefault.setFormato(getString(com.mantum.demo.R.string.formato_select_category));
                 formatos.add(0, formatoDefault);
             }
 
@@ -201,7 +201,7 @@ public class FullScreenView extends Mantum.Activity {
 
                 CategoryAdapter categoryDefault = new CategoryAdapter();
                 categoryDefault.setId((long) -1);
-                categoryDefault.setNombre(getString(com.mantum.component.R.string.category_select));
+                categoryDefault.setNombre(getString(com.mantum.demo.R.string.category_select));
 
                 ArrayAdapter<FormatoAdapter> spinnerAdapter = new ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, formatos);
                 formatoSpinner.setAdapter(spinnerAdapter);
@@ -241,7 +241,7 @@ public class FullScreenView extends Mantum.Activity {
 
                 CategoryAdapter categoryDefault = new CategoryAdapter();
                 categoryDefault.setId((long) -1);
-                categoryDefault.setNombre(getString(com.mantum.component.R.string.category_select));
+                categoryDefault.setNombre(getString(com.mantum.demo.R.string.category_select));
 
                 List<CategoryAdapter> filteredCategories = new ArrayList<>(allCategories);
                 filteredCategories.add(0, categoryDefault);

@@ -53,7 +53,8 @@ import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
-import com.futuremind.recyclerviewfastscroll.FastScroller;
+import com.mantum.component.util.FastScroller;
+import com.mantum.demo.R;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonObject;
@@ -745,14 +746,13 @@ public abstract class Mantum {
             itemAnimator.setRemoveDuration(500);
             recyclerView.setItemAnimator(itemAnimator);
 
-            FastScroller fastScroller = view.findViewById(R.id.fastscroll);
+            FastScroller fastScroller = view.findViewById(R.id.fastscroll_container);
             if (fastScroller != null) {
                 fastScroller.setRecyclerView(recyclerView);
             }
 
             return recyclerView;
         }
-
         public RecyclerView startAdapter(@NonNull View view, @NonNull RecyclerView.LayoutManager layoutManager) {
             RecyclerView recyclerView = view.findViewById(R.id.recycler_view);
             recyclerView.setLayoutManager(layoutManager);

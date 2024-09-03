@@ -19,7 +19,7 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.google.gson.Gson;
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.activity.BitacoraActivity;
 import com.mantum.cmms.activity.CambioEstadoActivity;
 import com.mantum.cmms.activity.DiligenciarRutaTrabajoActivity;
@@ -74,7 +74,7 @@ public abstract class SincronizarFragment extends Mantum.Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
-        View view = inflater.inflate(com.mantum.component.R.layout.information_layout_view,
+        View view = inflater.inflate(com.mantum.demo.R.layout.information_layout_view,
                 container, false);
 
         database = new Database(view.getContext());

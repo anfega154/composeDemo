@@ -19,7 +19,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.database.Database;
 import com.mantum.cmms.domain.Autorizacion;
 import com.mantum.cmms.domain.Response;

@@ -16,7 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.adapter.ParoAdapter;
 import com.mantum.cmms.adapter.onValueChange.ParoOnValueChange;
 import com.mantum.cmms.database.Database;

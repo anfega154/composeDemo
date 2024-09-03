@@ -19,7 +19,7 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.activity.BridgeActivity;
 import com.mantum.cmms.entity.Actividad;
 import com.mantum.cmms.entity.Entidad;

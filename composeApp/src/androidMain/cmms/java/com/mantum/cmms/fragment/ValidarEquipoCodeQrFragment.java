@@ -14,7 +14,7 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 
 import com.google.android.material.textfield.TextInputLayout;
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.activity.ValidarInventarioActivoActivity;
 import com.mantum.cmms.domain.RequestValidarEquipo;
 

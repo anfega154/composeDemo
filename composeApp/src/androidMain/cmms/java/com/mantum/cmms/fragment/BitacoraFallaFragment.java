@@ -25,7 +25,7 @@ import android.widget.TextView;
 import com.getbase.floatingactionbutton.FloatingActionButton;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.activity.CaptureActivityPortrait;
 import com.mantum.cmms.activity.GaleriaActivity;
 import com.mantum.cmms.adapter.ListadoConsumiblesAdapter;

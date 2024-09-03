@@ -6,7 +6,7 @@ import com.google.android.material.textfield.TextInputEditText;
 import android.util.Log;
 import android.view.MenuItem;
 
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.view.AutorizacionView;
 import com.mantum.component.Mantum;
 

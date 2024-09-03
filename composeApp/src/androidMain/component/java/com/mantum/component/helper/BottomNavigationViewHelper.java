@@ -3,7 +3,7 @@ package com.mantum.component.helper;
 import android.content.Context;
 import com.google.android.material.bottomnavigation.BottomNavigationMenuView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.mantum.component.R;
+import com.mantum.demo.R;
 
 import android.util.DisplayMetrics;
 import android.util.TypedValue;

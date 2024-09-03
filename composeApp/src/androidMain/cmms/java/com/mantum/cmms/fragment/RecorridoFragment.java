@@ -31,7 +31,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.google.zxing.integration.android.IntentIntegrator;
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.activity.BitacoraActivity;
 import com.mantum.cmms.activity.CaptureActivityPortrait;
 import com.mantum.cmms.activity.DescargarRutaTrabajoActivity;

@@ -12,7 +12,7 @@ import android.util.Log;
 
 import androidx.core.content.FileProvider;
 
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.entity.Cuenta;
 import com.mantum.cmms.entity.Transaccion;
 import com.mantum.component.Mantum;

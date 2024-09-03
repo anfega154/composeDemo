@@ -15,7 +15,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.getbase.floatingactionbutton.FloatingActionButton;
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.activity.MovimientoActivity;
 import com.mantum.cmms.activity.MovimientoAlmacenActivity;
 import com.mantum.cmms.entity.OrdenTrabajo;

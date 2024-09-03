@@ -15,7 +15,7 @@ import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.database.Database;
 import com.mantum.cmms.domain.Response;
 import com.mantum.cmms.entity.Cliente;

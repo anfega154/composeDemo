@@ -2,19 +2,23 @@ package com.mantum.cmms.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.tabs.TabLayout;
+
 import androidx.viewpager.widget.ViewPager;
 import androidx.appcompat.widget.Toolbar;
+
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ProgressBar;
 
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.database.Database;
 import com.mantum.cmms.fragment.ImagenesFragment;
 import com.mantum.cmms.fragment.PendienteDetalleFragment;
@@ -109,10 +113,12 @@ public class DetallePendienteActivity extends Mantum.Activity
                 }
 
                 @Override
-                public void onTabUnselected(TabLayout.Tab tab) {}
+                public void onTabUnselected(TabLayout.Tab tab) {
+                }
 
                 @Override
-                public void onTabReselected(TabLayout.Tab tab) {}
+                public void onTabReselected(TabLayout.Tab tab) {
+                }
 
             });
 

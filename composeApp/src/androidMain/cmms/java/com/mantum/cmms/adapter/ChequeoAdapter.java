@@ -11,7 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.domain.Chequeo;
 import com.mantum.component.Mantum;
 

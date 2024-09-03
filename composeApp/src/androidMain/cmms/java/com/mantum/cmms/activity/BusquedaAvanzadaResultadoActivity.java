@@ -16,7 +16,7 @@ import android.widget.LinearLayout;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.adapter.BusquedaAvanzadaResultadoAdapter;
 import com.mantum.cmms.convert.BusquedaConvert;
 import com.mantum.cmms.database.Database;

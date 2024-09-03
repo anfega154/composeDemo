@@ -27,4 +27,25 @@
     <dimen name="floating_action_button">16dp</dimen>
     <dimen name="bagge_1">10dp</dimen>
     <dimen name="bar_states">6dp</dimen>
+
+
+    <integer name="medium_size">10</integer>
+    <dimen name="list_padding_top">8dp</dimen>
+    <dimen name="list_padding_horizontal">8dp</dimen>
+    <dimen name="list_margin_horizontal">5dp</dimen>
+    <dimen name="list_icon">24dp</dimen>
+    <dimen name="list_icon_text">22sp</dimen>
+    <dimen name="list_icon_width">34dp</dimen>
+    <dimen name="list_title">16sp</dimen>
+    <dimen name="list_subtitle">14sp</dimen>
+    <dimen name="list_separator">1dp</dimen>
+    <dimen name="card_horizontal">16dp</dimen>
+    <dimen name="card_vertical">16dp</dimen>
+    <dimen name="separate1">22dp</dimen>
+    <dimen name="size_1">10dp</dimen>
+    <dimen name="size_2">45dp</dimen>
+    <dimen name="size_3">50dp</dimen>
+    <dimen name="size_4">18dp</dimen>
+    <dimen name="size_5">35dp</dimen>
+    <dimen name="font_size_1">10sp</dimen>
 </resources>

@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.mantum.R;
+import com.mantum.demo.R;
 
 public class SincronizarPendienteFragment extends SincronizarFragment {
 

@@ -10,7 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.adapter.SelectorPersonalListaChequeoAdapter;
 import com.mantum.cmms.entity.PersonalListaChequeo;
 import com.mantum.component.Mantum;
@@ -30,7 +30,7 @@ public class PersonaListaChequeoFragment extends Mantum.Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
-        View view = inflater.inflate(com.mantum.component.R.layout.simple_layout_view,
+        View view = inflater.inflate(com.mantum.demo.R.layout.simple_layout_view,
                 container, false);
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(view.getContext());

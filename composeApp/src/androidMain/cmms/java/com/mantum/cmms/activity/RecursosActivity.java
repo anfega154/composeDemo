@@ -24,7 +24,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.database.Database;
 import com.mantum.cmms.domain.Response;
 import com.mantum.cmms.helper.RecursoHelper;

@@ -11,7 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.entity.Tarea;
 import com.mantum.component.Mantum;
 import com.mantum.component.OnCompleteListener;

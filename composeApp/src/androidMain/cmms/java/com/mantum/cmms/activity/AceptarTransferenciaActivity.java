@@ -23,7 +23,7 @@ import android.widget.TextView;
 import com.getbase.floatingactionbutton.FloatingActionButton;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.adapter.ActivoAdapter;
 import com.mantum.cmms.database.Database;
 import com.mantum.cmms.domain.Transferencia;

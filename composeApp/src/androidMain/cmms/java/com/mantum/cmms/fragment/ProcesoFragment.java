@@ -12,7 +12,7 @@ import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.entity.Proceso;
 import com.mantum.component.Mantum;
 import com.mantum.component.OnCompleteListener;
@@ -33,7 +33,7 @@ public class ProcesoFragment extends Mantum.Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
-        View view = inflater.inflate(com.mantum.component.R.layout.timeline_layout_view,
+        View view = inflater.inflate(com.mantum.demo.R.layout.timeline_layout_view,
                 container, false);
 
         timeLineAdapter = new TimeLineAdapter<>(view.getContext());

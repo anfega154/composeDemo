@@ -23,7 +23,7 @@ import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 
 import com.getbase.floatingactionbutton.FloatingActionButton;
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.activity.BitacoraActivity;
 import com.mantum.cmms.activity.SolicitudServicioComentarActivity;
 import com.mantum.cmms.activity.DetalleSolicitudServicioActivity;

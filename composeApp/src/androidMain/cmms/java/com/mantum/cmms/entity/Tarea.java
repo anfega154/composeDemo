@@ -4,7 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.google.gson.annotations.SerializedName;
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.adapter.handler.TareaHandler;
 import com.mantum.component.adapter.handler.ViewAdapter;
 

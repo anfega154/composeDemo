@@ -6,7 +6,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.database.Database;
 import com.mantum.cmms.entity.Cuenta;
 import com.mantum.cmms.fragment.FormularioEquipoFragment;

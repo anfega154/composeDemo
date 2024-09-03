@@ -20,11 +20,10 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.futuremind.recyclerviewfastscroll.SectionTitleProvider;
 import com.mantum.component.Mantum;
 import com.mantum.component.OnCall;
 import com.mantum.component.OnValueChange;
-import com.mantum.component.R;
+import com.mantum.demo.R;
 import com.mantum.component.adapter.handler.ViewTrasladoAdapter;
 
 import java.text.Normalizer;
@@ -32,8 +31,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-public class ItemsAlmacenAdapter<T extends ViewTrasladoAdapter<T>> extends Mantum.Adapter<T, ItemsAlmacenAdapter.ViewHolder>
-        implements SectionTitleProvider {
+public class ItemsAlmacenAdapter<T extends ViewTrasladoAdapter<T>> extends Mantum.Adapter<T, ItemsAlmacenAdapter.ViewHolder> {
 
     @SuppressWarnings("WeakerAccess")
     protected boolean summary;
@@ -236,7 +234,6 @@ public class ItemsAlmacenAdapter<T extends ViewTrasladoAdapter<T>> extends Mantu
         return value;
     }
 
-    @Override
     public String getSectionTitle(int position) {
         T value = getItemPosition(position);
         return value != null ? value.getTitle().substring(0, 1) : null;

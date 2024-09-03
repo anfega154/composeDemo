@@ -12,7 +12,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.adapter.handler.CentroCostoHandler;
 import com.mantum.component.Mantum;
 import com.mantum.component.OnValueChange;

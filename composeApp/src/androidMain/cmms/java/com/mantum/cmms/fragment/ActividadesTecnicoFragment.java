@@ -28,7 +28,7 @@ import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.activity.DetalleOrdenTrabajoActivity;
 import com.mantum.cmms.activity.DetalleRutaTrabajoActivity;
 import com.mantum.cmms.activity.DiligenciarRutaTrabajoActivity;

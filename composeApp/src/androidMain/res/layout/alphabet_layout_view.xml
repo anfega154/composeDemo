@@ -14,15 +14,30 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
-        <com.futuremind.recyclerviewfastscroll.FastScroller
-            android:id="@+id/fastscroll"
+        <LinearLayout
+            android:id="@+id/fastscroll_container"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_alignParentEnd="true"
-            android:orientation="vertical"
-            app:fastscroll__bubbleColor="@color/fasts_croll_bubble"
-            app:fastscroll__bubbleTextAppearance="@style/StyledScrollerTextAppearance"
-            app:fastscroll__handleColor="@color/fasts_croll_handle" />
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/bubble"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/fasts_croll_bubble"
+                android:padding="8dp"
+                android:visibility="gone"
+                android:textAppearance="@style/StyledScrollerTextAppearance"
+                android:textColor="@android:color/white" />
+
+            <View
+                android:id="@+id/handle"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:background="@color/fasts_croll_handle"
+                android:layout_gravity="center_horizontal" />
+        </LinearLayout>
 
     </RelativeLayout>
 

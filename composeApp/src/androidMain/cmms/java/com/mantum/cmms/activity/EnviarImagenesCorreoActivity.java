@@ -13,7 +13,7 @@ import android.view.MenuItem;
 import android.widget.EditText;
 
 import com.getbase.floatingactionbutton.FloatingActionButton;
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.database.Database;
 import com.mantum.cmms.entity.Cuenta;
 import com.mantum.cmms.entity.Transaccion;

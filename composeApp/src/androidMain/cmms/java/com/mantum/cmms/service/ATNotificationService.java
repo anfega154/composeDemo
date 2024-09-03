@@ -17,7 +17,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.broadcast.ActividadTecnicoBroadcast;
 import com.mantum.cmms.database.Database;
 import com.mantum.cmms.domain.BitacoraOrdenTrabajo;
@@ -143,8 +143,8 @@ public class ATNotificationService {
     }
 
     public void noDisponible(@NonNull OnResult<String> callback) {
-        View form = View.inflate(context, com.mantum.component.R.layout.observation_form, null);
-        TextInputEditText observacion = form.findViewById(com.mantum.component.R.id.observation);
+        View form = View.inflate(context, com.mantum.demo.R.layout.observation_form, null);
+        TextInputEditText observacion = form.findViewById(com.mantum.demo.R.id.observation);
 
         AlertDialog builder = new AlertDialog.Builder(context)
                 .setTitle(R.string.title_observacion_tecnico)
@@ -195,8 +195,8 @@ public class ATNotificationService {
     }
 
     public void cancelar(@NonNull OnResult<String> callback, Estado estado, boolean logout) {
-        View form = View.inflate(context, com.mantum.component.R.layout.observation_form, null);
-        TextInputEditText observacion = form.findViewById(com.mantum.component.R.id.observation);
+        View form = View.inflate(context, com.mantum.demo.R.layout.observation_form, null);
+        TextInputEditText observacion = form.findViewById(com.mantum.demo.R.id.observation);
 
         AlertDialog builder = new AlertDialog.Builder(context)
                 .setTitle(R.string.title_observacion_tecnico_cancelar)

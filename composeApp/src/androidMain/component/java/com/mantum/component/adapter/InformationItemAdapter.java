@@ -16,7 +16,7 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.mantum.component.Mantum;
 import com.mantum.component.OnSelected;
-import com.mantum.component.R;
+import com.mantum.demo.R;
 import com.mantum.component.adapter.handler.ViewInformationChildrenAdapter;
 
 public class InformationItemAdapter<T extends ViewInformationChildrenAdapter<T>> extends Mantum.Adapter<T, InformationItemAdapter.ViewHolder> {

@@ -17,7 +17,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.getbase.floatingactionbutton.FloatingActionButton;
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.activity.BitacoraActivity;
 import com.mantum.cmms.activity.SolicitudServicioActivity;
 import com.mantum.cmms.entity.Equipo;

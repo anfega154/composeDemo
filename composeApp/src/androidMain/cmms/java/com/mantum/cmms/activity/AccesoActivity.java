@@ -40,7 +40,7 @@ import com.google.zxing.Result;
 import com.google.zxing.common.HybridBinarizer;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.database.Database;
 import com.mantum.cmms.domain.Check;
 import com.mantum.cmms.domain.QR;

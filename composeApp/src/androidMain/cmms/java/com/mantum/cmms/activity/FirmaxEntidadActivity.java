@@ -23,7 +23,7 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageView;
 
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.domain.FirmaxEntidad;
 import com.mantum.cmms.entity.Transaccion;
 import com.mantum.cmms.helper.TransaccionHelper;
@@ -119,11 +119,11 @@ public class FirmaxEntidadActivity extends TransaccionHelper.Dialog implements O
 
             Category categoryDefault = new Category();
             categoryDefault.setId((long) -1);
-            categoryDefault.setNombre(getString(com.mantum.component.R.string.category_select_firma));
+            categoryDefault.setNombre(getString(com.mantum.demo.R.string.category_select_firma));
 
             Formato formatoDefault = new Formato();
             formatoDefault.setId((long) -1);
-            formatoDefault.setFormato(getString(com.mantum.component.R.string.formato_select_category));
+            formatoDefault.setFormato(getString(com.mantum.demo.R.string.formato_select_category));
             formatosList.add(0, formatoDefault);
 
             ArrayAdapter<Formato> spinnerAdapter = new ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, formatosList);

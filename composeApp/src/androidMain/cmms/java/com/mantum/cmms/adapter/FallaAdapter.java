@@ -11,7 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.component.Mantum;
 import com.mantum.component.OnCall;
 import com.mantum.component.OnInvoke;

@@ -17,7 +17,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.entity.Personal;
 import com.mantum.component.Mantum;
 import com.mantum.component.OnSelected;

@@ -5,7 +5,7 @@ import androidx.annotation.Nullable;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.Multipart;
 import com.mantum.component.adapter.handler.ViewAdapter;
 import com.mantum.component.service.Photo;

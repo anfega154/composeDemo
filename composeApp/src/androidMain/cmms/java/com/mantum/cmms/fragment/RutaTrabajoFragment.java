@@ -22,7 +22,7 @@ import android.view.ViewGroup;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.activity.DetalleRutaTrabajoActivity;
 import com.mantum.cmms.activity.DiligenciarRutaTrabajoActivity;
 import com.mantum.cmms.database.Database;
@@ -103,7 +103,7 @@ public class RutaTrabajoFragment extends Mantum.Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
-        view = inflater.inflate(com.mantum.component.R.layout.information_layout_view,
+        view = inflater.inflate(com.mantum.demo.R.layout.information_layout_view,
                 container, false);
 
         progressBar = view.findViewById(R.id.progressBar);

@@ -4,7 +4,7 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.util.Log;
 
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.entity.parameter.UserPermission;
 import com.mantum.core.Mantum;
 

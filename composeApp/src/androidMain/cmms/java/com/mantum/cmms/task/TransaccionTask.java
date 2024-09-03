@@ -14,7 +14,7 @@ import androidx.annotation.Nullable;
 import android.util.Log;
 
 import com.google.gson.Gson;
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.activity.ConfiguracionActivity;
 import com.mantum.cmms.database.Database;
 import com.mantum.cmms.domain.Archivo;

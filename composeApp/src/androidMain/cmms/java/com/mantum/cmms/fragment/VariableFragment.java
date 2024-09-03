@@ -12,7 +12,7 @@ import android.view.ViewGroup;
 
 import com.getbase.floatingactionbutton.FloatingActionButton;
 import com.getbase.floatingactionbutton.FloatingActionsMenu;
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.activity.LecturaActivity;
 import com.mantum.cmms.entity.Variable;
 import com.mantum.component.Mantum;

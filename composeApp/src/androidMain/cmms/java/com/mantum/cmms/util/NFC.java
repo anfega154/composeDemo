@@ -32,8 +32,8 @@ public class NFC extends Mantum.Activity {
             boolean results = push(intent.getParcelableExtra(NfcAdapter.EXTRA_TAG), ndefMessage);
 
             AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(view.getContext());
-            alertDialogBuilder.setPositiveButton(com.mantum.component.R.string.accept, (dialog, which) -> dialog.dismiss());
-            alertDialogBuilder.setMessage(results ? com.mantum.component.R.string.write_success_nfc : com.mantum.component.R.string.write_error_nfc);
+            alertDialogBuilder.setPositiveButton(com.mantum.demo.R.string.accept, (dialog, which) -> dialog.dismiss());
+            alertDialogBuilder.setMessage(results ? com.mantum.demo.R.string.write_success_nfc : com.mantum.demo.R.string.write_error_nfc);
             alertDialogBuilder.setCancelable(true);
             alertDialogBuilder.show();
         }

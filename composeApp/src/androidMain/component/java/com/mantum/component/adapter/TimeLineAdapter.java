@@ -14,7 +14,7 @@ import android.view.ViewGroup;
 
 import com.github.vipulasri.timelineview.TimelineView;
 import com.mantum.component.Mantum;
-import com.mantum.component.R;
+import com.mantum.demo.R;
 import com.mantum.component.adapter.handler.ViewTimeLineAdapter;
 
 public class TimeLineAdapter<T extends ViewTimeLineAdapter<T>> extends Mantum.Adapter<T, TimeLineAdapter.ViewHolder> {

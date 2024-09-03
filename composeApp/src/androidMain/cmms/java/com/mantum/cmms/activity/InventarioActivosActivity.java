@@ -15,7 +15,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.google.android.material.snackbar.Snackbar;
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.adapter.ValidationAdapter;
 import com.mantum.cmms.database.Database;
 import com.mantum.cmms.domain.ResponseInventarioActivos;

@@ -5,7 +5,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import android.util.Log;
 
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.database.Database;
 import com.mantum.cmms.domain.Autorizacion;
 import com.mantum.cmms.domain.Response;

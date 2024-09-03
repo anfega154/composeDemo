@@ -10,7 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.entity.Personal;
 import com.mantum.component.Mantum;
 import com.mantum.component.OnCompleteListener;
@@ -31,7 +31,7 @@ public class PersonalFragment extends Mantum.Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
-        View view = inflater.inflate(com.mantum.component.R.layout.simple_layout_view,
+        View view = inflater.inflate(com.mantum.demo.R.layout.simple_layout_view,
                 container, false);
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(view.getContext());

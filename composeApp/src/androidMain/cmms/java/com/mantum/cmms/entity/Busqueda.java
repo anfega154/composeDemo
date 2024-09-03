@@ -5,7 +5,7 @@ import androidx.annotation.Nullable;
 
 import com.google.gson.GsonBuilder;
 import com.google.gson.annotations.SerializedName;
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.activity.BusquedaActivity;
 import com.mantum.cmms.adapter.handler.BusquedaHandler;
 import com.mantum.cmms.entity.parameter.Barcode;

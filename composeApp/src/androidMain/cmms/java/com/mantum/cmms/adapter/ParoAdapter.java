@@ -16,7 +16,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatSpinner;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.adapter.handler.ParoHandler;
 import com.mantum.cmms.adapter.onValueChange.ParoOnValueChange;
 import com.mantum.cmms.database.Database;

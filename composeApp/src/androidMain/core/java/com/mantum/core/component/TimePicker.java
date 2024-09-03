@@ -8,8 +8,7 @@ import androidx.annotation.NonNull;
 import android.view.View;
 import android.widget.EditText;
 
-import com.mantum.core.R;
-import com.mantum.core.util.Assert;
+import com.mantum.demo.R;import com.mantum.core.util.Assert;
 
 import java.util.Calendar;
 import java.util.TimeZone;

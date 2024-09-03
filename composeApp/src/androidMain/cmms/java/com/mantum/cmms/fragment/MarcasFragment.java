@@ -12,7 +12,7 @@ import android.widget.ExpandableListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.entity.Autorizaciones;
 import com.mantum.cmms.entity.Personal;
 import com.mantum.component.Mantum;
@@ -34,7 +34,7 @@ public class MarcasFragment extends Mantum.Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
-        View view = inflater.inflate(com.mantum.component.R.layout.group_layout_view,
+        View view = inflater.inflate(com.mantum.demo.R.layout.group_layout_view,
                 container, false);
 
         groupAdapter = new GroupAdapter<>(view.getContext());

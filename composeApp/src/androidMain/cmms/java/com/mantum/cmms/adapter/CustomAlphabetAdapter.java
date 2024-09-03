@@ -19,8 +19,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
-import com.futuremind.recyclerviewfastscroll.SectionTitleProvider;
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.component.Mantum;
 import com.mantum.component.OnSelected;
 import com.mantum.component.adapter.handler.ViewAdapter;
@@ -30,7 +29,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-public class CustomAlphabetAdapter<T extends ViewAdapter<T>> extends Mantum.Adapter<T, CustomAlphabetAdapter.ViewHolder> implements SectionTitleProvider {
+public class CustomAlphabetAdapter<T extends ViewAdapter<T>> extends Mantum.Adapter<T, CustomAlphabetAdapter.ViewHolder> {
 
     @SuppressWarnings("WeakerAccess")
     protected boolean summary;
@@ -146,7 +145,7 @@ public class CustomAlphabetAdapter<T extends ViewAdapter<T>> extends Mantum.Adap
 
         if(this.bMultiple) {
             if (super.selectedIds.contains(position)) {
-                holder.container.getRootView().setBackground(new ColorDrawable(ContextCompat.getColor(context, com.mantum.component.R.color.colorPrimary_2)));
+                holder.container.getRootView().setBackground(new ColorDrawable(ContextCompat.getColor(context, com.mantum.demo.R.color.colorPrimary_2)));
             } else {
                 holder.container.getRootView().setBackground(new ColorDrawable(ContextCompat.getColor(context, android.R.color.transparent)));
             }
@@ -219,13 +218,13 @@ public class CustomAlphabetAdapter<T extends ViewAdapter<T>> extends Mantum.Adap
     }
 
     public void showMessageEmpty(@NonNull View view, @StringRes int message, @DrawableRes int icon) {
-        RelativeLayout empty = view.findViewById(com.mantum.component.R.id.empty);
+        RelativeLayout empty = view.findViewById(com.mantum.demo.R.id.empty);
         if (empty != null) {
             empty.setVisibility(isEmpty() ? View.VISIBLE : View.GONE);
         }
 
         if (isEmpty()) {
-            TextView container = view.findViewById(com.mantum.component.R.id.message);
+            TextView container = view.findViewById(com.mantum.demo.R.id.message);
             if (message != 0) {
                 container.setText(view.getContext().getString(message));
             }
@@ -245,7 +244,6 @@ public class CustomAlphabetAdapter<T extends ViewAdapter<T>> extends Mantum.Adap
         return value;
     }
 
-    @Override
     public String getSectionTitle(int position) {
         T value = getItemPosition(position);
         return value != null ? value.getTitle().substring(0, 1) : null;
@@ -276,14 +274,14 @@ public class CustomAlphabetAdapter<T extends ViewAdapter<T>> extends Mantum.Adap
 
         public ViewHolder(View itemView) {
             super(itemView);
-            container = itemView.findViewById(com.mantum.component.R.id.container);
-            letter = itemView.findViewById(com.mantum.component.R.id.letter);
-            favorite = itemView.findViewById(com.mantum.component.R.id.favorite);
-            title = itemView.findViewById(com.mantum.component.R.id.title);
-            subtitle = itemView.findViewById(com.mantum.component.R.id.subtitle);
-            summary = itemView.findViewById(com.mantum.component.R.id.summary);
-            separator = itemView.findViewById(com.mantum.component.R.id.separator);
-            icon = itemView.findViewById(com.mantum.component.R.id.icon);
+            container = itemView.findViewById(com.mantum.demo.R.id.container);
+            letter = itemView.findViewById(com.mantum.demo.R.id.letter);
+            favorite = itemView.findViewById(com.mantum.demo.R.id.favorite);
+            title = itemView.findViewById(com.mantum.demo.R.id.title);
+            subtitle = itemView.findViewById(com.mantum.demo.R.id.subtitle);
+            summary = itemView.findViewById(com.mantum.demo.R.id.summary);
+            separator = itemView.findViewById(com.mantum.demo.R.id.separator);
+            icon = itemView.findViewById(com.mantum.demo.R.id.icon);
         }
     }
 }

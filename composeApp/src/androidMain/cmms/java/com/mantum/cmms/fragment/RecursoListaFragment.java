@@ -9,7 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.view.RecursoView;
 import com.mantum.component.Mantum;
 import com.mantum.component.adapter.AlphabetAdapter;
@@ -31,7 +31,7 @@ public class RecursoListaFragment extends Mantum.Fragment {
                              @Nullable Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
         View view = inflater.inflate(
-                com.mantum.component.R.layout.alphabet_layout_view,
+                com.mantum.demo.R.layout.alphabet_layout_view,
                 container, false);
 
         LinearLayoutManager layoutManager

@@ -13,7 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.adapter.handler.TareaHandler;
 import com.mantum.cmms.adapter.onValueChange.CustomCheckChange;
 import com.mantum.component.Mantum;

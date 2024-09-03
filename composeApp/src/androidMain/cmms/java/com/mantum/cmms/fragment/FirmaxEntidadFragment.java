@@ -13,7 +13,7 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageView;
 
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.domain.FirmaxEntidad;
 import com.mantum.component.Mantum;
 import com.mantum.component.OnCompleteListener;
@@ -169,7 +169,7 @@ public class FirmaxEntidadFragment extends Mantum.Fragment {
             List<Category> items = new FormatoService(getContext()).getAllCategories();
             Category general = new Category();
             general.setId((long) -1);
-            general.setNombre(getString(com.mantum.component.R.string.category_select));
+            general.setNombre(getString(com.mantum.demo.R.string.category_select));
             items.add(0, general);
 
             category.setAdapter(new ArrayAdapter<>(

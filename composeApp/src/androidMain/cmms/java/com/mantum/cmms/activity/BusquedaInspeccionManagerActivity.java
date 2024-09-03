@@ -15,7 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.textfield.TextInputEditText;
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.adapter.ContenedorAdapter;
 import com.mantum.cmms.database.Database;
 import com.mantum.cmms.entity.Contenedor;

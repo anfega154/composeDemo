@@ -3,7 +3,7 @@ package com.mantum.cmms.activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.component.Mantum;
 import android.widget.TextView;
 import java.util.Date;

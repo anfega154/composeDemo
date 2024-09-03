@@ -18,7 +18,7 @@ import androidx.core.app.ActivityCompat;
 
 import android.util.Log;
 
-import com.mantum.component.R;
+import com.mantum.demo.R;
 
 import java.util.TimeZone;
 

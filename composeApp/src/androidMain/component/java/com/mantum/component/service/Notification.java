@@ -13,7 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.app.NotificationCompat;
 
-import com.mantum.component.R;
+import com.mantum.demo.R;
 
 import java.util.Random;
 

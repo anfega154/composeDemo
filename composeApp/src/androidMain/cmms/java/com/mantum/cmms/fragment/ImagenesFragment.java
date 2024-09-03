@@ -12,7 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.activity.GaleriaActivity;
 import com.mantum.cmms.entity.Adjuntos;
 import com.mantum.component.activity.FullScreenView;

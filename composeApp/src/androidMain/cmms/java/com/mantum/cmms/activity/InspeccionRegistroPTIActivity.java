@@ -15,7 +15,7 @@ import com.google.android.material.tabs.TabLayout;
 import com.google.firebase.crashlytics.FirebaseCrashlytics;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.database.Database;
 import com.mantum.cmms.entity.Contenedor;
 import com.mantum.cmms.entity.Cuenta;

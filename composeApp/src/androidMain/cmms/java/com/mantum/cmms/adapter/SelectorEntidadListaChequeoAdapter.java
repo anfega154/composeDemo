@@ -10,7 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.widget.SwitchCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.entity.EntidadesClienteListaChequeo;
 import com.mantum.component.Mantum;
 

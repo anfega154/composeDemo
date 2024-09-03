@@ -17,7 +17,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.getbase.floatingactionbutton.FloatingActionButton;
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.database.Database;
 import com.mantum.cmms.entity.Almacen;
 import com.mantum.cmms.entity.Bodega;

@@ -32,7 +32,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.activity.BusquedaVariablesEquipoActivity;
 import com.mantum.cmms.activity.FormularioEquipoActivity;
 import com.mantum.cmms.adapter.CentroCostoAdapter;

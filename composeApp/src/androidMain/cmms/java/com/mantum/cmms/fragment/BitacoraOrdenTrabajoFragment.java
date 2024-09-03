@@ -11,7 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.domain.BitacoraOrdenTrabajo;
 import com.mantum.cmms.entity.parameter.UserPermission;
 import com.mantum.component.Mantum;

@@ -12,7 +12,7 @@ import android.widget.ExpandableListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.activity.DetalleActividadMantenimientoActivity;
 import com.mantum.cmms.activity.DetalleTareaActivity;
 import com.mantum.cmms.entity.Actividad;
@@ -39,7 +39,7 @@ public class EntidadesListaFragment extends Mantum.Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
-        View view = inflater.inflate(com.mantum.component.R.layout.group_layout_view, container, false);
+        View view = inflater.inflate(com.mantum.demo.R.layout.group_layout_view, container, false);
 
         groupAdapter = new GroupAdapter<>(view.getContext());
         groupAdapter.setOnAction(new OnSelected<Actividad>() {

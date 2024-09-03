@@ -4,8 +4,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import androidx.annotation.NonNull;
 
-import com.mantum.core.R;
-
+import com.mantum.demo.R;
 @Deprecated
 public abstract class Url {
 

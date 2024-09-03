@@ -20,7 +20,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.google.android.material.snackbar.Snackbar;
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.database.Database;
 import com.mantum.cmms.entity.Cuenta;
 import com.mantum.cmms.entity.ListaChequeo;
@@ -59,7 +59,7 @@ public class ListaChequeoEntidadActivity extends Mantum.Activity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(com.mantum.component.R.layout.information_layout_view);
+        setContentView(com.mantum.demo.R.layout.information_layout_view);
 
         includeBackButtonAndTitle(R.string.lista_chequeo_entidad);
 

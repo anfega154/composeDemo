@@ -23,7 +23,7 @@ import com.mantum.cmms.service.TransferenciaService;
 import com.mantum.component.Mantum;
 import com.mantum.component.OnSelected;
 import com.mantum.component.adapter.AlphabetAdapter;
-import com.mantum.R;
+import com.mantum.demo.R;
 
 import java.util.ArrayList;
 import java.util.List;

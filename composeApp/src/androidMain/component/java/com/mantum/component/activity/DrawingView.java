@@ -17,7 +17,7 @@ import com.larswerkman.holocolorpicker.ColorPicker;
 import com.larswerkman.holocolorpicker.OpacityBar;
 import com.larswerkman.holocolorpicker.SVBar;
 import com.mantum.component.Mantum;
-import com.mantum.component.R;
+import com.mantum.demo.R;
 import com.mantum.component.view.Drawing;
 
 import java.io.File;

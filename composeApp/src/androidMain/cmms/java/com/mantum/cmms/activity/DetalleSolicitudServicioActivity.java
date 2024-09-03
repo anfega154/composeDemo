@@ -15,7 +15,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ProgressBar;
 
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.database.Database;
 import com.mantum.cmms.entity.EstadoInicial;
 import com.mantum.cmms.entity.parameter.UserPermission;

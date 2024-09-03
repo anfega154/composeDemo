@@ -9,7 +9,7 @@ import android.widget.EditText;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.adapter.handler.HistoricoParoHandler;
 import com.mantum.component.Mantum;
 

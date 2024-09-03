@@ -14,7 +14,7 @@ import androidx.appcompat.widget.AppCompatSpinner;
 
 import com.getbase.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.textfield.TextInputEditText;
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.activity.FirmaActivity;
 import com.mantum.cmms.domain.RecibirOT;
 import com.mantum.cmms.entity.parameter.StateReceive;

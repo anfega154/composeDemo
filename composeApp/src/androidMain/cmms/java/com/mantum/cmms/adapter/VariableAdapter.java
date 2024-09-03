@@ -15,7 +15,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.entity.Variable;
 import com.mantum.cmms.entity.VariableCualitativa;
 import com.mantum.component.Mantum;

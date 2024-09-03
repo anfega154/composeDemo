@@ -34,7 +34,7 @@ import android.widget.TextView;
 
 import com.getbase.floatingactionbutton.FloatingActionButton;
 import com.getbase.floatingactionbutton.FloatingActionsMenu;
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.activity.EntidadesListaChequeoActivity;
 import com.mantum.cmms.activity.FirmaxEntidadActivity;
 import com.mantum.cmms.activity.GaleriaActivity;

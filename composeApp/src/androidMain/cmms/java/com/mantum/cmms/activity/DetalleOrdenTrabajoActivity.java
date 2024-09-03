@@ -20,7 +20,7 @@ import android.view.View;
 import android.widget.ProgressBar;
 
 import com.google.firebase.crashlytics.FirebaseCrashlytics;
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.database.Database;
 import com.mantum.cmms.entity.Consumible;
 import com.mantum.cmms.entity.Falla;

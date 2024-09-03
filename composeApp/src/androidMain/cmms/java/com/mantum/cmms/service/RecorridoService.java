@@ -5,7 +5,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import android.util.Log;
 
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.database.Database;
 import com.mantum.cmms.entity.Cuenta;
 import com.mantum.cmms.entity.Recorrido;

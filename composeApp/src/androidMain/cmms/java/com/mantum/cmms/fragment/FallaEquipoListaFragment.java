@@ -12,7 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.activity.DetalleFallaActivity;
 import com.mantum.cmms.entity.Falla;
 import com.mantum.cmms.view.FallaEquipo;
@@ -36,7 +36,7 @@ public class FallaEquipoListaFragment extends Mantum.Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
-        View view = inflater.inflate(com.mantum.component.R.layout.alphabet_layout_view, container, false);
+        View view = inflater.inflate(com.mantum.demo.R.layout.alphabet_layout_view, container, false);
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(view.getContext());
         alphabetAdapter = new AlphabetAdapter<>(view.getContext());

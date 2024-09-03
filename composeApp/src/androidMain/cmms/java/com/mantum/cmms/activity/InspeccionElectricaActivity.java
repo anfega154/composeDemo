@@ -7,7 +7,7 @@ import com.google.android.material.snackbar.Snackbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.database.Database;
 import com.mantum.cmms.domain.InspeccionElectrica;
 import com.mantum.cmms.fragment.InspeccionElectricaFragment;

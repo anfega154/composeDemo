@@ -3,7 +3,7 @@ package com.mantum.cmms.view;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.entity.Autorizaciones;
 import com.mantum.component.adapter.handler.ViewAdapter;
 

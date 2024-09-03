@@ -17,7 +17,7 @@ import androidx.viewpager.widget.ViewPager;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.tabs.TabLayout;
 import com.google.firebase.crashlytics.FirebaseCrashlytics;
-import com.mantum.R;
+import com.mantum.demo.R;
 import com.mantum.cmms.database.Database;
 import com.mantum.cmms.entity.Cuenta;
 import com.mantum.cmms.entity.Entidad;
