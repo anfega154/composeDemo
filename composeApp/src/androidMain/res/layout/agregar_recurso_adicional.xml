@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:paddingTop="@dimen/activity_horizontal_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_horizontal_margin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/description_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            fab:errorTextAppearance="@style/error_appearance"
+            android:layout_marginTop="@dimen/form_horizontal"
+            android:layout_marginBottom="@dimen/form_horizontal">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/descripcion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:inputType="textAutoComplete"
+                android:hint="@string/descripcion" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/cantidad_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                fab:errorTextAppearance="@style/error_appearance"
+                android:layout_marginTop="@dimen/form_horizontal"
+                android:layout_marginBottom="@dimen/form_horizontal">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/cantidad"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:fontFamily="sans-serif-light"
+                    android:inputType="numberDecimal"
+                    android:hint="@string/cantidad" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/utilizado"
+                android:theme="@style/ColorSwitchStyle"
+                android:checked="false"
+                android:text="@string/utilizado"
+                android:layout_weight="1"
+                android:layout_marginTop="@dimen/form_horizontal"
+                android:layout_marginBottom="@dimen/form_horizontal"
+                android:fontFamily="sans-serif-light"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/form_horizontal"
+            android:layout_marginBottom="@dimen/form_horizontal">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/unidad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:inputType="textAutoComplete"
+                android:hint="@string/unidad" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/form_horizontal"
+            android:layout_marginBottom="@dimen/form_horizontal">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/referencia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:inputType="textAutoComplete"
+                android:hint="@string/referencia" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

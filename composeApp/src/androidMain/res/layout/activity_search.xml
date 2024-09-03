@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".cmms.activity.BusquedaActivity">
+
+    <LinearLayout
+        android:id="@+id/layout_check_busqueda"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/border_contain_6"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <LinearLayout
+            android:id="@+id/layout_titulo_busqueda_relevante"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <TextView
+                android:id="@+id/button_busqueda_relevante"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="13"
+                android:fontFamily="sans-serif-light"
+                android:text="@string/filtros_busqueda"
+                android:textAlignment="center" />
+
+            <ImageView
+                android:id="@+id/image_busqueda_relevante"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/expand_less" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_check_busqueda_relevante"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/check_busqueda_equipo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/equipo"
+                    app:buttonTint="@color/colorPrimary" />
+
+                <CheckBox
+                    android:id="@+id/check_busqueda_instalacion_locativa"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/instalacion_locativa"
+                    app:buttonTint="@color/colorPrimary" />
+
+                <CheckBox
+                    android:id="@+id/check_busqueda_instalacion_proceso"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/instalacion_proceso"
+                    app:buttonTint="@color/colorPrimary" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/check_busqueda_orden_trabajo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tab_OT"
+                    android:visibility="gone"
+                    app:buttonTint="@color/colorPrimary" />
+
+                <CheckBox
+                    android:id="@+id/check_busqueda_ruta_trabajo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tab_RT"
+                    android:visibility="gone"
+                    app:buttonTint="@color/colorPrimary" />
+
+                <CheckBox
+                    android:id="@+id/check_busqueda_solicitud_servicio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tab_SS"
+                    android:visibility="gone"
+                    app:buttonTint="@color/colorPrimary" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_titulo_filtros_mostrar_mas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <TextView
+                android:id="@+id/button_filtros_mostrar_mas"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="20"
+                android:fontFamily="sans-serif-light"
+                android:text="@string/filtros_busqueda_mostrar_mas"
+                android:textAlignment="center" />
+
+            <ImageView
+                android:id="@+id/image_filtros_mostrar_mas"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/expand_more" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_check_busqueda_mas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/check_busqueda_grupo_variable"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/menu.grupo.variable"
+                    app:buttonTint="@color/colorPrimary" />
+
+                <CheckBox
+                    android:id="@+id/check_busqueda_pieza"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pieza"
+                    app:buttonTint="@color/colorPrimary" />
+
+                <CheckBox
+                    android:id="@+id/check_busqueda_recurso"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/recurso"
+                    android:visibility="gone"
+                    app:buttonTint="@color/colorPrimary" />
+
+                <CheckBox
+                    android:id="@+id/check_busqueda_fabricante"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fabricante"
+                    android:visibility="gone"
+                    app:buttonTint="@color/colorPrimary" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/check_busqueda_personal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/personal"
+                    app:buttonTint="@color/colorPrimary" />
+
+                <CheckBox
+                    android:id="@+id/check_busqueda_componente"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/componente"
+                    app:buttonTint="@color/colorPrimary" />
+
+                <CheckBox
+                    android:id="@+id/check_busqueda_familia"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/familia"
+                    android:visibility="gone"
+                    app:buttonTint="@color/colorPrimary" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <include
+        layout="@layout/alphabet_layout_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout_check_busqueda" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="@dimen/floating_action_button"
+        android:layout_marginBottom="@dimen/floating_action_button"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        app:backgroundTint="@color/colorPrimary"
+        app:srcCompat="@drawable/camera"
+        android:contentDescription="@string/app_name" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:indeterminateDrawable="@drawable/circular"
+        android:visibility="gone" />
+
+</RelativeLayout>

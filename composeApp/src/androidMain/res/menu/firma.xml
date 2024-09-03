@@ -1,0 +1,20 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".cmms.activity.FirmaActivity">
+
+    <item
+        android:id="@+id/action_accept"
+        android:icon="@drawable/guardar"
+        android:orderInCategory="1"
+        android:title="@string/action_accept"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_erase"
+        android:icon="@drawable/eliminar"
+        android:orderInCategory="3"
+        android:title="@string/action_erase"
+        app:showAsAction="ifRoom" />
+
+</menu>

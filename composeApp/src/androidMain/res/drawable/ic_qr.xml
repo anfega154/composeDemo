@@ -1,0 +1,40 @@
+<vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:name="vector"
+    android:width="1200dp"
+    android:height="1200dp"
+    android:viewportWidth="1200"
+    android:viewportHeight="1200">
+    <group android:name="group">
+        <path
+            android:name="path"
+            android:pathData="M 75 262.5 L 75 450 L 450 450 L 450 75 L 75 75 L 75 262.5 Z M 375 262.5 L 375 375 L 150 375 L 150 150 L 375 150 L 375 262.5 Z"
+            android:fillColor="#FFF"
+            android:strokeWidth="1"/>
+        <path
+            android:name="path_1"
+            android:pathData="M 225 262.5 L 225 300 L 300 300 L 300 225 L 225 225 L 225 262.5 Z"
+            android:fillColor="#FFF"
+            android:strokeWidth="1"/>
+        <path
+            android:name="path_2"
+            android:pathData="M 525 187.5 L 525 300 L 600 300 L 600 375 L 525 375 L 525 525 L 600 525 L 600 600 L 375 600 L 375 525 L 225 525 L 225 600 L 150 600 L 150 525 L 75 525 L 75 600 L 150 600 L 150 675 L 225 675 L 225 600 L 300 600 L 300 675 L 525 675 L 525 750 L 600 750 L 600 825 L 525 825 L 525 1050 L 600 1050 L 600 1125 L 900 1125 L 900 975 L 1050 975 L 1050 1050 L 975 1050 L 975 1125 L 1050 1125 L 1050 1050 L 1125 1050 L 1125 975 L 1050 975 L 1050 900 L 1125 900 L 1125 825 L 1050 825 L 1050 675 L 1125 675 L 1125 525 L 1050 525 L 1050 600 L 975 600 L 975 750 L 750 750 L 750 675 L 675 675 L 675 750 L 600 750 L 600 600 L 675 600 L 675 525 L 600 525 L 600 450 L 675 450 L 675 225 L 600 225 L 600 150 L 675 150 L 675 75 L 525 75 L 525 187.5 Z M 750 787.5 L 750 825 L 900 825 L 900 975 L 825 975 L 825 1050 L 600 1050 L 600 975 L 675 975 L 675 900 L 600 900 L 600 825 L 675 825 L 675 750 L 750 750 L 750 787.5 Z M 1050 862.5 L 1050 900 L 975 900 L 975 825 L 1050 825 L 1050 862.5 Z"
+            android:fillColor="#FFF"
+            android:strokeWidth="1"/>
+        <path
+            android:name="path_3"
+            android:pathData="M 675 862.5 L 675 900 L 750 900 L 750 975 L 825 975 L 825 900 L 750 900 L 750 825 L 675 825 L 675 862.5 Z M 750 262.5 L 750 450 L 1125 450 L 1125 75 L 750 75 L 750 262.5 Z M 1050 262.5 L 1050 375 L 825 375 L 825 150 L 1050 150 L 1050 262.5 Z"
+            android:fillColor="#FFF"
+            android:strokeWidth="1"/>
+        <path
+            android:name="path_4"
+            android:pathData="M 900 262.5 L 900 300 L 975 300 L 975 225 L 900 225 L 900 262.5 Z M 750 562.5 L 750 600 L 825 600 L 825 675 L 900 675 L 900 525 L 750 525 L 750 562.5 Z M 75 937.5 L 75 1125 L 450 1125 L 450 750 L 75 750 L 75 937.5 Z M 375 937.5 L 375 1050 L 150 1050 L 150 825 L 375 825 L 375 937.5 Z"
+            android:fillColor="#FFF"
+            android:strokeWidth="1"/>
+        <path
+            android:name="path_5"
+            android:pathData="M 225 937.5 L 225 975 L 300 975 L 300 900 L 225 900 L 225 937.5 Z"
+            android:fillColor="#FFF"
+            android:strokeWidth="1"/>
+    </group>
+</vector>

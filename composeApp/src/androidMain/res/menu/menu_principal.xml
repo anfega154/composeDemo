@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="@string/accesos_rapidos">
+        <menu>
+            <item
+                android:id="@+id/solicitud_servicio"
+                android:icon="@drawable/create"
+                android:orderInCategory="1"
+                android:title="@string/menu.solicitud.servicios"
+                android:visible="false" />
+            <item
+                android:id="@+id/bitacora"
+                android:icon="@drawable/reloj"
+                android:orderInCategory="2"
+                android:title="@string/menu.bitacora" />
+            <item
+                android:id="@+id/location"
+                android:icon="@drawable/location"
+                android:orderInCategory="3"
+                android:title="@string/menu.location" />
+            <item
+                android:id="@+id/calendar"
+                android:icon="@drawable/calendar"
+                android:orderInCategory="4"
+                android:title="@string/menu.calendar"
+                android:visible="false" />
+            <item
+                android:id="@+id/mochila"
+                android:icon="@drawable/work"
+                android:orderInCategory="5"
+                android:title="@string/menu.mochila"
+                android:visible="false" />
+            <item
+                android:id="@+id/transferencia"
+                android:icon="@drawable/ic_call_split_black_24dp"
+                android:orderInCategory="6"
+                android:title="@string/menu.transferencia"
+                android:visible="false" />
+            <item
+                android:id="@+id/security"
+                android:icon="@drawable/security"
+                android:orderInCategory="7"
+                android:title="@string/autorizacion_acceso"
+                android:visible="false" />
+
+            <item
+                android:id="@+id/validacion"
+                android:icon="@drawable/qr_code_scanner"
+                android:orderInCategory="8"
+                android:title="@string/validacion_ingreso_qr"
+                android:visible="false" />
+            <item
+                android:id="@+id/eventos"
+                android:icon="@drawable/ic_event_black_24dp"
+                android:orderInCategory="9"
+                android:title="@string/eventos"
+                android:visible="false" />
+
+            <item
+                android:id="@+id/almacen"
+                android:icon="@drawable/store_2"
+                android:orderInCategory="10"
+                android:title="@string/menu.almacen"
+                android:visible="false" />
+
+            <item
+                android:id="@+id/crear_equipo"
+                android:icon="@drawable/equipment"
+                android:orderInCategory="11"
+                android:title="@string/menu.crear.equipo"
+                android:visible="false" />
+
+            <item
+                android:id="@+id/imagenes_correo"
+                android:icon="@drawable/ic_mail"
+                android:orderInCategory="12"
+                android:title="@string/menu.imagenes.correo"
+                android:visible="false" />
+
+            <item
+                android:id="@+id/lista_chequeo"
+                android:icon="@drawable/ic_ejecutar_tareas"
+                android:orderInCategory="13"
+                android:title="@string/lista_chequeo_entidad"
+                android:visible="false" />
+
+            <item
+                android:id="@+id/inventario_activos"
+                android:icon="@drawable/ic_inventario_activos"
+                android:orderInCategory="14"
+                android:title="@string/inventario_activos"
+                android:visible="false" />
+
+        </menu>
+    </item>
+
+    <item android:title="@string/extra">
+        <menu>
+            <item
+                android:id="@+id/manager_pti_eir"
+                android:icon="@drawable/ic_baseline_view_week_24"
+                android:orderInCategory="1"
+                android:title="@string/manager_pti_eir"
+                android:visible="false" />
+        </menu>
+    </item>
+
+    <item android:title="@string/descargas">
+        <menu>
+            <item
+                android:id="@+id/my_security"
+                android:icon="@drawable/download"
+                android:orderInCategory="1"
+                android:title="@string/descargar_autorizaciones"
+                android:visible="false" />
+            <item
+                android:id="@+id/descargar_entidad"
+                android:icon="@drawable/download"
+                android:orderInCategory="2"
+                android:title="@string/descargar_entidades"
+                android:visible="true" />
+            <item
+                android:id="@+id/descargar_inventarios"
+                android:icon="@drawable/download"
+                android:orderInCategory="3"
+                android:title="@string/descargar_inventarios"
+                android:visible="true" />
+            <item
+                android:id="@+id/descargar_recurso"
+                android:icon="@drawable/download"
+                android:orderInCategory="4"
+                android:title="@string/descargar_recursos"
+                android:visible="false" />
+            <item
+                android:id="@+id/descargar_rutas_trabajo"
+                android:icon="@drawable/download"
+                android:orderInCategory="5"
+                android:title="@string/descargar_rutas_trabajo"
+                android:visible="false" />
+        </menu>
+    </item>
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/cloud"
+            android:icon="@drawable/cloud"
+            android:orderInCategory="1"
+            android:title="@string/menu.cloud" />
+        <item
+            android:id="@+id/certificado"
+            android:icon="@drawable/lock"
+            android:orderInCategory="2"
+            android:title="@string/titulo_actualizar_certificado"
+            android:visible="false" />
+        <item
+            android:id="@+id/setting"
+            android:icon="@drawable/settings"
+            android:orderInCategory="3"
+            android:title="@string/menu.setting" />
+        <item
+            android:id="@+id/connection_test"
+            android:icon="@drawable/ic_connection"
+            android:orderInCategory="4"
+            android:title="@string/menu.connection.test"
+            android:visible="false" />
+        <item
+            android:id="@+id/about"
+            android:icon="@drawable/acerca"
+            android:orderInCategory="5"
+            android:title="@string/menu.about" />
+        <item
+            android:id="@+id/close"
+            android:icon="@drawable/salir"
+            android:orderInCategory="6"
+            android:title="@string/menu.exit" />
+    </group>
+</menu>

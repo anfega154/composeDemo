@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/actualizar"
+        android:icon="@drawable/refresh"
+        android:orderInCategory="0"
+        android:title="@string/menu.refresh"
+        app:showAsAction="ifRoom|collapseActionView" />
+
+    <item
+        android:id="@+id/registrar_solicitud_servicio"
+        android:orderInCategory="1"
+        android:title="@string/registrar_solicitud_servicio" />
+
+    <item
+        android:id="@+id/registrar_ot_bitacora"
+        android:orderInCategory="2"
+        android:title="@string/registrar_ot_bitacora" />
+
+    <item
+        android:id="@+id/registrar_bitacora_evento"
+        android:orderInCategory="3"
+        android:title="@string/registrar_bitacora_evento"
+        android:visible="false" />
+
+    <item
+        android:id="@+id/ver_ubicacion"
+        android:orderInCategory="4"
+        android:title="@string/ver_ubicacion" />
+
+    <item
+        android:id="@+id/registrar_lectura"
+        android:orderInCategory="5"
+        android:title="@string/registrar_lectura"
+        android:visible="false" />
+
+    <item
+        android:id="@+id/camara"
+        android:orderInCategory="6"
+        android:title="@string/asociar_archivos" />
+
+    <item
+        android:id="@+id/nfc"
+        android:orderInCategory="7"
+        android:title="@string/asociar_nfc"
+        android:visible="false" />
+
+    <item
+        android:id="@+id/qr"
+        android:orderInCategory="8"
+        android:title="@string/asociar_qr"
+        android:visible="false" />
+
+    <item
+        android:id="@+id/editar"
+        android:orderInCategory="9"
+        android:title="@string/editar_equipo"
+        android:visible="false" />
+
+    <item
+        android:id="@+id/generar_rotulo"
+        android:orderInCategory="10"
+        android:title="@string/generar_rotulo"
+        android:visible="false" />
+
+    <item
+        android:id="@+id/imagenes_correo"
+        android:orderInCategory="11"
+        android:title="@string/menu.imagenes.correo"
+        android:visible="false" />
+
+    <item
+        android:id="@+id/registrar_falla"
+        android:orderInCategory="12"
+        android:title="@string/registrar_falla"
+        android:visible="false" />
+
+    <item
+        android:id="@+id/ver_historico_paros"
+        android:orderInCategory="13"
+        android:title="@string/historico_paros_opcion"
+        android:visible="false" />
+
+</menu>

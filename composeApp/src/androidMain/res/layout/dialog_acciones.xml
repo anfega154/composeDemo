@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingRight="@dimen/dialog_paddding"
+        android:paddingLeft="@dimen/dialog_paddding"
+        android:paddingTop="@dimen/alphabet_horizontal_margin"
+        android:paddingBottom="@dimen/alphabet_horizontal_margin">
+
+        <TextView
+            android:id="@+id/navigation_camera"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/camera"
+            android:drawablePadding="20dp"
+            android:padding="@dimen/bagge_1"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/card_vertical"
+            android:textColor="@color/white"
+            android:singleLine="true"
+            android:textStyle="bold"
+            android:text="@string/equipo_leer" />
+
+        <TextView
+            android:id="@+id/navigation_equipos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/store_2_white"
+            android:drawablePadding="20dp"
+            android:padding="@dimen/bagge_1"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/card_vertical"
+            android:textColor="@color/white"
+            android:singleLine="true"
+            android:textStyle="bold"
+            android:text="@string/menu.almacen.seleccionar" />
+
+        <TextView
+            android:id="@+id/navigation_nfc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/nfc_menu"
+            android:drawablePadding="20dp"
+            android:padding="@dimen/bagge_1"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/card_vertical"
+            android:textColor="@color/white"
+            android:singleLine="true"
+            android:textStyle="bold"
+            android:text="@string/menu.nfc.seleccionar" />
+
+        <TextView
+            android:id="@+id/navigation_marcar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/nfc_menu"
+            android:drawablePadding="20dp"
+            android:padding="@dimen/bagge_1"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/card_vertical"
+            android:textColor="@color/white"
+            android:singleLine="true"
+            android:textStyle="bold"
+            android:visibility="gone"
+            android:text="@string/marcar_equipo" />
+
+        <TextView
+            android:id="@+id/navigation_crear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/create"
+            android:drawablePadding="20dp"
+            android:padding="@dimen/bagge_1"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/card_vertical"
+            android:textColor="@color/white"
+            android:singleLine="true"
+            android:visibility="gone"
+            android:textStyle="bold"
+            android:text="@string/equipo_registro" />
+
+        <RelativeLayout
+            android:id="@+id/section_scan"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Acerca el dispositivo"
+                style="@style/TextAppearance.AppCompat.Large.Inverse"
+                android:gravity="center"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="@dimen/dialog_paddding"
+                android:src="@drawable/nfc_menu"
+                android:gravity="center" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

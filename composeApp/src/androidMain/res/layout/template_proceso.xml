@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_marginBottom="@dimen/margin_bottom_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:paddingBottom="@dimen/vertical_margin_card"
+        android:paddingLeft="@dimen/horizontal_margin_card"
+        android:paddingRight="@dimen/horizontal_margin_card"
+        android:paddingTop="@dimen/vertical_margin_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:src="@drawable/procesos"
+            android:layout_gravity="end"
+            android:layout_marginRight="@dimen/horizontal_margin_card"
+            android:layout_marginEnd="@dimen/horizontal_margin_card"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:contentDescription="@string/app_name" />
+
+        <TextView
+            android:textSize="22sp"
+            android:lines="1"
+            android:text="@string/detalle_procesos"
+            android:fontFamily="sans-serif-ligth"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+        <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginBottom="@dimen/body_margin_text_card"
+        android:layout_marginLeft="@dimen/body_text_card"
+        android:layout_marginStart="@dimen/body_text_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textSize="14sp"
+                android:text="@string/proceso_estado"
+                android:fontFamily="sans-serif"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/estado"
+                android:textSize="14sp"
+                android:layout_marginBottom="@dimen/body_margin_text_card"
+                android:fontFamily="sans-serif-light"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textSize="14sp"
+                android:text="@string/proceso_fecha"
+                android:fontFamily="sans-serif"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/fecha"
+                android:textSize="14sp"
+                android:layout_marginBottom="@dimen/body_margin_text_card"
+                android:fontFamily="sans-serif-light"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textSize="14sp"
+                android:text="@string/proceso_descripcion"
+                android:fontFamily="sans-serif"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/descripcion"
+                android:textSize="14sp"
+                android:layout_marginBottom="@dimen/body_margin_text_card"
+                android:fontFamily="sans-serif-light"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

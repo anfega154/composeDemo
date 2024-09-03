@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/activity_vertical_margin"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    fab:errorTextAppearance="@style/error_appearance">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/falla_nombre"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:fontFamily="sans-serif-light"
+                        android:hint="@string/falla"
+                        android:inputType="date|none" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    fab:errorTextAppearance="@style/error_appearance">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/falla_entidad"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:fontFamily="sans-serif-light"
+                        android:hint="@string/entidad"
+                        android:inputType="date|none" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    fab:errorTextAppearance="@style/error_appearance">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/begin_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:fontFamily="sans-serif-light"
+                        android:hint="@string/fecha_inicio"
+                        android:inputType="date|none" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/form_vertical"
+                android:layout_marginBottom="@dimen/form_vertical"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/check_finished"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_weight="1"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="5dp"
+                    app:buttonTint="@color/colorPrimary"
+                    android:text="@string/falla_corregida" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/form_vertical"
+                android:layout_marginBottom="@dimen/form_vertical"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/content_end_date"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_weight="1.5"
+                    fab:errorTextAppearance="@style/error_appearance">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/end_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:fontFamily="sans-serif-light"
+                        android:hint="@string/fecha_fin"
+                        android:inputType="time|none" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/content_end_time"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_weight="1.5"
+                    fab:errorTextAppearance="@style/error_appearance">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/end_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:fontFamily="sans-serif-light"
+                        android:hint="@string/hora_fin"
+                        android:inputType="time|none" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view_repuestos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingStart="3dp"
+                android:paddingEnd="3dp"
+                android:layout_marginHorizontal="3dp"
+                android:background="@drawable/border_contain_6"/>
+
+            <TextView
+                android:id="@+id/agregar_repuesto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_marginHorizontal="3dp"
+                android:padding="10dp"
+                android:text="@string/agregar_repuesto"
+                android:textColor="@color/white"
+                android:background="@drawable/background_button"
+                android:textSize="18sp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view_consumibles"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingStart="3dp"
+                android:paddingEnd="3dp"
+                android:layout_marginHorizontal="3dp"
+                android:background="@drawable/border_contain_6"/>
+
+            <TextView
+                android:id="@+id/agregar_consumible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_marginHorizontal="3dp"
+                android:padding="10dp"
+                android:text="@string/agregar_consumible"
+                android:textColor="@color/white"
+                android:background="@drawable/background_button"
+                android:textSize="18sp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+        fab:fab_addButtonColorNormal="@color/colorPrimary"
+        fab:fab_addButtonColorPressed="@color/colorPrimaryDark"
+        fab:fab_addButtonStrokeVisible="false"
+        fab:fab_labelStyle="@style/menu_labels_style"
+        fab:fab_labelsPosition="left">
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/camera_qr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_icon="@drawable/ic_qr"
+            fab:fab_colorNormal="@color/colorPrimary"
+            fab:fab_colorPressed="@color/colorPrimaryDark"
+            fab:fab_size="mini"
+            fab:fab_title="@string/agregar_repuesto_qr" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/previous_photos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_icon="@drawable/camera"
+            fab:fab_colorNormal="@color/colorPrimary"
+            fab:fab_colorPressed="@color/colorPrimaryDark"
+            fab:fab_size="mini"
+            fab:fab_title="@string/asociar_fotografia_previa" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/later_photos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_icon="@drawable/camera"
+            fab:fab_colorNormal="@color/colorPrimary"
+            fab:fab_colorPressed="@color/colorPrimaryDark"
+            fab:fab_size="mini"
+            fab:fab_title="@string/asociar_fotografia_posterior" />
+
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+</RelativeLayout>

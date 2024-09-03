@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".cmms.activity.MovimientoActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/activity_horizontal_margin">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/container_filter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginBottom="@dimen/margin_bottom_card">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/horizontal_margin_card"
+                android:paddingRight="@dimen/horizontal_margin_card"
+                android:paddingBottom="@dimen/vertical_margin_card">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/movimiento_tipo"
+                    android:textAlignment="center"
+                    android:textSize="12dp"
+                    android:layout_marginTop="@dimen/list_margin_horizontal"
+                    android:textStyle="bold"/>
+
+                <Spinner
+                    android:id="@+id/mSpinner"
+                    style="@style/Widget.AppCompat.Spinner.Underlined"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:layout_marginTop="@dimen/card_vertical"
+                    android:spinnerMode="dropdown" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/title_equipos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/movimiento_equipos"
+            android:textAlignment="center"
+            android:textSize="@dimen/dialog_paddding"
+            android:layout_marginTop="@dimen/list_margin_horizontal"
+            android:layout_below="@+id/container_filter"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:id="@+id/actions_items"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title_equipos"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/instalar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:backgroundTint="@color/colorPrimary_2"
+                    android:translationY="10dp"
+                    android:text="@string/movimiento_instalar" />
+
+                <TextView
+                    android:id="@+id/badge_btn_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_contain_3"
+                    android:text="0"
+                    android:layout_margin="1dp"
+                    android:gravity="center"
+                    android:layout_centerHorizontal="true"
+                    android:translationZ="10dp"
+                    android:textSize="@dimen/bagge_1"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal">
+
+                <Button
+                    android:id="@+id/retirar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:translationY="10dp"
+                    android:text="@string/movimiento_retirar" />
+
+                <TextView
+                    android:id="@+id/badge_btn_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_contain_3"
+                    android:text="0"
+                    android:layout_margin="1dp"
+                    android:gravity="center"
+                    android:layout_centerHorizontal="true"
+                    android:translationZ="10dp"
+                    android:textSize="@dimen/bagge_1"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/recursos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:translationY="10dp"
+                    android:text="@string/consumibles" />
+
+                <TextView
+                    android:id="@+id/badge_btn_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_contain_3"
+                    android:text="0"
+                    android:layout_margin="1dp"
+                    android:gravity="center"
+                    android:layout_centerHorizontal="true"
+                    android:translationZ="10dp"
+                    android:textSize="@dimen/bagge_1"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+        <ViewAnimator
+            android:id="@+id/viewanimator"
+            android:layout_below="@+id/actions_items"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_centerVertical="true">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view_instalar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="vertical"  />
+
+
+                <TextView
+                    android:id="@+id/empty_instalar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:drawableTop="@drawable/bitacora_recursos"
+                    android:drawingCacheQuality="high"
+                    android:textAlignment="center"
+                    android:text="@string/movimiento_instalar_empty" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_centerVertical="true"
+                android:visibility="visible">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view_retirar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="vertical" />
+
+                <TextView
+                    android:id="@+id/empty_retirar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:drawableTop="@drawable/bitacora_recursos"
+                    android:drawingCacheQuality="high"
+                    android:textAlignment="center"
+                    android:text="@string/movimiento_retirar_empty" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_centerVertical="true"
+                android:visibility="visible">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view_recursos"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="vertical" />
+
+                <TextView
+                    android:id="@+id/empty_recurso"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:drawableTop="@drawable/bitacora_recursos"
+                    android:drawingCacheQuality="high"
+                    android:textAlignment="center"
+                    android:text="@string/movimiento_recurso_empty" />
+
+
+            </RelativeLayout>
+
+        </ViewAnimator>
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"
+        android:indeterminateDrawable="@drawable/circular"
+        android:layout_gravity="bottom|center" />
+
+
+    <com.mantum.component.adapter.MovableFloatingActionButton
+        android:id="@+id/actions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="@dimen/floating_action_button"
+        android:layout_marginRight="@dimen/floating_action_button"
+        android:layout_marginBottom="@dimen/floating_action_button"
+        fab:backgroundTint="@color/colorPrimary"
+        fab:srcCompat="@drawable/add" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

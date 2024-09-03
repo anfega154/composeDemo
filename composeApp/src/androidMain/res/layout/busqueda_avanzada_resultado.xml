@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/list_padding_top">
+
+    <View
+        android:id="@+id/separador"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_separator"
+        android:background="#dbdbdb"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/list_padding_horizontal"
+        android:paddingLeft="@dimen/list_padding_horizontal"
+        android:paddingTop="@dimen/list_padding_top"
+        android:paddingEnd="@dimen/list_padding_horizontal"
+        android:paddingRight="@dimen/list_padding_horizontal"
+        android:paddingBottom="@dimen/list_padding_top">
+
+        <TextView
+            android:id="@+id/caracter"
+            android:layout_width="@dimen/list_icon_width"
+            android:layout_height="match_parent"
+            android:fontFamily="sans-serif"
+            android:paddingStart="@dimen/list_padding_top"
+            android:paddingEnd="@dimen/list_padding_top"
+            android:text="@string/alphabet_letter"
+            android:textAlignment="center"
+            android:textColor="@color/list_color_accent"
+            android:textSize="@dimen/list_icon_text" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/list_padding_horizontal"
+            android:paddingLeft="@dimen/list_padding_horizontal"
+            android:paddingEnd="@dimen/list_padding_horizontal"
+            android:paddingRight="@dimen/list_padding_horizontal">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/codigo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="sans-serif"
+                    android:maxLines="1"
+                    android:text="@string/codigo"
+                    android:textSize="@dimen/list_title"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/nombre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/codigo"
+                    android:ellipsize="end"
+                    android:fontFamily="sans-serif-light"
+                    android:maxLines="1"
+                    android:text="@string/nombre"
+                    android:textSize="@dimen/list_subtitle" />
+
+                <TextView
+                    android:id="@+id/equipo_padre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/nombre"
+                    android:ellipsize="end"
+                    android:fontFamily="sans-serif-light"
+                    android:maxLines="1"
+                    android:text="@string/equipo_padre"
+                    android:textSize="@dimen/list_subtitle" />
+
+                <TextView
+                    android:id="@+id/instalacion_padre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/equipo_padre"
+                    android:ellipsize="end"
+                    android:fontFamily="sans-serif-light"
+                    android:maxLines="1"
+                    android:text="@string/instalacion_padre"
+                    android:textSize="@dimen/list_subtitle" />
+
+                <TextView
+                    android:id="@+id/familia_uno"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/instalacion_padre"
+                    android:ellipsize="end"
+                    android:fontFamily="sans-serif-light"
+                    android:maxLines="1"
+                    android:text="@string/familia_one"
+                    android:textSize="@dimen/list_subtitle" />
+
+                <TextView
+                    android:id="@+id/familia_dos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/familia_uno"
+                    android:ellipsize="end"
+                    android:fontFamily="sans-serif-light"
+                    android:maxLines="1"
+                    android:text="@string/familia_two"
+                    android:textSize="@dimen/list_subtitle" />
+
+                <TextView
+                    android:id="@+id/familia_tres"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/familia_dos"
+                    android:ellipsize="end"
+                    android:fontFamily="sans-serif-light"
+                    android:maxLines="1"
+                    android:text="@string/familia_three"
+                    android:textSize="@dimen/list_subtitle" />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/tipo"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center|top"
+                android:contentDescription="@string/app_name" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

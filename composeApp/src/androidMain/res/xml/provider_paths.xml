@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <external-path
+        name="pictures"
+        path="Android/data/com.mantum/files/Pictures" />
+
+    <external-path
+        name="files"
+        path="Android/data/com.mantum/files" />
+
+    <external-path
+        name="external_files"
+        path="." />
+</paths>

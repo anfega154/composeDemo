@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="@string/general">
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:enabled="false"
+            android:key="preference.socket.estado"
+            android:summary="@string/preference_socket_estado"
+            android:title="@string/preference_socket" />
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:enabled="false"
+            android:key="preference.whitelist"
+            android:summary="@string/preference_summary_whitelist"
+            android:title="@string/preference_title_whitelist" />
+
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/transacciones">
+
+        <ListPreference
+            android:defaultValue="1"
+            android:entries="@array/meses_sincronizar_label"
+            android:entryValues="@array/meses_sincronizar"
+            android:key="preference.sincronizar.remove"
+            android:summary="@string/preference.sincronizar.remove.descripcion"
+            android:title="@string/preference.sincronizar.remove" />
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="preference_transaccion_directa"
+            android:enabled="false"
+            android:summary="@string/preference_descripcion_transaccion_directa"
+            android:title="@string/preference_transaccion_directa" />
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="preference_notificacion_satisfactoria"
+            android:summary="@string/preference_notificacion_descripcion_satisfactorias"
+            android:title="@string/preference_notificacion_satisfactoria" />
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="preference_notificacion_erronea"
+            android:summary="@string/preference_notificacion_descripcion_erronea"
+            android:title="@string/preference_notificacion_erronea" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/ubicacion">
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="preference.ubicacion"
+            android:summary="@string/preference.ubicacion.descripcion"
+            android:title="@string/preference_ubicacion" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/permisos">
+
+        <CheckBoxPreference
+            android:enabled="false"
+            android:key="preference.solicitar.ubicacion"
+            android:summary="@string/preference.gps.descripcion"
+            android:title="@string/preference.solicitar.ubicacion" />
+
+        <CheckBoxPreference
+            android:enabled="false"
+            android:key="preference.requiere.ubicacion"
+            android:summary="@string/preference.requiere.gps.descripcion"
+            android:title="@string/preference.requiere.ubicacion" />
+
+        <CheckBoxPreference
+            android:enabled="false"
+            android:key="preference.solicitar.ubicacion.image"
+            android:summary="@string/preference.gps.image.descripcion"
+            android:title="@string/preference.solicitar.ubicacion.image" />
+
+        <CheckBoxPreference
+            android:enabled="false"
+            android:key="preference.galery"
+            android:summary="@string/preference.galery.descripcion"
+            android:title="@string/preference.galery" />
+
+        <CheckBoxPreference
+            android:enabled="false"
+            android:key="preference.validar.registro.rt"
+            android:summary="@string/preference_validar_registro_rt_descripcion"
+            android:title="@string/preference_validar_registro_rt" />
+
+        <CheckBoxPreference
+            android:enabled="false"
+            android:key="preference.validar.registro.ot"
+            android:summary="@string/preference_validar_registro_ot_descripcion"
+            android:title="@string/preference_validar_registro_ot" />
+
+        <CheckBoxPreference
+            android:enabled="false"
+            android:key="preference.registrar.paros"
+            android:summary="@string/preference_validar_registrar_paros_descripcion"
+            android:title="@string/preference_registrar_paros" />
+
+        <CheckBoxPreference
+            android:enabled="false"
+            android:key="preference.gestion.servicios"
+            android:summary="@string/preference_summary_gestion_servicios"
+            android:title="@string/preference_gestion_servicios" />
+
+        <CheckBoxPreference
+            android:enabled="false"
+            android:key="preference_panel_gestion_servicios"
+            android:summary="@string/preference_summary_panel_gestion_servicios"
+            android:title="@string/preference_panel_gestion_servicios" />
+
+        <CheckBoxPreference
+            android:enabled="false"
+            android:key="preference_bloquear_busqueda_recursos"
+            android:summary="@string/preference_summary_busqueda_recursos"
+            android:title="@string/preference_title_busqueda_recursos" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/parametros">
+        <CheckBoxPreference
+            android:enabled="false"
+            android:key="campos_adicionales_crear_equipo"
+            android:summary="@string/preference_summary_campos_adicionales_crear_equipo"
+            android:title="@string/preference_title_campos_adicionales_crear_equipo" />
+    </PreferenceCategory>
+</PreferenceScreen>

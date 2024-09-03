@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/alphabet_horizontal_margin">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/container_filter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:cardBackgroundColor="@color/gray_2"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/horizontal_margin_card"
+                    android:paddingRight="@dimen/horizontal_margin_card"
+                    android:paddingBottom="@dimen/vertical_margin_card">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/title_filtro_ot_"
+                        android:textAlignment="center"
+                        android:textSize="12dp"
+                        android:layout_marginTop="@dimen/list_margin_horizontal"
+                        android:textStyle="bold"/>
+
+                    <Spinner
+                        android:id="@+id/mSpinner"
+                        style="@style/Widget.AppCompat.Spinner.Underlined"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:layout_marginTop="@dimen/card_vertical"
+                        android:spinnerMode="dropdown" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/listaEntidades"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="vertical" />
+
+            <LinearLayout
+                android:id="@+id/container_actions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btn_new_lc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lista_chequeo_nueva" />
+
+                <Button
+                    android:id="@+id/btn_close_lc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/close" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+</LinearLayout>

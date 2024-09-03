@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="12dp"
+    android:layout_marginTop="5dp"
+    android:background="@drawable/background_item_recycler"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2.5"
+        android:paddingStart="0dp"
+        android:paddingEnd="5dp"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/codigo_centro_costo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:fontFamily="sans-serif"/>
+
+        <TextView
+            android:id="@+id/nombre_centro_costo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:fontFamily="sans-serif-light"/>
+
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        app:errorTextAppearance="@style/error_appearance">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/porcentaje_centro_costo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="5dp"
+            android:paddingEnd="0dp"
+            android:inputType="numberDecimal"
+            android:fontFamily="sans-serif-light"
+            android:hint="@string/crear_equipo_campo_porcentaje"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageView
+        android:id="@+id/remover_centro_costo"
+        android:layout_width="1dp"
+        android:layout_height="30dp"
+        android:layout_weight="0.3"
+        android:layout_gravity="center"
+        android:src="@drawable/cancelar"
+        android:tint="@color/colorAccent"
+        android:contentDescription="@string/app_name" />
+    
+</LinearLayout>

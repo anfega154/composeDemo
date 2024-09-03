@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".cmms.activity.AlmacenActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/activity_horizontal_margin">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/container_filter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginBottom="@dimen/margin_bottom_card">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/horizontal_margin_card"
+                android:paddingTop="@dimen/vertical_margin_card"
+                android:paddingRight="@dimen/horizontal_margin_card"
+                android:paddingBottom="@dimen/vertical_margin_card">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/almacen_filter"
+                    android:textAlignment="center"
+                    android:textSize="12dp"
+                    android:textStyle="bold"/>
+
+                <com.mantum.component.adapter.SpinnerMultipleAdapter
+                    android:id="@+id/mSpinner"
+                    style="@style/Widget.AppCompat.Spinner.Underlined"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:spinnerMode="dropdown" />
+
+                    <LinearLayout
+                        android:id="@+id/linearCantidad"
+                        android:layout_marginBottom="@dimen/body_margin_text_card"
+                        android:layout_marginTop="@dimen/body_margin_text_card"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:fontFamily="sans-serif-ligth"
+                            android:text="@string/almacen_filtro_cantidad"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/check_cantidad"
+                            android:theme="@style/ColorSwitchStyle"
+                            android:checked="true"
+                            android:textColor="@color/colorPrimary"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/form_vertical"
+                        android:layout_marginBottom="@dimen/form_vertical"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/code_input"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:hint="@string/criterio"
+                                android:inputType="text" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:onClick="searchItems"
+                            android:text="@string/buscar"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/container_filter"
+            android:scrollbars="vertical"/>
+
+
+        <RelativeLayout
+            android:id="@+id/empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:drawableTop="@drawable/bitacora_recursos"
+                android:drawingCacheQuality="high"
+                android:textAlignment="center"
+                android:text="@string/lista_empty_almacen" />
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"
+        android:indeterminateDrawable="@drawable/circular"
+        android:layout_gravity="bottom|center" />
+
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:id="@+id/floating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom|end"
+        android:visibility="gone"
+        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+        fab:fab_addButtonColorNormal="@color/colorPrimary"
+        fab:fab_addButtonColorPressed="@color/colorPrimaryDark"
+        fab:fab_addButtonStrokeVisible="false"
+        fab:fab_labelStyle="@style/menu_labels_style"
+        fab:fab_labelsPosition="left">
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/transferir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_icon="@drawable/transfer_item"
+            fab:fab_colorNormal="@color/colorPrimary"
+            fab:fab_colorPressed="@color/colorPrimaryDark"
+            fab:fab_size="mini"
+            android:visibility="gone"
+            fab:fab_title="@string/traslado_almacen_title"/>
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/crearEntrada"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            fab:fab_icon="@drawable/entry_movement"
+            fab:fab_colorNormal="@color/colorPrimary"
+            fab:fab_colorPressed="@color/colorPrimaryDark"
+            fab:fab_size="mini"
+            fab:fab_title="Crear entrada"/>
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/crearSalida"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            fab:fab_icon="@drawable/exit_movement"
+            fab:fab_colorNormal="@color/colorPrimary"
+            fab:fab_colorPressed="@color/colorPrimaryDark"
+            fab:fab_size="mini"
+            fab:fab_title="Crear salida"/>
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/receive_store"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_icon="@drawable/arrow_bottom"
+            fab:fab_colorNormal="@color/colorPrimary"
+            fab:fab_colorPressed="@color/colorPrimaryDark"
+            fab:fab_size="mini"
+            android:visibility="gone"
+            fab:fab_title="@string/title_recibir_almacen"/>
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/send_store"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_icon="@drawable/arrow_top"
+            fab:fab_colorNormal="@color/colorPrimary"
+            fab:fab_colorPressed="@color/colorPrimaryDark"
+            fab:fab_size="mini"
+            android:visibility="gone"
+            fab:fab_title="@string/title_entregar_almacen"/>
+
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+    <com.getbase.floatingactionbutton.FloatingActionButton
+        android:id="@+id/cameraQR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:visibility="gone"
+        fab:fab_colorNormal="@color/colorPrimary"
+        fab:fab_colorPressed="@color/colorPrimaryDark"
+        fab:fab_icon="@drawable/camera" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

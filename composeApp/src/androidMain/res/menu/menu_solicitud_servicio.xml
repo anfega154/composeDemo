@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/refresh"
+        android:orderInCategory="1"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/refresh"
+        android:title="@string/ss_option_actualizar" />
+
+    <item
+        android:id="@+id/solicitud_servicio_estado_inicial"
+        android:orderInCategory="2"
+        android:visible="false"
+        android:title="@string/estado_inicial" />
+
+
+    <item
+        android:id="@+id/solicitud_servicio_bitacora"
+        android:orderInCategory="3"
+        android:title="@string/ss_option_bitacora" />
+
+    <item
+        android:id="@+id/solicitud_servicio_informe_tecnico"
+        android:orderInCategory="4"
+        android:visible="false"
+        android:title="@string/informe_tecnico" />
+
+
+    <item
+        android:id="@+id/solicitud_servicio_evaluar"
+        android:orderInCategory="5"
+        android:title="@string/ss_option_evaluar" />
+
+    <item
+        android:id="@+id/solicitud_servicio_comentario"
+        android:orderInCategory="6"
+        android:title="@string/ss_option_comentario" />
+
+    <item
+        android:id="@+id/solicitud_servicio_recibir"
+        android:orderInCategory="7"
+        android:title="@string/ss_option_recibir" />
+
+    <item
+        android:id="@+id/ubicar"
+        android:orderInCategory="8"
+        android:title="@string/ubicar" />
+
+</menu>

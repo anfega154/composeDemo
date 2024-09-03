@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="300dp"
+    android:height="300dp"
+    android:viewportWidth="504.123"
+    android:viewportHeight="504.123">
+
+    <path
+        android:fillColor="#FFD05B"
+        android:pathData="M 252.062 0 C 391.271998612 0 504.124 112.852001388 504.124 252.062 C 504.124 391.271998612 391.271998612 504.124 252.062 504.124 C 112.852001388 504.124 0 391.271998612 0 252.062 C 0 112.852001388 112.852001388 0 252.062 0 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M 317.44 94.523 L 129.182 94.523 L 129.182 409.6 L 374.942 409.6 L 374.942 152.025 Z" />
+    <path
+        android:fillColor="#54C0EB"
+        android:pathData="M 151.237 157.932 H 194.56 V 201.255 H 151.237 V 157.932 Z" />
+    <path
+        android:fillColor="#CED5E0"
+        android:pathData="M 207.557 172.505 H 352.886 V 187.077 H 207.557 V 172.505 Z" />
+    <path
+        android:fillColor="#CED5E0"
+        android:pathData="M 151.237 219.372 H 194.56 V 262.695 H 151.237 V 219.372 Z" />
+    <path
+        android:fillColor="#F1543F"
+        android:pathData="M 207.557 233.551 H 352.886 V 248.123 H 207.557 V 233.551 Z" />
+    <path
+        android:fillColor="#2C9984"
+        android:pathData="M 151.237 280.418 H 194.56 V 323.741 H 151.237 V 280.418 Z" />
+    <path
+        android:fillColor="#CED5E0"
+        android:pathData="M 207.557 294.991 H 352.886 V 309.563 H 207.557 V 294.991 Z" />
+    <path
+        android:fillColor="#F1543F"
+        android:pathData="M 151.237 341.858 H 194.56 V 385.181 H 151.237 V 341.858 Z" />
+    <path
+        android:fillColor="#54C0EB"
+        android:pathData="M 207.557 356.037 H 352.886 V 370.609 H 207.557 V 356.037 Z" />
+    <path
+        android:fillColor="#ACB3BA"
+        android:pathData="M 317.44 152.025 L 374.942 152.025 L 317.44 94.523 Z" />
+    <path
+        android:fillColor="#324A5E"
+        android:pathData="M 206.375 116.578 H 281.6 V 131.938 H 206.375 V 116.578 Z" />
+</vector>

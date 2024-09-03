@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".cmms.activity.BitacoraActivity">
+
+    <ScrollView
+        android:id="@+id/scrollview_bitacora"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin">
+
+            <TextView
+                android:id="@+id/information"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:visibility="gone"
+                android:text="@string/registrar_bitacora_evento_info"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/register_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/form_vertical"
+                android:layout_marginBottom="@dimen/form_vertical"
+                android:hint="@string/bitacora_codigo"
+                android:visibility="gone">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/register"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:fontFamily="sans-serif-light"
+                    android:inputType="none"
+                    android:maxLines="1" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/paro"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/form_vertical"
+                android:layout_marginBottom="@dimen/form_vertical"
+                android:fontFamily="sans-serif-light"
+                android:imeOptions="actionNext"
+                android:nextFocusDown="@+id/type"
+                android:spinnerMode="dropdown"
+                android:visibility="gone" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/type"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/form_vertical"
+                android:layout_marginBottom="@dimen/form_vertical"
+                android:fontFamily="sans-serif-light"
+                android:imeOptions="actionNext"
+                android:spinnerMode="dropdown"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/activity_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/form_vertical"
+                android:layout_marginBottom="@dimen/form_vertical"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/activity"
+                    style="@style/Widget.AppCompat.Spinner.Underlined"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/form_vertical"
+                    android:layout_marginBottom="@dimen/form_vertical"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-light"
+                    android:imeOptions="actionNext"
+                    android:spinnerMode="dropdown" />
+
+                <TextView
+                    android:id="@+id/buscar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="4"
+                    android:drawableTop="@drawable/nfc"
+                    android:text="@string/filtrar"
+                    android:textAlignment="center" />
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/state"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/form_vertical"
+                android:layout_marginBottom="@dimen/form_vertical"
+                android:fontFamily="sans-serif-light"
+                android:imeOptions="actionNext"
+                android:spinnerMode="dropdown"
+                android:visibility="gone" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/content_creation_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                fab:errorTextAppearance="@style/error_appearance">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/creation_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:fontFamily="sans-serif-light"
+                    android:hint="@string/fecha_inicio"
+                    android:inputType="date|none" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/horas_habiles_contenedor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                fab:errorTextAppearance="@style/error_appearance">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/horas_habiles"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:hint="@string/horas_habiles"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/form_vertical"
+                android:layout_marginBottom="@dimen/form_vertical"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/content_creation_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    fab:errorTextAppearance="@style/error_appearance">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/creation_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:fontFamily="sans-serif-light"
+                        android:hint="@string/hora_inicial"
+                        android:inputType="date|none" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/content_creation_end"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    fab:errorTextAppearance="@style/error_appearance">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/creation_end"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:fontFamily="sans-serif-light"
+                        android:hint="@string/ss.register.creationEnd"
+                        android:inputType="time|none" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/tipos"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/form_vertical"
+                android:layout_marginBottom="@dimen/form_vertical"
+                android:fontFamily="sans-serif-light"
+                android:imeOptions="actionNext"
+                android:nextFocusDown="@+id/type"
+                android:spinnerMode="dropdown"
+                android:visibility="gone" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/content_execution"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/form_vertical"
+                android:layout_marginBottom="@dimen/form_vertical"
+                android:visibility="gone"
+                fab:errorTextAppearance="@style/error_appearance">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/execution"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:hint="@string/ss.register.execution"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    android:maxLines="1" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/type_time"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/form_vertical"
+                android:layout_marginBottom="@dimen/form_vertical"
+                android:fontFamily="sans-serif-light"
+                android:imeOptions="actionNext"
+                android:spinnerMode="dropdown" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/form_vertical"
+                android:layout_marginBottom="@dimen/form_horizontal"
+                android:baselineAligned="false"
+                android:gravity="end"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/form_vertical"
+                    android:layout_marginBottom="@dimen/form_vertical"
+                    android:layout_weight="1">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:hint="@string/descripcion"
+                        android:maxLines="6" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/form_vertical"
+                android:layout_marginBottom="@dimen/form_horizontal"
+                android:baselineAligned="false"
+                android:gravity="end"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/content_nota"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/form_vertical"
+                    android:layout_marginBottom="@dimen/form_vertical"
+                    android:layout_weight="1"
+                    android:visibility="gone">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/nota"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:hint="@string/nota"
+                        android:maxLines="6" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/form_vertical"
+                android:layout_marginBottom="@dimen/form_horizontal"
+                android:baselineAligned="false"
+                android:gravity="end"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/content_observacionactivos"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/form_vertical"
+                    android:layout_marginBottom="@dimen/form_vertical"
+                    android:layout_weight="1"
+                    android:visibility="gone">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/observacion_activos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:hint="@string/observacion_activos"
+                        android:maxLines="6" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+        fab:fab_addButtonColorNormal="@color/colorPrimary"
+        fab:fab_addButtonColorPressed="@color/colorPrimaryDark"
+        fab:fab_addButtonStrokeVisible="false"
+        fab:fab_labelStyle="@style/menu_labels_style"
+        fab:fab_labelsPosition="left">
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/ejecutar_tareas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            fab:fab_colorNormal="@color/colorPrimary"
+            fab:fab_colorPressed="@color/colorPrimaryDark"
+            fab:fab_icon="@drawable/ic_ejecutar_tareas"
+            fab:fab_size="mini"
+            fab:fab_title="@string/ejecutar_tareas_titulo" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/asignar_paros"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            fab:fab_colorNormal="@color/colorPrimary"
+            fab:fab_colorPressed="@color/colorPrimaryDark"
+            fab:fab_icon="@drawable/ic_asignar_paros"
+            fab:fab_size="mini"
+            fab:fab_title="@string/asignar_paros_titulo" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/gestionar_fallas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            fab:fab_colorNormal="@color/colorPrimary"
+            fab:fab_colorPressed="@color/colorPrimaryDark"
+            fab:fab_icon="@drawable/gestionar_falla"
+            fab:fab_size="mini"
+            fab:fab_title="@string/gestionar_falla_titulo" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/lecturas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            fab:fab_colorNormal="@color/colorPrimary"
+            fab:fab_colorPressed="@color/colorPrimaryDark"
+            fab:fab_icon="@drawable/registrarlectura"
+            fab:fab_size="mini"
+            fab:fab_title="@string/lectura_carga_titulo" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/pendiente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            fab:fab_colorNormal="@color/colorPrimary"
+            fab:fab_colorPressed="@color/colorPrimaryDark"
+            fab:fab_icon="@drawable/notification"
+            fab:fab_size="mini"
+            fab:fab_title="@string/pendiente" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/mochila"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            fab:fab_colorNormal="@color/colorPrimary"
+            fab:fab_colorPressed="@color/colorPrimaryDark"
+            fab:fab_icon="@drawable/work"
+            fab:fab_size="mini"
+            fab:fab_title="@string/mochila" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/recursos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            fab:fab_colorNormal="@color/colorPrimary"
+            fab:fab_colorPressed="@color/colorPrimaryDark"
+            fab:fab_icon="@drawable/recurso_canvas"
+            fab:fab_size="mini"
+            fab:fab_title="@string/agregar_recursos" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/personas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            fab:fab_colorNormal="@color/colorPrimary"
+            fab:fab_colorPressed="@color/colorPrimaryDark"
+            fab:fab_icon="@drawable/baseline_person_24"
+            fab:fab_size="mini"
+            fab:fab_title="@string/agregar_personal" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/devolucion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            fab:fab_colorNormal="@color/colorPrimary"
+            fab:fab_colorPressed="@color/colorPrimaryDark"
+            fab:fab_icon="@drawable/recurso_canvas"
+            fab:fab_size="mini"
+            fab:fab_title="@string/devolucion" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/firma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            fab:fab_colorNormal="@color/colorPrimary"
+            fab:fab_colorPressed="@color/colorPrimaryDark"
+            fab:fab_icon="@drawable/create"
+            fab:fab_size="mini"
+            fab:fab_title="@string/firma_digital" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            fab:fab_colorNormal="@color/colorPrimary"
+            fab:fab_colorPressed="@color/colorPrimaryDark"
+            fab:fab_icon="@drawable/files"
+            fab:fab_size="mini"
+            fab:fab_title="@string/asociar_archivos" />
+
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+</RelativeLayout>

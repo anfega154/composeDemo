@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    tools:context=".cmms.activity.EnviarImagenesCorreoActivity">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/content_codigo_contenedor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/activity_vertical_margin">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/codigo_contenedor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:hint="@string/codigo_contenedor" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.getbase.floatingactionbutton.FloatingActionButton
+        android:id="@+id/imagenes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="bottom|end"
+
+        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+        fab:fab_colorNormal="@color/colorPrimary"
+        fab:fab_colorPressed="@color/colorPrimaryDark"
+        fab:fab_icon="@drawable/camera" />
+
+</RelativeLayout>

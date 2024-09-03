@@ -1,0 +1,729 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/border_contain_6"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="sans-serif-light"
+                android:text="@string/crear_equipo_titulo_general"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/familia_equipo_container"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3.7"
+                    app:errorTextAppearance="@style/error_appearance">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/familia_equipo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:fontFamily="sans-serif-light"
+                        android:hint="@string/crear_equipo_campo_familia"
+                        android:inputType="none"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="0dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ImageView
+                    android:id="@+id/remover_familia_equipo"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/cancelar"
+                    android:tint="@color/colorAccent" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="2.5dp"
+                    app:errorTextAppearance="@style/error_appearance">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/codigo_equipo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:hint="@string/crear_equipo_campo_codigo"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="0dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/nombre_equipo_container"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:paddingStart="2.5dp"
+                    android:paddingEnd="0dp"
+                    app:errorTextAppearance="@style/error_appearance">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/nombre_equipo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:hint="@string/crear_equipo_campo_nombre"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="0dp"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/instalacion_proceso_equipo_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:errorTextAppearance="@style/error_appearance">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/instalacion_proceso_equipo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:fontFamily="sans-serif-light"
+                    android:hint="@string/crear_equipo_campo_instalacion_proceso"
+                    android:inputType="none"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="0dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3.7"
+                    app:errorTextAppearance="@style/error_appearance">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/instalacion_locativa_equipo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:fontFamily="sans-serif-light"
+                        android:hint="@string/crear_equipo_campo_instalacion_locativa"
+                        android:inputType="none"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="0dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ImageView
+                    android:id="@+id/remover_instalacion_locativa_equipo"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/cancelar"
+                    android:tint="@color/colorAccent" />
+
+            </LinearLayout>
+
+            <Spinner
+                android:id="@+id/provoca_paro"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ubicacion_equipo_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:errorTextAppearance="@style/error_appearance">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ubicacion_equipo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:hint="@string/crear_equipo_campo_ubicacion"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="0dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/pais_equipo_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:errorTextAppearance="@style/error_appearance">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/pais_equipo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:fontFamily="sans-serif-light"
+                    android:hint="@string/crear_equipo_campo_pais"
+                    android:inputType="none"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="0dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/departamento_equipo_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:errorTextAppearance="@style/error_appearance">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/departamento_equipo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:fontFamily="sans-serif-light"
+                    android:hint="@string/crear_equipo_campo_departamento"
+                    android:inputType="none"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="0dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ciudad_equipo_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:errorTextAppearance="@style/error_appearance">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ciudad_equipo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:fontFamily="sans-serif-light"
+                    android:hint="@string/crear_equipo_campo_ciudad"
+                    android:inputType="none"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="0dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:errorTextAppearance="@style/error_appearance">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/observaciones_equipo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:hint="@string/crear_equipo_campo_observaciones"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="0dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/border_contain_6"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="sans-serif-light"
+                android:text="@string/crear_equipo_titulo_tecnico"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/serie_equipo_container"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="4dp"
+                    app:errorTextAppearance="@style/error_appearance">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/serie_equipo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:hint="@string/crear_equipo_campo_serie"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="0dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/modelo_equipo_container"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="0dp"
+                    app:errorTextAppearance="@style/error_appearance">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/modelo_equipo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:hint="@string/crear_equipo_campo_modelo"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="0dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:errorTextAppearance="@style/error_appearance">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/color_equipo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:hint="@string/crear_equipo_campo_color"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="0dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/marca_equipo_container"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3.7"
+                    app:errorTextAppearance="@style/error_appearance">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/marca_equipo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:fontFamily="sans-serif-light"
+                        android:hint="@string/crear_equipo_campo_marca"
+                        android:inputType="none"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="0dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ImageView
+                    android:id="@+id/remover_marca_equipo"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/cancelar"
+                    android:tint="@color/colorAccent" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_weight="3"
+                    app:errorTextAppearance="@style/error_appearance">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/largo_equipo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:hint="@string/crear_equipo_campo_largo"
+                        android:inputType="numberDecimal"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="0dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Spinner
+                    android:id="@+id/medida_largo_equipo"
+                    style="@style/Widget.AppCompat.Spinner.Underlined"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-light" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_weight="3"
+                    app:errorTextAppearance="@style/error_appearance">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ancho_equipo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:hint="@string/crear_equipo_campo_ancho"
+                        android:inputType="numberDecimal"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="0dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Spinner
+                    android:id="@+id/medida_ancho_equipo"
+                    style="@style/Widget.AppCompat.Spinner.Underlined"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-light" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_weight="3"
+                    app:errorTextAppearance="@style/error_appearance">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/alto_equipo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:hint="@string/crear_equipo_campo_alto"
+                        android:inputType="numberDecimal"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="0dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Spinner
+                    android:id="@+id/medida_alto_equipo"
+                    style="@style/Widget.AppCompat.Spinner.Underlined"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-light" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_weight="3"
+                    app:errorTextAppearance="@style/error_appearance">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/peso_equipo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:hint="@string/crear_equipo_campo_peso"
+                        android:inputType="numberDecimal"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="0dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Spinner
+                    android:id="@+id/medida_peso_equipo"
+                    style="@style/Widget.AppCompat.Spinner.Underlined"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-light" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/border_contain_6"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="sans-serif-light"
+                android:text="@string/crear_equipo_titulo_histórico"
+                android:textSize="15sp" />
+
+            <Spinner
+                android:id="@+id/estado_actual_equipo"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/contenedor_responsable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/border_contain_6"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="sans-serif-light"
+                android:text="@string/crear_equipo_titulo_personal"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3.7"
+                    app:errorTextAppearance="@style/error_appearance">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/responsable_equipo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:fontFamily="sans-serif-light"
+                        android:hint="@string/crear_equipo_campo_responsable"
+                        android:inputType="none"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="0dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ImageView
+                    android:id="@+id/remover_responsable_equipo"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/cancelar"
+                    android:tint="@color/colorAccent" />
+
+            </LinearLayout>
+
+            <Spinner
+                android:id="@+id/estado_equipo"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/contenedor_contable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_contain_6"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="sans-serif-light"
+                android:text="@string/crear_equipo_titulo_financiero"
+                android:textSize="15sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:errorTextAppearance="@style/error_appearance">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/codigo_contable_equipo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:hint="@string/crear_equipo_campo_codigo_contable"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="0dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Spinner
+                android:id="@+id/categoria_equipo"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:errorTextAppearance="@style/error_appearance">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/annos_inventario"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:hint="@string/annos_inventario"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="0dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:id="@+id/buscar_centro_costo_equipo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="3dp"
+                android:background="@drawable/background_button"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:padding="12dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3.7"
+                    android:text="@string/crear_equipo_campo_centro_costo"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/add"
+                    android:tint="@color/white" />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view_centro_costo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="3dp"
+                android:paddingEnd="3dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView >

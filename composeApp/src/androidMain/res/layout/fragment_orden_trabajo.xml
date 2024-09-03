@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/busqueda_ot_yarda"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:textAlignment="center"
+        android:text="@string/buscar_ot_yarda_hint"
+        android:textColor="@color/white"
+        android:background="@drawable/background_button_grey"
+        android:visibility="gone"
+        android:textSize="18sp"/>
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/ocultar_100"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="18dp"
+        android:checked="false"
+        android:maxLines="2"
+        android:layout_marginTop="9dp"
+        android:layout_marginBottom="9dp"
+        android:text="@string/ocultar_ot_100"
+        android:theme="@style/ColorSwitchStyle" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/mostrar_solo_asignadas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="18dp"
+        android:checked="false"
+        android:maxLines="2"
+        android:layout_marginBottom="9dp"
+        android:text="@string/mostrar_solo_ots_asignadas"
+        android:theme="@style/ColorSwitchStyle" />
+
+    <include layout="@layout/information_layout_view" />
+
+</LinearLayout>

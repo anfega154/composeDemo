@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:paddingTop="@dimen/body_margin_text_card"
+        android:paddingBottom="@dimen/body_margin_text_card"
+        android:paddingStart="@dimen/horizontal_margin_card"
+        android:paddingLeft="@dimen/horizontal_margin_card"
+        android:paddingEnd="@dimen/horizontal_margin_card"
+        android:paddingRight="@dimen/horizontal_margin_card"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_weight="1"
+            android:src="@drawable/recursos"
+            android:layout_gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:contentDescription="@string/app_name" />
+
+        <LinearLayout
+            android:layout_weight="2"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:id="@+id/contenedor"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/title"
+                android:maxLines="2"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/code"
+                android:textSize="14sp"
+                android:maxLines="1"
+                android:fontFamily="sans-serif-light"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/count"
+                android:textSize="14sp"
+                android:maxLines="1"
+                android:visibility="gone"
+                android:fontFamily="sans-serif-light"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

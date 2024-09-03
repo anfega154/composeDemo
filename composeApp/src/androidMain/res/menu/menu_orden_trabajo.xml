@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/refresh"
+        android:icon="@drawable/refresh"
+        android:orderInCategory="1"
+        android:title="@string/actualizar"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/bitacora"
+        android:orderInCategory="2"
+        android:title="@string/orden_trabajo_opcion_bitacora" />
+
+    <item
+        android:id="@+id/recibir"
+        android:orderInCategory="3"
+        android:title="@string/orden_trabajo_opcion_recibir"
+        android:visible="false" />
+
+    <item
+        android:id="@+id/terminar"
+        android:orderInCategory="4"
+        android:title="@string/orden_trabajo_opcion_terminar"
+        android:visible="false" />
+
+    <item
+        android:id="@+id/check_list"
+        android:orderInCategory="5"
+        android:title="@string/lista_chequeo"
+        android:visible="false" />
+
+    <item
+        android:id="@+id/firmaxentidad"
+        android:orderInCategory="6"
+        android:title="@string/registrar_firmaxentidad"
+        android:visible="false" />
+
+    <item
+        android:id="@+id/asociar_fotografia"
+        android:orderInCategory="7"
+        android:title="@string/asociar_archivos"
+        android:visible="true" />
+
+    <item
+        android:id="@+id/tiempos"
+        android:orderInCategory="8"
+        android:title="@string/registrar_tiempos"
+        android:visible="false" />
+
+    <item
+        android:id="@+id/inspeccion_electrica"
+        android:orderInCategory="9"
+        android:title="@string/inspeccion_electrica"
+        android:visible="false" />
+
+    <item
+        android:id="@+id/contacto"
+        android:orderInCategory="10"
+        android:title="@string/actualizar_contacto"
+        android:visible="false" />
+
+    <item
+        android:id="@+id/recorrido_planta_externa"
+        android:orderInCategory="11"
+        android:title="@string/recorrido_planta_externa"
+        android:visible="false" />
+
+    <item
+        android:id="@+id/instalacion_planta_externa"
+        android:orderInCategory="12"
+        android:title="@string/instalacion_planta_externa"
+        android:visible="false" />
+
+    <item
+        android:id="@+id/registrar_falla"
+        android:orderInCategory="13"
+        android:title="@string/registrar_falla"
+        android:visible="false" />
+
+    <item
+        android:id="@+id/remove"
+        android:orderInCategory="14"
+        android:title="@string/remover"
+        android:visible="false" />
+
+</menu>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/refresh"
+        android:orderInCategory="1"
+        android:icon="@drawable/refresh"
+        app:showAsAction="ifRoom"
+        android:visible="true"
+        android:title="@string/actualizar" />
+
+    <item
+        android:id="@+id/diligenciar"
+        android:orderInCategory="2"
+        android:title="@string/ruta_trabajo_opcion_diligenciar" />
+
+    <item
+        android:id="@+id/remove"
+        android:visible="true"
+        android:orderInCategory="3"
+        android:title="@string/remover" />
+
+</menu>

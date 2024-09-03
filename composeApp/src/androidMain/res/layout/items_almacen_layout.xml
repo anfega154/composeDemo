@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/list_padding_top">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/list_padding_horizontal"
+        android:paddingTop="@dimen/list_padding_top"
+        android:paddingEnd="@dimen/list_padding_horizontal"
+        android:paddingBottom="@dimen/list_padding_top">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/list_padding_horizontal"
+            android:paddingLeft="@dimen/list_padding_horizontal"
+            android:paddingEnd="@dimen/list_padding_horizontal"
+            android:paddingRight="@dimen/list_padding_horizontal">
+
+            <RelativeLayout
+                android:id="@+id/delete"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:padding="0dp"
+                android:layout_margin="0dp"
+                android:layout_weight="0.1"
+                android:layout_gravity="left" >
+
+                <ImageButton
+                    android:id="@+id/btn_delete"
+                    android:layout_width="50dp"
+                    android:layout_height="46dp"
+                    android:background="@drawable/border_contain"
+                    android:src="@drawable/delete_white"
+                    android:visibility="gone"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true" />
+
+                <ImageButton
+                    android:id="@+id/btn_more"
+                    android:layout_width="50dp"
+                    android:layout_height="46dp"
+                    android:background="@drawable/border_contain"
+                    android:src="@drawable/more"
+                    android:visibility="gone"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.9"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/list_margin_horizontal">
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="sans-serif"
+                    android:maxLines="1"
+                    android:text="@string/alphabet_title"
+                    android:textSize="@dimen/list_title"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/subtitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/title"
+                    android:ellipsize="end"
+                    android:fontFamily="sans-serif-light"
+                    android:maxLines="2"
+                    android:text="@string/alphabet_subtitle"
+                    android:textSize="@dimen/list_subtitle" />
+
+                <TextView
+                    android:id="@+id/summary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/subtitle"
+                    android:ellipsize="end"
+                    android:fontFamily="sans-serif-light"
+                    android:maxLines="1"
+                    android:text="@string/alphabet_summary"
+                    android:textSize="@dimen/list_subtitle" />
+
+                <TextView
+                    android:id="@+id/summary_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/summary"
+                    android:ellipsize="end"
+                    android:fontFamily="sans-serif-light"
+                    android:maxLines="1"
+                    android:text="@string/alphabet_summary"
+                    android:textSize="@dimen/list_subtitle" />
+
+                <TextView
+                    android:id="@+id/summary_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/summary_2"
+                    android:ellipsize="end"
+                    android:fontFamily="sans-serif-light"
+                    android:maxLines="2"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textStyle="bold"
+                    android:text="@string/alphabet_summary"
+                    android:textSize="@dimen/list_subtitle" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="@dimen/size_2"
+                android:layout_weight="0.2"
+                android:background="@drawable/border_contain_2"
+                android:layout_gravity="right|center_vertical">
+
+                <EditText
+                    android:id="@+id/cantidad"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="1"
+                    android:textAlignment="center"
+                    android:inputType="numberDecimal"/>
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

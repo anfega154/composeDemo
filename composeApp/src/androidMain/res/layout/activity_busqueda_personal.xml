@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".cmms.activity.ListaPersonalActivity">
+
+    <include layout="@layout/alphabet_layout_view" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:indeterminateDrawable="@drawable/circular"
+        android:visibility="gone" />
+
+    <com.mantum.component.adapter.MovableFloatingActionButton
+        android:id="@+id/add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="@dimen/floating_action_button"
+        android:layout_marginBottom="@dimen/floating_action_button"
+        fab:backgroundTint="@color/colorPrimary"
+        fab:srcCompat="@drawable/add" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

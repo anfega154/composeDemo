@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.mantum.component.view.ScrollControl
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingBottom="@dimen/activity_horizontal_margin">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TableLayout
+                    android:id="@+id/layou_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="@dimen/activity_horizontal_margin"
+                        android:text="@string/datos_firmaxentidad"
+                        android:textAlignment="center"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/descripcion_firmaxentidad"
+                        android:textSize="12dp" />
+
+                    <EditText
+                        android:id="@+id/selectidpersonal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:completionThreshold="1"
+                        android:editable="false"
+                        android:focusable="false"
+                        android:hint="Seleccione el Personal"
+                        tools:layout_editor_absoluteX="107dp"
+                        tools:layout_editor_absoluteY="96dp" />
+
+                    <EditText
+                        android:id="@+id/selectidproveedor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:completionThreshold="1"
+                        android:editable="false"
+                        android:focusable="false"
+                        android:hint="Seleccione Proveedor"
+                        tools:layout_editor_absoluteX="107dp"
+                        tools:layout_editor_absoluteY="96dp" />
+
+                    <EditText
+                        android:id="@+id/selectidcliente"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:completionThreshold="1"
+                        android:editable="false"
+                        android:focusable="false"
+                        android:hint="Seleccione el Cliente"
+                        tools:layout_editor_absoluteX="107dp"
+                        tools:layout_editor_absoluteY="96dp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dialog_paddding"
+                        android:background="@drawable/border_contein"
+                        android:orientation="vertical"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                        android:paddingTop="@dimen/activity_horizontal_margin"
+                        android:paddingRight="@dimen/activity_horizontal_margin"
+                        android:paddingBottom="@dimen/activity_horizontal_margin">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingBottom="@dimen/dialog_paddding"
+                                android:text="@string/about_firmaxentidad"
+                                android:textAlignment="center"
+                                android:textSize="12dp"
+                                android:textStyle="bold" />
+
+                            <EditText
+                                android:id="@+id/nombre"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/margin_bottom_card"
+                                android:hint="Nombre"
+                                android:inputType="text"
+                                android:textSize="12dp" />
+
+                            <EditText
+                                android:id="@+id/cedula"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/margin_bottom_card"
+                                android:hint="Cédula"
+                                android:inputType="number"
+                                android:textSize="12dp" />
+
+                            <EditText
+                                android:id="@+id/cargo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/margin_bottom_card"
+                                android:hint="Cargo"
+                                android:inputType="text"
+                                android:textSize="12dp" />
+
+                            <EditText
+                                android:id="@+id/empresa"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/margin_bottom_card"
+                                android:hint="Empresa"
+                                android:inputType="text"
+                                android:textSize="12dp" />
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/muestra_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dialog_paddding"
+                        android:background="@drawable/border_contein"
+                        android:orientation="vertical"
+                        android:paddingLeft="@dimen/activity_horizontal_margin"
+                        android:paddingTop="@dimen/activity_horizontal_margin"
+                        android:paddingRight="@dimen/activity_horizontal_margin"
+                        android:paddingBottom="@dimen/activity_horizontal_margin">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingBottom="@dimen/dialog_paddding"
+                                android:text="@string/about_muestras_firmaxentidad"
+                                android:textAlignment="center"
+                                android:textSize="12dp"
+                                android:textStyle="bold" />
+
+                            <EditText
+                                android:id="@+id/muestra"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/margin_bottom_card"
+                                android:hint="Muestra"
+                                android:inputType="text"
+                                android:textSize="12dp" />
+
+                            <EditText
+                                android:id="@+id/resultado"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/margin_bottom_card"
+                                android:hint="Resultado"
+                                android:inputType="text"
+                                android:textSize="12dp" />
+
+                            <EditText
+                                android:id="@+id/hora"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/margin_bottom_card"
+                                android:focusable="false"
+                                android:hint="Hora"
+                                android:inputType="time"
+                                android:textSize="12dp" />
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_item"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dialog_paddding"
+                        android:background="@color/background_white"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/categoryName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone">
+
+                        </TextView>
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/formato"
+                            style="@style/Widget.AppCompat.Spinner.Underlined"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-light"
+                            android:spinnerMode="dropdown" />
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/category"
+                            style="@style/Widget.AppCompat.Spinner.Underlined"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-light"
+                            android:spinnerMode="dropdown" />
+
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/button_add"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:onClick="modeDraw"
+                        android:text="@string/agregar_firma"
+                        android:textColor="@color/common_google_signin_btn_text_light_default"
+                        android:textStyle="bold" />
+
+                </TableLayout>
+
+                <RelativeLayout
+                    android:id="@+id/layout_draw"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dialog_paddding"
+                    android:background="@drawable/border_firma"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingTop="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:paddingBottom="@dimen/activity_horizontal_margin"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/firmaText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/firma_presentar"
+                            android:textAlignment="center"
+                            android:textSize="12dp"
+                            android:textStyle="bold"
+                            android:visibility="gone" />
+
+                        <ImageView
+                            android:id="@+id/firmaView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:minHeight="300dp"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/textInfo"
+                            android:layout_width="match_parent"
+                            android:layout_height="22dp"
+                            android:text="@string/titulo_firmaxentidad"
+                            android:textAlignment="center"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                        <com.mantum.component.view.Drawing
+                            android:id="@+id/firmaxentidad"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/background_white"
+                            android:minHeight="300dp" />
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_buttons"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:onClick="clearFirma"
+                        android:text="@string/menu.clean"
+                        android:textColor="@color/colorAccent"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:onClick="EnableScroll"
+                        android:text="@string/menu.listo"
+                        android:textColor="@color/zxing_custom_possible_result_points"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/text_scroll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/about_firma_scroll"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="12dp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </com.mantum.component.view.ScrollControl>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

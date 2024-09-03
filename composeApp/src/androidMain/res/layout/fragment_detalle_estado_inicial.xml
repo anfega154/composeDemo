@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:paddingTop="@dimen/activity_horizontal_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingBottom="@dimen/activity_horizontal_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <ImageView
+                    android:src="@drawable/start"
+                    android:layout_gravity="end"
+                    android:layout_marginRight="@dimen/horizontal_margin_card"
+                    android:layout_marginEnd="@dimen/horizontal_margin_card"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:contentDescription="@string/app_name" />
+
+                <TextView
+                    android:textSize="22sp"
+                    android:lines="1"
+                    android:text="@string/informacion_general"
+                    android:fontFamily="sans-serif-ligth"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginBottom="@dimen/body_margin_text_card"
+                android:layout_marginLeft="@dimen/body_text_card"
+                android:layout_marginStart="@dimen/body_text_card"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/tipo_falla"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tipo"
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif-light"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginBottom="@dimen/body_margin_text_card"
+                android:layout_marginLeft="@dimen/body_text_card"
+                android:layout_marginStart="@dimen/body_text_card"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/marca"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/marca"
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif-light"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginBottom="@dimen/body_margin_text_card"
+                android:layout_marginLeft="@dimen/body_text_card"
+                android:layout_marginStart="@dimen/body_text_card"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/denominacion_interna"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/denominacion"
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif-light"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginBottom="@dimen/body_margin_text_card"
+                android:orientation="vertical"
+                android:layout_marginLeft="@dimen/body_text_card"
+                android:layout_marginStart="@dimen/body_text_card"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/numero_producto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/numero"
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif-light"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginBottom="@dimen/body_margin_text_card"
+                android:layout_marginLeft="@dimen/body_text_card"
+                android:layout_marginStart="@dimen/body_text_card"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/numero_serial"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/serial"
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif-light"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginBottom="@dimen/body_margin_text_card"
+                android:layout_marginLeft="@dimen/body_text_card"
+                android:layout_marginStart="@dimen/body_text_card"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/caracteristicas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/caracteristicas"
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif-light"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginBottom="@dimen/body_margin_text_card"
+                android:layout_marginLeft="@dimen/body_text_card"
+                android:layout_marginStart="@dimen/body_text_card"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/estado_inicial"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/estado"
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif-light"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

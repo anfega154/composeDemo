@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:orientation="vertical"
+    card_view:cardCornerRadius="5dp"
+    card_view:cardElevation="2dp">
+
+    <FrameLayout
+        android:id="@+id/selected"
+        android:layout_width="4dp"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/card_horizontal"
+        android:paddingTop="@dimen/card_vertical"
+        android:paddingRight="@dimen/card_horizontal"
+        android:paddingBottom="@dimen/card_vertical">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:contentDescription="@string/app_name"
+            tool:src="@tools:sample/avatars" />
+
+        <LinearLayout
+            android:id="@+id/container_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@id/title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:maxLines="1"
+                android:textSize="20sp"
+                tool:text="Inspección" />
+
+            <ImageButton
+                android:id="@+id/more"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/more"
+                android:tint="@color/background_gray" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/container_summary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/container_title"
+            android:layout_marginStart="50dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@id/summary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="14sp"
+                tool:text="2023-01-10 20:07:12" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/container_subtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/container_summary"
+            android:layout_marginStart="50dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/subtitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:textSize="12sp"
+                tool:text="EIR" />
+
+            <TextView
+                android:id="@+id/state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingStart="4dp"
+                android:paddingLeft="4dp"
+                android:paddingTop="2dp"
+                android:paddingEnd="4dp"
+                android:paddingRight="4dp"
+                android:paddingBottom="2dp"
+                android:textAlignment="center"
+                android:textSize="12sp"
+                tool:text="sincronizado" />
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/children"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/container_subtitle"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:scrollbars="vertical" />
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/children"
+            android:maxLines="4"
+            android:textSize="12sp"
+            tool:text="El registro de la inspección se realizó correctamente" />
+
+        <Button
+            android:id="@+id/action"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/description"
+            android:background="@drawable/primary_bg_bordered_button"
+            android:textColor="@color/colorPrimary"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
+

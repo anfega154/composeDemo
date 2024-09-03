@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".cmms.activity.BusquedaActivity">
+
+    <item
+        android:id="@+id/agregar"
+        android:icon="@drawable/add"
+        android:orderInCategory="1"
+        android:title="@string/agregar"
+        app:showAsAction="ifRoom" />
+
+</menu>

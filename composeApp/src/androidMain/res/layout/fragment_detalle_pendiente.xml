@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:paddingTop="@dimen/activity_horizontal_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingBottom="@dimen/activity_horizontal_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <ImageView
+                    android:src="@drawable/information"
+                    android:layout_gravity="end"
+                    android:layout_marginRight="@dimen/horizontal_margin_card"
+                    android:layout_marginEnd="@dimen/horizontal_margin_card"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:contentDescription="@string/app_name" />
+
+                <TextView
+                    android:textSize="22sp"
+                    android:lines="1"
+                    android:text="@string/informacion_general"
+                    android:fontFamily="sans-serif-ligth"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginBottom="@dimen/body_margin_text_card"
+                android:layout_marginLeft="@dimen/body_text_card"
+                android:layout_marginStart="@dimen/body_text_card"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/nombre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/codigo"
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif-light"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginBottom="@dimen/body_margin_text_card"
+                android:layout_marginLeft="@dimen/body_text_card"
+                android:layout_marginStart="@dimen/body_text_card"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/fecha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/fecha"
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif-light"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginBottom="@dimen/body_margin_text_card"
+                android:orientation="vertical"
+                android:layout_marginLeft="@dimen/body_text_card"
+                android:layout_marginStart="@dimen/body_text_card"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/criticidad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/criticidad"
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif-light"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginBottom="@dimen/body_margin_text_card"
+                android:layout_marginLeft="@dimen/body_text_card"
+                android:layout_marginStart="@dimen/body_text_card"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/personal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/personal"
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif-light"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginBottom="@dimen/body_margin_text_card"
+                android:layout_marginLeft="@dimen/body_text_card"
+                android:layout_marginStart="@dimen/body_text_card"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/detalle_orden_trabajo_estado"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/estado"
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif-light"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginBottom="@dimen/body_margin_text_card"
+                android:orientation="vertical"
+                android:layout_marginLeft="@dimen/body_text_card"
+                android:layout_marginStart="@dimen/body_text_card"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/actividad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/actividad"
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif-light"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginBottom="@dimen/body_margin_text_card"
+                android:orientation="vertical"
+                android:layout_marginLeft="@dimen/body_text_card"
+                android:layout_marginStart="@dimen/body_text_card"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/tiempo_estimado"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tiempo_estimado"
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif-light"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginBottom="@dimen/body_margin_text_card"
+                android:orientation="vertical"
+                android:layout_marginLeft="@dimen/body_text_card"
+                android:layout_marginStart="@dimen/body_text_card"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/detalle_orden_trabajo_descripcion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/descripcion"
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif-light"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

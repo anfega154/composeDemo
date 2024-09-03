@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_marginBottom="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Id -->
+        <EditText
+            android:id="@+id/id"
+            android:hint="@string/app_name"
+            android:visibility="gone"
+            android:inputType="text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!-- Tipo -->
+        <EditText
+            android:id="@+id/tipo"
+            android:hint="@string/app_name"
+            android:inputType="text"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!-- Codigo -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/nombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:maxLines="2"
+                android:focusable="false"
+                android:cursorVisible="false"
+                android:inputType="none"
+                android:hint="@string/nombre" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Valor -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/contenedor_valor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:maxLines="1"
+                android:inputType="numberDecimal|numberSigned"
+                android:hint="@string/lectura.valor" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Valores definidos -->
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/rango"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:spinnerMode="dialog"
+            android:fontFamily="sans-serif-light"
+            style="@style/Widget.AppCompat.Spinner.Underlined" />
+
+        <!-- Descripcion -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/contenedor_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/form_vertical"
+            android:layout_marginBottom="@dimen/form_vertical">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:maxLines="6"
+                android:hint="@string/lectura.descripcion" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Informacion -->
+        <TextView
+            android:id="@+id/limites"
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/utlima_lectura"
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

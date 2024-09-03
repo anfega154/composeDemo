@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/drop"
+        android:orderInCategory="1"
+        android:title="@string/drop_item" />
+
+    <item
+        android:id="@+id/qr"
+        android:orderInCategory="2"
+        android:visible="false"
+        android:title="@string/asignar_padre_qr" />
+
+    <item
+        android:id="@+id/nfc"
+        android:orderInCategory="3"
+        android:visible="false"
+        android:title="@string/asignar_padre_nfc" />
+
+    <item
+        android:id="@+id/jerarquia"
+        android:orderInCategory="4"
+        android:visible="false"
+        android:title="@string/asignar_padre_jerarquia" />
+
+    <item
+        android:id="@+id/tipo_salida"
+        android:orderInCategory="5"
+        android:visible="false"
+        android:title="@string/tipo_salida" />
+
+</menu>

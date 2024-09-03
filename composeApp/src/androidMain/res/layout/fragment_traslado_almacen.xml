@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/activity_horizontal_margin">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/container_filter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginBottom="@dimen/margin_bottom_card">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/horizontal_margin_card"
+                android:paddingTop="@dimen/vertical_margin_card"
+                android:paddingRight="@dimen/horizontal_margin_card"
+                android:paddingBottom="@dimen/vertical_margin_card">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/almacen_destino"
+                    android:textAlignment="center"
+                    android:textSize="12dp"
+                    android:textStyle="bold"/>
+
+                <Spinner
+                    android:id="@+id/mSpinner"
+                    style="@style/Widget.AppCompat.Spinner.Underlined"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:focusable="false"
+                    android:spinnerMode="dropdown" />
+
+                <LinearLayout
+                    android:id="@+id/check_ip"
+                    android:layout_marginBottom="@dimen/body_margin_text_card"
+                    android:layout_marginTop="@dimen/body_margin_text_card"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_below="@id/mSpinner"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:fontFamily="sans-serif-ligth"
+                        android:text="@string/traslado_ip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/ejecutar"
+                        android:theme="@style/ColorSwitchStyle"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_width="match_parent"
+                        android:focusable="false"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/observacion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:lines="4"
+                    android:editable="false"
+                    android:scrollbars="vertical"
+                    android:layout_below="@+id/check_ip"
+                    android:hint="@string/observacion"/>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/container_filter"
+            android:scrollbars="vertical"/>
+
+    </RelativeLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

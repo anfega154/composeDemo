@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:paddingTop="@dimen/vertical_margin_card"
+    android:paddingBottom="@dimen/vertical_margin_card"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:overScrollMode="never"
+    android:fillViewport="true">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/entidad_contenedor"
+                android:layout_marginBottom="@dimen/vertical_margin_card"
+                android:visibility="visible"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:paddingBottom="@dimen/vertical_margin_card"
+                    android:paddingLeft="@dimen/horizontal_margin_card"
+                    android:paddingRight="@dimen/horizontal_margin_card"
+                    android:paddingTop="@dimen/vertical_margin_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp">
+
+                        <ImageView
+                            android:id="@+id/icono"
+                            android:layout_gravity="end"
+                            android:layout_marginRight="@dimen/horizontal_margin_card"
+                            android:layout_marginEnd="@dimen/horizontal_margin_card"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:contentDescription="@string/app_name" />
+
+                        <TextView
+                            android:id="@id/code"
+                            android:textSize="22sp"
+                            android:lines="1"
+                            android:text="@string/detalle_informacion_general"
+                            android:fontFamily="sans-serif-ligth"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/entidad"
+                    android:paddingTop="80dp"
+                    android:paddingLeft="@dimen/horizontal_margin_card"
+                    android:paddingRight="@dimen/horizontal_margin_card"
+                    android:paddingBottom="@dimen/vertical_margin_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/variables_contenedor"
+                android:layout_below="@+id/entidad_contenedor"
+                android:paddingBottom="@dimen/vertical_margin_card"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/vertical_margin_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:paddingBottom="@dimen/vertical_margin_card"
+                    android:paddingLeft="@dimen/horizontal_margin_card"
+                    android:paddingRight="@dimen/horizontal_margin_card"
+                    android:paddingTop="@dimen/vertical_margin_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp">
+
+                        <ImageView
+                            android:src="@drawable/variable"
+                            android:layout_marginRight="@dimen/horizontal_margin_card"
+                            android:layout_marginEnd="@dimen/horizontal_margin_card"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:contentDescription="@string/app_name" />
+
+                        <TextView
+                            android:id="@id/code"
+                            android:textSize="22sp"
+                            android:lines="1"
+                            android:text="@string/detalle_variables"
+                            android:fontFamily="sans-serif-ligth"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/variables"
+                    android:paddingTop="80dp"
+                    android:paddingLeft="@dimen/horizontal_margin_card"
+                    android:paddingRight="@dimen/horizontal_margin_card"
+                    android:paddingBottom="@dimen/vertical_margin_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/empty"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:drawableTop="@drawable/detalle"
+            android:drawablePadding="10dp"
+            android:drawingCacheQuality="high"
+            android:layout_centerInParent="true"
+            android:textAlignment="center"
+            android:text="@string/detail.empty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom|end"
+        fab:fab_addButtonColorNormal="@color/colorPrimary"
+        fab:fab_addButtonColorPressed="@color/colorPrimaryDark"
+        fab:fab_addButtonStrokeVisible="false"
+        fab:fab_labelStyle="@style/menu_labels_style"
+        fab:fab_labelsPosition="left">
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/qr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            fab:fab_colorNormal="@color/colorPrimary"
+            fab:fab_colorPressed="@color/colorPrimaryDark"
+            fab:fab_icon="@drawable/ic_qr"
+            fab:fab_size="mini"
+            fab:fab_title="@string/asociar_qr" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/register_ss"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/create"
+            fab:fab_colorNormal="@color/colorPrimary"
+            fab:fab_colorPressed="@color/colorPrimaryDark"
+            fab:fab_size="mini"
+            fab:fab_title="@string/registrar_solicitud_servicio" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/registrar_ot_bitacora"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/reloj"
+            android:tint="@color/white"
+            android:visibility="gone"
+            fab:fab_colorNormal="@color/colorPrimary"
+            fab:fab_colorPressed="@color/colorPrimaryDark"
+            fab:fab_size="mini"
+            fab:fab_title="@string/registrar_ot_bitacora" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/registrar_bitacora_evento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/reloj"
+            android:tint="@color/white"
+            android:visibility="gone"
+            fab:fab_colorNormal="@color/colorPrimary"
+            fab:fab_colorPressed="@color/colorPrimaryDark"
+            fab:fab_size="mini"
+            fab:fab_title="@string/registrar_bitacora_evento" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/registrar_lecturas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/registrarlectura"
+            fab:fab_colorNormal="@color/colorPrimary"
+            fab:fab_colorPressed="@color/colorPrimaryDark"
+            fab:fab_size="mini"
+            fab:fab_title="@string/registrar_lectura" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/imagenes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/files"
+            fab:fab_colorNormal="@color/colorPrimary"
+            fab:fab_colorPressed="@color/colorPrimaryDark"
+            fab:fab_size="mini"
+            fab:fab_title="@string/asociar_archivos" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/ubicacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ubicacion"
+            fab:fab_colorNormal="@color/colorPrimary"
+            fab:fab_colorPressed="@color/colorPrimaryDark"
+            fab:fab_size="mini"
+            fab:fab_title="@string/ubicacion" />
+
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+</RelativeLayout>

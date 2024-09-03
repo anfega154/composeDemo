@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="10dp"
+    android:layout_marginBottom="5dp"
+    android:background="@drawable/border_contain_6"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="4"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/form_vertical"
+            android:layout_marginBottom="@dimen/form_vertical"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/content_hora_inicio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="5dp"
+                android:layout_weight="1"
+                app:errorTextAppearance="@style/error_appearance">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/hora_inicio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:fontFamily="sans-serif-light"
+                    android:hint="@string/hora_inicio"
+                    android:inputType="time|none" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingHorizontal="5dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/content_hora_fin"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    app:errorTextAppearance="@style/error_appearance">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/hora_fin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:fontFamily="sans-serif-light"
+                        android:hint="@string/hora_fin"
+                        android:inputType="time|none" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ImageView
+                    android:id="@+id/remover_hora_fin"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="0.8"
+                    android:layout_gravity="bottom"
+                    android:src="@drawable/cancelar"
+                    app:tint="@color/colorAccent"
+                    android:contentDescription="@string/app_name" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/clasificacion"
+            style="@style/Widget.AppCompat.Spinner.Underlined"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginTop="@dimen/form_vertical"
+            android:layout_marginBottom="@dimen/form_vertical"
+            android:fontFamily="sans-serif-light"
+            android:spinnerMode="dropdown" />
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/tipo"
+            style="@style/Widget.AppCompat.Spinner.Underlined"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginTop="@dimen/form_vertical"
+            android:layout_marginBottom="@dimen/form_vertical"
+            android:fontFamily="sans-serif-light"
+            android:spinnerMode="dropdown" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/remover_paro"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_weight="0.3"
+        android:layout_gravity="center"
+        android:src="@drawable/cancelar"
+        app:tint="@color/colorAccent"
+        android:contentDescription="@string/app_name" />
+
+</LinearLayout>
